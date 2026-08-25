@@ -6,6 +6,9 @@ test("renders the JVF Services concept", () => {
   render(<Home />);
 
   expect(
-    screen.getByRole("heading", { name: /JVF Services/i }),
+    screen.getByRole("heading", {
+      level: 1,
+      name: /reliable help for the spaces and moments that matter/i,
+    }),
   ).toBeInTheDocument();
 });

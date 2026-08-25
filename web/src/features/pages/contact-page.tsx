@@ -1,8 +1,16 @@
 import { businessFacts } from "@/content/business";
 import { getContent } from "@/content/content";
 import type { Locale } from "@/content/types";
+import { ContactForm } from "@/features/contact/contact-form";
+import type { ServiceId } from "@/features/contact/types";
 
-export function ContactPage({ locale }: { locale: Locale }) {
+export function ContactPage({
+  locale,
+  initialService,
+}: {
+  locale: Locale;
+  initialService?: ServiceId;
+}) {
   const content = getContent(locale);
   return (
     <>
@@ -26,12 +34,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
             </a>
           </aside>
           <div className="form-stage">
-            <h2>{content.contact.formTitle}</h2>
-            <p>
-              {locale === "en"
-                ? "The secure demo request form is loading in the next implementation step."
-                : "El formulario seguro de demostración se añadirá en el siguiente paso."}
-            </p>
+            <ContactForm locale={locale} initialService={initialService} />
             <p className="privacy-callout">{content.contact.privacyNote}</p>
           </div>
         </div>

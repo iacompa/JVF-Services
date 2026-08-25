@@ -1,4 +1,5 @@
 import type { Locale, ServiceKey } from "@/content/types";
+import type { ServiceId } from "@/features/contact/types";
 import { routeKeys, type RouteKey } from "@/lib/routes";
 import { SiteShell } from "@/components/layout/site-shell";
 import { AboutPage } from "./about-page";
@@ -22,9 +23,11 @@ const serviceByRoute: Partial<Record<RouteKey, ServiceKey>> = {
 export function PublicPage({
   locale,
   route,
+  initialService,
 }: {
   locale: Locale;
   route: RouteKey;
+  initialService?: ServiceId;
 }) {
   let page;
   if (route === "home") page = <HomePage locale={locale} />;
@@ -34,7 +37,8 @@ export function PublicPage({
       <ServiceDetailPage locale={locale} service={serviceByRoute[route]} />
     );
   else if (route === "about") page = <AboutPage locale={locale} />;
-  else if (route === "contact") page = <ContactPage locale={locale} />;
+  else if (route === "contact")
+    page = <ContactPage locale={locale} initialService={initialService} />;
   else
     page = (
       <LegalPage
