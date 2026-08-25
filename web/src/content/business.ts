@@ -12,13 +12,7 @@ export const businessFacts = Object.freeze({
   services: {
     housekeeping: {
       audiences: ["homes", "small offices"],
-      types: [
-        "standard",
-        "deep",
-        "recurring",
-        "move-in/move-out",
-        "one-time",
-      ],
+      types: ["standard", "deep", "recurring", "move-in/move-out", "one-time"],
       excluded: ["hazardous work", "biohazard work"],
     },
     decoration: {

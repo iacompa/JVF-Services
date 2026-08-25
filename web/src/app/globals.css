@@ -1013,14 +1013,47 @@ h3,
   font-weight: 620;
   line-height: 1;
 }
+.legal-status {
+  display: inline-block;
+  margin: 0 0 1.25rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #9a6a17;
+  background: #fff8df;
+  color: #634100;
+  font-size: 0.78rem;
+  font-weight: 820;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.legal-introduction {
+  margin-top: 2rem;
+  color: var(--muted-graphite);
+  font-size: 1.2rem;
+  line-height: 1.75;
+}
 .legal-copy h2 {
   margin-top: 3rem;
   color: var(--evergreen-900);
   font-size: 1.7rem;
   font-weight: 650;
 }
+.legal-copy section {
+  padding-top: 0.25rem;
+  border-top: 1px solid var(--sage-300);
+}
+.legal-copy section p {
+  color: var(--muted-graphite);
+  line-height: 1.75;
+}
 .legal-date {
   color: var(--muted-graphite);
+}
+.legal-resource {
+  margin-top: 3rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--forest-600);
+  background: var(--sage-100);
+  font-weight: 750;
 }
 
 @media (max-width: 900px) {

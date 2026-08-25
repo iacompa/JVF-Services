@@ -10,23 +10,29 @@ export function LegalPage({
   route: Extract<RouteKey, "terms" | "privacy" | "accessibility">;
 }) {
   const content = getContent(locale);
-  const title =
-    route === "terms"
-      ? content.legal.termsTitle
-      : route === "privacy"
-        ? content.legal.privacyTitle
-        : content.legal.accessibilityTitle;
+  const page = content.legal[route];
   return (
     <section className="page-section legal-page">
       <div className="site-container legal-copy">
-        <h1>{title}</h1>
+        <p className="legal-status">{page.status}</p>
+        <h1>{page.title}</h1>
         <p className="legal-date">{content.legal.lastUpdated}</p>
-        <h2>{locale === "en" ? "Review version" : "Versión para revisión"}</h2>
-        <p>
-          {locale === "en"
-            ? "This page is part of the local website review and will contain the full launch-ready policy before publication."
-            : "Esta página forma parte de la revisión local y contendrá la política completa antes de la publicación."}
-        </p>
+        <p className="legal-introduction">{page.introduction}</p>
+        {page.sections.map((section) => (
+          <section key={section.title}>
+            <h2>{section.title}</h2>
+            {section.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </section>
+        ))}
+        {route === "terms" ? (
+          <p className="legal-resource">
+            <a href="https://www.ohiosos.gov/notary/become-a-notary-in-ohio/resources-and-frequently-asked-questions">
+              {content.legal.officialNotaryResource}
+            </a>
+          </p>
+        ) : null}
       </div>
     </section>
   );

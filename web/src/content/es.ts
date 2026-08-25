@@ -99,8 +99,7 @@ export const es = {
       scheduleBody:
         "Indique qué habitaciones necesitan atención, qué le gustaría cambiar y cuándo prefiere hacerlo. No se pide presupuesto en la solicitud inicial.",
       price: "Cotización personalizada después de una consulta",
-      note:
-        "Este es un servicio de decoración y estilo, no un servicio profesional de diseño interior con licencia.",
+      note: "Este es un servicio de decoración y estilo, no un servicio profesional de diseño interior con licencia.",
       cta: "Solicitar apoyo de decoración",
     },
     notary: {
@@ -141,14 +140,14 @@ export const es = {
       scheduleBody:
         "La interpretación por teléfono y medios virtuales está disponible las 24 horas. La interpretación en persona está disponible de 8:00 a. m. a 6:00 p. m., hora del Este. Después de las 6:00 p. m., las solicitudes deben ser por teléfono o reunión virtual.",
       price: "El precio se confirma después de revisar la solicitud",
-      note:
-        "Si la línea está ocupada o no recibe respuesta, envíe un mensaje al (716) 748-9117 o solicite una devolución de llamada urgente.",
+      note: "Si la línea está ocupada o no recibe respuesta, envíe un mensaje al (716) 748-9117 o solicite una devolución de llamada urgente.",
       cta: "Solicitar intérprete",
     },
   },
   about: {
     eyebrow: "Acerca de JVF Services",
-    title: "Un negocio de servicios basado en atención, claridad y cumplimiento.",
+    title:
+      "Un negocio de servicios basado en atención, claridad y cumplimiento.",
     intro:
       "JVF Services apoya a hogares, oficinas pequeñas y clientes de Ohio que necesitan servicios atentos para el hogar o apoyo profesional bilingüe.",
     missionTitle: "Ayuda práctica con un trato más personal",
@@ -169,7 +168,8 @@ export const es = {
         body: "Este sitio solo solicita detalles prácticos que no sean confidenciales.",
       },
     ],
-    placeholderTitle: "La historia y el retrato de la propietaria se añadirán antes del lanzamiento",
+    placeholderTitle:
+      "La historia y el retrato de la propietaria se añadirán antes del lanzamiento",
     placeholderBody:
       "Esta versión de revisión no publica el nombre, el retrato, las credenciales ni la historia personal de la propietaria hasta que se verifiquen.",
   },
@@ -186,9 +186,141 @@ export const es = {
       "No envíe documentos, números de identificación, expedientes médicos ni detalles legales confidenciales.",
   },
   legal: {
-    termsTitle: "Términos y condiciones",
-    privacyTitle: "Aviso de privacidad",
-    accessibilityTitle: "Declaración de accesibilidad",
     lastUpdated: "Última actualización: 25 de agosto de 2026",
+    officialNotaryResource: "Información oficial sobre notarías de Ohio",
+    terms: {
+      title: "Términos y condiciones",
+      status: "Borrador para revisión — aún no publicado",
+      introduction:
+        "Estos términos conceptuales explican cómo funcionarán el sitio web y el proceso de solicitud de JVF Services. Requieren revisión legal antes de publicar el sitio.",
+      sections: [
+        {
+          title: "Propósito del sitio web",
+          paragraphs: [
+            "Este sitio ofrece información general sobre JVF Services y permite solicitar una cotización. El contenido es informativo y no constituye una oferta vinculante, asesoramiento profesional ni garantía de disponibilidad.",
+          ],
+        },
+        {
+          title: "Cotizaciones y confirmación del servicio",
+          paragraphs: [
+            "Enviar una solicitud no crea una cita ni un contrato de servicio. JVF Services debe confirmar directamente el alcance, precio, posibles tarifas de viaje, horario, lugar y disponibilidad antes de comenzar el trabajo.",
+            "Una cotización personalizada puede cambiar si cambia el alcance o la información. El cliente debe proporcionar datos exactos y no confidenciales para evaluar la solicitud.",
+          ],
+        },
+        {
+          title: "Servicios para el hogar",
+          paragraphs: [
+            "La limpieza se ofrece para hogares y oficinas pequeñas y no incluye trabajos peligrosos ni de riesgo biológico. La decoración incluye estilo de habitaciones, selección, distribución y montaje de decoraciones; no es un servicio autorizado de diseño de interiores, ingeniería, construcción ni arquitectura.",
+          ],
+        },
+        {
+          title: "Servicio de notaría",
+          paragraphs: [
+            "El servicio de notaría se ofrece con cita y solo en persona. El firmante debe comparecer con identificación aceptable y estar dispuesto y capacitado para firmar. JVF Services no ofrece notarización remota en línea, asesoramiento legal ni selección de documentos.",
+            "La tarifa indicada es de $5 por acto notarial en persona. Cualquier tarifa razonable de viaje móvil se cotizará y acordará antes del acto. La notarización puede rechazarse si no se cumplen los requisitos legales o de identificación.",
+          ],
+        },
+        {
+          title: "Servicio de interpretación",
+          paragraphs: [
+            "La interpretación español–inglés es un servicio profesional de comunicación y no se presenta como interpretación certificada ni jurada. El horario presencial es de 8:00 a. m. a 6:00 p. m., hora del Este. La interpretación por teléfono, Zoom u otra modalidad virtual puede solicitarse 24/7, incluso después de las 6:00 p. m.",
+            "La interpretación no constituye asesoramiento legal, médico ni financiero. En una emergencia, comuníquese con el servicio de emergencia correspondiente en lugar de depender de este sitio.",
+          ],
+        },
+        {
+          title: "Pagos y cancelaciones",
+          paragraphs: [
+            "Este sitio no acepta pagos, no crea cuentas de cliente ni completa reservas. El método de pago, las condiciones de cancelación y cualquier tarifa de viaje se confirmarán directamente antes del servicio.",
+          ],
+        },
+        {
+          title: "Leyes de Ohio y revisión",
+          paragraphs: [
+            "Estos términos preliminares se regirán por las leyes aplicables de Ohio. No son asesoramiento legal y deben revisarse según la entidad final del negocio, ubicación, seguro y prácticas de servicio antes de su publicación.",
+          ],
+        },
+      ],
+    },
+    privacy: {
+      title: "Aviso de privacidad",
+      status: "Borrador para revisión — aún no publicado",
+      introduction:
+        "Este aviso conceptual describe la información que maneja la versión local de revisión del sitio de JVF Services. Debe actualizarse y revisarse legalmente antes del lanzamiento público.",
+      sections: [
+        {
+          title: "Información que proporciona el visitante",
+          paragraphs: [
+            "El formulario solicita nombre, número de teléfono, correo electrónico, ciudad, código postal, servicio elegido, preferencias de horario y una nota breve no confidencial. Las preguntas específicas pueden tratar sobre un hogar u oficina pequeña, objetivos de decoración, una cita notarial o el formato y duración de una interpretación.",
+            "No envíe documentos, números de identificación, expedientes médicos, datos de cuentas financieras ni información legal confidencial. El sitio conceptual no permite subir archivos.",
+          ],
+        },
+        {
+          title: "Modo de demostración actual",
+          paragraphs: [
+            "En modo de demostración, el servidor valida la solicitud y devuelve un resultado realista. Solo registra metadatos anónimos: identificador de envío, idioma de la página, servicio elegido y fecha y hora. No registra el nombre, teléfono, correo, ciudad, código postal ni mensaje del visitante.",
+            "El concepto no tiene base de datos de clientes, cuentas, respuesta automática por correo o texto ni entrega de correo de producción. El contenido del formulario no se conserva intencionalmente después de completar la respuesta.",
+          ],
+        },
+        {
+          title: "Futuro proveedor de entrega por correo",
+          paragraphs: [
+            "Antes del lanzamiento, JVF Services podrá configurar un proveedor de correo para enviar solicitudes validadas al negocio. Este aviso deberá identificar al proveedor, la información enviada, reglas de retención, controles de acceso y un contacto de privacidad activo antes de recopilar datos.",
+          ],
+        },
+        {
+          title: "Alojamiento y Web Analytics de Vercel",
+          paragraphs: [
+            "Está previsto alojar el sitio en Vercel. Su infraestructura puede procesar información técnica necesaria para servir y proteger el sitio. Vercel Web Analytics se incluye para medición agregada enfocada en la privacidad; los valores y el contenido del formulario no se envían como eventos analíticos.",
+          ],
+        },
+        {
+          title: "Uso e intercambio",
+          paragraphs: [
+            "JVF Services usaría la información solo para comprender, responder, proteger y mejorar las solicitudes. No vendemos los datos del formulario. Solo se compartirían con proveedores necesarios para operar el sitio o cuando la ley lo exija, sujeto a la política final.",
+          ],
+        },
+        {
+          title: "Sus opciones y contacto",
+          paragraphs: [
+            "Puede llamar al (716) 748-9117 en vez de usar el formulario. Antes del lanzamiento se añadirán un correo de privacidad, período de retención, proceso de eliminación y dirección comercial verificada.",
+          ],
+        },
+      ],
+    },
+    accessibility: {
+      title: "Declaración de accesibilidad",
+      status: "Borrador para revisión — aún no publicado",
+      introduction:
+        "JVF Services desea que las personas con discapacidades puedan conocer los servicios, navegar el sitio y pedir ayuda con dignidad e independencia.",
+      sections: [
+        {
+          title: "Nuestro objetivo de accesibilidad",
+          paragraphs: [
+            "El objetivo técnico es cumplir las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2 Nivel AA. Esta declaración describe un esfuerzo continuo de buena fe y no garantiza el cumplimiento legal bajo todas las leyes o circunstancias.",
+          ],
+        },
+        {
+          title: "Cómo está diseñado el sitio",
+          paragraphs: [
+            "El sitio usa encabezados y regiones semánticas, enlace para saltar al contenido, navegación y formularios operables con teclado, foco visible, enlaces descriptivos, campos etiquetados, resumen de errores enlazado, avisos de estado, contraste fuerte, ampliación y reajuste del texto y preferencias de movimiento reducido.",
+            "Las páginas están pensadas para lectores de pantalla actuales, zoom del navegador, control por voz, dispositivos de conmutación y uso exclusivo del teclado. El sitio no depende solo del color y no usa una capa ni widget de accesibilidad.",
+          ],
+        },
+        {
+          title: "Limitaciones conocidas de esta revisión",
+          paragraphs: [
+            "El concepto usa espacios visuales claramente identificados mientras se preparan fotografías, logotipo y materiales de la propietaria. Los recursos finales necesitarán texto alternativo apropiado y otra revisión de accesibilidad.",
+            "Las pruebas automáticas ayudan a encontrar barreras, pero no sustituyen las pruebas manuales con teclado, lector de pantalla, zoom y usuarios. El sitio se volverá a revisar cuando cambien contenidos, integraciones o recursos visuales.",
+          ],
+        },
+        {
+          title: "Comentarios y asistencia de accesibilidad",
+          paragraphs: [
+            "Si una página o formulario es difícil de usar, llame o envíe un mensaje al (716) 748-9117 y describa la página, la tarea y, si se siente cómodo, la tecnología de asistencia o navegador. JVF Services puede ofrecer información y tomar una solicitud por teléfono.",
+            "Antes del lanzamiento se añadirá un correo de accesibilidad. Se revisarán los comentarios y se harán esfuerzos razonables para ofrecer una alternativa accesible mientras se corrige una barrera.",
+          ],
+        },
+      ],
+    },
   },
 } satisfies SiteContent;

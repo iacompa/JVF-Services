@@ -1,10 +1,7 @@
 export type Locale = "en" | "es";
 
 export type ServiceKey =
-  | "housekeeping"
-  | "decoration"
-  | "notary"
-  | "interpreting";
+  "housekeeping" | "decoration" | "notary" | "interpreting";
 
 export type ReviewStatus = "approved" | "owner-review-required";
 
@@ -19,6 +16,16 @@ export interface ServiceCopy {
   price: string;
   note: string;
   cta: string;
+}
+
+export interface LegalPageCopy {
+  title: string;
+  status: string;
+  introduction: string;
+  sections: Array<{
+    title: string;
+    paragraphs: string[];
+  }>;
 }
 
 export interface SiteContent {
@@ -93,9 +100,10 @@ export interface SiteContent {
     privacyNote: string;
   };
   legal: {
-    termsTitle: string;
-    privacyTitle: string;
-    accessibilityTitle: string;
     lastUpdated: string;
+    terms: LegalPageCopy;
+    privacy: LegalPageCopy;
+    accessibility: LegalPageCopy;
+    officialNotaryResource: string;
   };
 }

@@ -140,8 +140,7 @@ export const en = {
       scheduleBody:
         "Phone and virtual interpreting is available 24/7. In-person interpreting is available from 8:00 a.m. to 6:00 p.m. Eastern Time. After 6:00 p.m., requests must be by phone or virtual meeting.",
       price: "Pricing confirmed after request review",
-      note:
-        "If the line is busy or unanswered, text (716) 748-9117 or submit an urgent callback request.",
+      note: "If the line is busy or unanswered, text (716) 748-9117 or submit an urgent callback request.",
       cta: "Request an interpreter",
     },
   },
@@ -185,9 +184,141 @@ export const en = {
       "Do not submit documents, identification numbers, medical records, or confidential legal details.",
   },
   legal: {
-    termsTitle: "Terms and conditions",
-    privacyTitle: "Privacy notice",
-    accessibilityTitle: "Accessibility statement",
     lastUpdated: "Last updated August 25, 2026",
+    officialNotaryResource: "Official Ohio notary information",
+    terms: {
+      title: "Terms and conditions",
+      status: "Draft for review — not yet published",
+      introduction:
+        "These concept terms explain how the JVF Services website and request process are intended to work. They require legal review before this website is published.",
+      sections: [
+        {
+          title: "Website purpose",
+          paragraphs: [
+            "This website provides general information about JVF Services and lets a visitor request a quote. Website content is informational and is not a binding offer, professional advice, or a guarantee that a service is available.",
+          ],
+        },
+        {
+          title: "Quotes and service confirmation",
+          paragraphs: [
+            "Submitting a request does not create an appointment or service agreement. Scope, price, travel fees, timing, location, and availability must be confirmed directly by JVF Services before work begins.",
+            "A personalized quote may change if the requested scope or information changes. Customers are responsible for providing accurate, non-sensitive details needed to evaluate the request.",
+          ],
+        },
+        {
+          title: "Home services",
+          paragraphs: [
+            "Housekeeping is intended for homes and small offices and does not include hazardous or biohazard work. Home decoration covers room styling, decor selection, arrangement, and setup; it is not licensed interior-design, engineering, construction, or architectural service.",
+          ],
+        },
+        {
+          title: "Notary service",
+          paragraphs: [
+            "Notary service is offered by appointment and in person only. The signer must personally appear with acceptable identification and must be willing and able to sign. JVF Services does not offer remote online notarization and does not provide legal advice or choose documents for a customer.",
+            "The stated fee is $5 per in-person notarial act. Any reasonable mobile travel fee will be quoted and agreed before the notarial act. A notarization may be declined when legal or identification requirements are not met.",
+          ],
+        },
+        {
+          title: "Interpreting service",
+          paragraphs: [
+            "Spanish–English interpreting is a professional communication service and is not represented as certified or sworn interpreting. In-person availability is 8:00 a.m.–6:00 p.m. Eastern Time. Phone, Zoom, and other virtual interpreting may be requested 24/7, including after 6:00 p.m.",
+            "An interpreting request is not legal, medical, or financial advice. For an emergency, contact the appropriate emergency service rather than relying on this website.",
+          ],
+        },
+        {
+          title: "Payments and cancellations",
+          paragraphs: [
+            "This website does not accept payments, create customer accounts, or complete bookings. Payment method, cancellation expectations, and any travel charge will be confirmed directly before service.",
+          ],
+        },
+        {
+          title: "Ohio law and review",
+          paragraphs: [
+            "These draft terms are intended to be governed by the applicable laws of Ohio. They are not legal advice and must be reviewed for the business’s final entity, operating location, insurance, and service practices before publication.",
+          ],
+        },
+      ],
+    },
+    privacy: {
+      title: "Privacy notice",
+      status: "Draft for review — not yet published",
+      introduction:
+        "This concept notice describes the information handled by the local review version of the JVF Services website. It must be updated and legally reviewed before public launch.",
+      sections: [
+        {
+          title: "Information a visitor provides",
+          paragraphs: [
+            "The request form asks for name, phone number, email address, city, ZIP code, selected service, scheduling preferences, and a short non-sensitive note. Service-specific questions may ask about a home or small office, decorating goals, a notary appointment, or interpreting format and duration.",
+            "Do not submit documents, identification numbers, medical records, financial account details, or confidential legal information. The concept site has no file uploads.",
+          ],
+        },
+        {
+          title: "Current demo mode",
+          paragraphs: [
+            "In demo mode, the server validates a request and returns a realistic success or error state. It records only redacted event metadata: a submission identifier, page language, selected service, and timestamp. It does not log the visitor’s name, phone, email, city, ZIP code, or message.",
+            "The concept has no customer database, no customer accounts, no automated customer email or text reply, and no production email delivery. Form contents are not intentionally retained after the request response completes.",
+          ],
+        },
+        {
+          title: "Future email delivery provider",
+          paragraphs: [
+            "Before launch, JVF Services may configure a future email delivery provider to send validated requests to the business. This notice must then identify that provider, the information sent, retention rules, access controls, and a working privacy contact before collection begins.",
+          ],
+        },
+        {
+          title: "Vercel hosting and Web Analytics",
+          paragraphs: [
+            "The planned website host is Vercel. Vercel infrastructure may process technical request information needed to serve and protect the site. Vercel Web Analytics is included for privacy-focused aggregate usage measurement; form values and submission contents are not sent as analytics events.",
+          ],
+        },
+        {
+          title: "Use and sharing",
+          paragraphs: [
+            "JVF Services would use request information only to understand, respond to, secure, and improve service inquiries. We do not sell form data. Information may be shared only with service providers needed to operate the website or when required by law, subject to the final launch policy.",
+          ],
+        },
+        {
+          title: "Your choices and contact",
+          paragraphs: [
+            "Visitors may call (716) 748-9117 instead of using the form. A privacy email contact, retention period, deletion process, and verified business mailing address must be added before public launch.",
+          ],
+        },
+      ],
+    },
+    accessibility: {
+      title: "Accessibility statement",
+      status: "Draft for review — not yet published",
+      introduction:
+        "JVF Services wants people with disabilities to be able to learn about services, navigate the website, and request help with dignity and independence.",
+      sections: [
+        {
+          title: "Our accessibility target",
+          paragraphs: [
+            "The engineering target for this website is WCAG 2.2 Level AA, the Web Content Accessibility Guidelines. This statement describes an ongoing good-faith effort and is not a guarantee of legal compliance under every law or in every circumstance.",
+          ],
+        },
+        {
+          title: "How the site is designed",
+          paragraphs: [
+            "The site uses semantic headings and landmarks, a skip link, keyboard-operable navigation and forms, visible focus indicators, descriptive links, labeled fields, linked error summaries, live status announcements, strong color contrast, text resizing and reflow support, and reduced-motion preferences.",
+            "Pages are intended to work with current screen reader, browser zoom, voice-control, switch-control, and keyboard-only workflows. The site does not depend on color alone and does not use an accessibility overlay or accessibility widget.",
+          ],
+        },
+        {
+          title: "Known review-stage limitations",
+          paragraphs: [
+            "The concept currently uses clearly labeled visual asset slots while original photographs, a logo, and owner materials are being prepared. Those final assets will require appropriate alternative text and another accessibility review before launch.",
+            "Automated tests help identify barriers but cannot replace manual keyboard, screen reader, zoom, and user testing. The site will be rechecked when content, integrations, or visual assets change.",
+          ],
+        },
+        {
+          title: "Accessibility feedback and assistance",
+          paragraphs: [
+            "If a page or form is difficult to use, call or text (716) 748-9117 and describe the page, the task you were trying to complete, and the assistive technology or browser involved if you are comfortable sharing it. JVF Services can provide service information and take a request by phone.",
+            "An accessibility email contact will be added before public launch. Feedback will be reviewed and reasonable efforts will be made to provide an accessible alternative while a barrier is addressed.",
+          ],
+        },
+      ],
+    },
   },
 } satisfies SiteContent;
