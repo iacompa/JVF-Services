@@ -10,7 +10,9 @@ export function SiteFooter({ locale }: { locale: Locale }) {
     <footer className="site-footer">
       <div className="site-container footer-grid">
         <div className="footer-brand">
-          <p className="footer-wordmark">{businessFacts.publicName}</p>
+          <p className="footer-wordmark" translate="no">
+            {businessFacts.publicName}
+          </p>
           <p>{content.common.footerSummary}</p>
         </div>
         <nav aria-label={locale === "en" ? "Services" : "Servicios"}>

@@ -29,6 +29,7 @@ export function SiteHeader({
           className="wordmark"
           href={localizedHref("home", locale)}
           aria-label={`${businessFacts.publicName} — ${content.nav.home}`}
+          translate="no"
         >
           <span>JVF</span>
           <span>Services</span>

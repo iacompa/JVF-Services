@@ -46,6 +46,7 @@ textarea {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 a {
   color: inherit;
@@ -71,6 +72,15 @@ h3,
 .footer-wordmark {
   font-family: var(--font-display), Georgia, serif;
   text-wrap: balance;
+}
+h1,
+h2,
+h3 {
+  scroll-margin-top: 8rem;
+}
+p,
+li {
+  text-wrap: pretty;
 }
 
 .site-shell {
@@ -391,20 +401,21 @@ h3,
   position: relative;
   isolation: isolate;
   display: flex;
-  min-height: 28rem;
+  min-height: 0;
   align-items: flex-end;
   overflow: hidden;
   border: 1px solid var(--sage-300);
   background: var(--sage-100);
   color: var(--evergreen-900);
 }
+.asset-slot-logo {
+  aspect-ratio: 10 / 3;
+}
 .asset-slot-hero {
-  aspect-ratio: 4 / 5;
-  min-height: 34rem;
+  aspect-ratio: 4 / 3;
 }
 .asset-slot-landscape {
   aspect-ratio: 4 / 3;
-  min-height: 25rem;
 }
 .asset-slot-portrait {
   width: min(100%, 29rem);
@@ -490,7 +501,7 @@ h3,
 }
 .availability-index {
   margin: 0;
-  color: var(--sage-300);
+  color: var(--forest-600);
   font-family: var(--font-display), Georgia, serif;
   font-size: clamp(3rem, 6vw, 5.5rem);
   font-weight: 650;
@@ -1069,8 +1080,7 @@ h3,
   }
   .asset-slot-hero {
     width: min(100%, 38rem);
-    aspect-ratio: 5 / 4;
-    min-height: 26rem;
+    aspect-ratio: 4 / 3;
   }
   .asset-slot-portrait {
     justify-self: start;
@@ -1113,7 +1123,7 @@ h3,
   .asset-slot,
   .asset-slot-hero,
   .asset-slot-landscape {
-    min-height: 22rem;
+    min-height: 0;
   }
   .availability-grid {
     grid-template-columns: 1fr;

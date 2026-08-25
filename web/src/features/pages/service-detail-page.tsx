@@ -31,6 +31,12 @@ export function ServiceDetailPage({
           </div>
           <AssetSlot
             variant="landscape"
+            placeholderText={locale === "en" ? "Placeholder" : "Marcador visual"}
+            notRealWorkText={
+              locale === "en"
+                ? "This is not a photograph of completed JVF work."
+                : "Esta no es una fotografía de un trabajo terminado de JVF."
+            }
             label={
               locale === "en"
                 ? "Future service image"
