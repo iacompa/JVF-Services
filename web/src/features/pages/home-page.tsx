@@ -3,9 +3,9 @@ import { businessFacts } from "@/content/business";
 import { getContent } from "@/content/content";
 import type { Locale, ServiceKey } from "@/content/types";
 import { localizedHref } from "@/lib/i18n";
-import { AssetSlot } from "@/components/ui/asset-slot";
 import { CallToAction } from "@/components/ui/call-to-action";
 import { ServiceCard } from "@/components/ui/service-card";
+import { ServiceLedger } from "@/components/ui/service-ledger";
 
 const serviceRoutes: Record<
   ServiceKey,
@@ -28,6 +28,7 @@ export function HomePage({ locale }: { locale: Locale }) {
       <section className="home-hero page-section">
         <div className="site-container hero-grid">
           <div className="hero-copy">
+            <p className="page-kicker">{content.home.eyebrow}</p>
             <h1>{content.home.title}</h1>
             <p className="hero-summary">{content.home.summary}</p>
             <div className="hero-actions">
@@ -53,25 +54,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               <a href={businessFacts.phoneHref}>{content.common.call}</a>
             </div>
           </div>
-          <AssetSlot
-            variant="hero"
-            placeholderText={locale === "en" ? "Placeholder" : "Marcador visual"}
-            notRealWorkText={
-              locale === "en"
-                ? "This is not a photograph of completed JVF work."
-                : "Esta no es una fotografía de un trabajo terminado de JVF."
-            }
-            label={
-              locale === "en"
-                ? "Future JVF service photograph"
-                : "Próxima fotografía de un servicio JVF"
-            }
-            description={
-              locale === "en"
-                ? "A bright, real home-care image will be added before launch."
-                : "Se añadirá una imagen real y luminosa del servicio antes del lanzamiento."
-            }
-          />
+          <ServiceLedger locale={locale} />
         </div>
       </section>
 

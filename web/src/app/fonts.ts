@@ -1,10 +1,4 @@
-import { Inter, Newsreader } from "next/font/google";
-
-export const bodyFont = Inter({
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-});
+import { Newsreader } from "next/font/google";
 
 export const displayFont = Newsreader({
   subsets: ["latin"],

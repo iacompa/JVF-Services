@@ -17,14 +17,22 @@ export function AboutPage({ locale }: { locale: Locale }) {
           </div>
           <AssetSlot
             variant="portrait"
-            placeholderText={locale === "en" ? "Placeholder" : "Marcador visual"}
+            placeholderText={
+              locale === "en"
+                ? "JVF profile direction"
+                : "Dirección del perfil JVF"
+            }
             notRealWorkText={
               locale === "en"
-                ? "This is not a photograph of completed JVF work."
-                : "Esta no es una fotografía de un trabajo terminado de JVF."
+                ? "This is original abstract artwork, not a portrait or photograph of completed JVF work."
+                : "Esta es una ilustración abstracta original, no un retrato ni una fotografía de un trabajo terminado de JVF."
             }
-            label={content.about.placeholderTitle}
-            description={content.about.placeholderBody}
+            label={
+              locale === "en"
+                ? "An owner-led service approach"
+                : "Un servicio dirigido personalmente"
+            }
+            description={content.about.missionTitle}
           />
         </div>
       </section>

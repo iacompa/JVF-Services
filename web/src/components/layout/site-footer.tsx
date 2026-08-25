@@ -3,6 +3,7 @@ import { businessFacts } from "@/content/business";
 import { getContent } from "@/content/content";
 import type { Locale } from "@/content/types";
 import { localizedHref } from "@/lib/i18n";
+import { BrandLockup } from "@/components/ui/brand-lockup";
 
 export function SiteFooter({ locale }: { locale: Locale }) {
   const content = getContent(locale);
@@ -10,9 +11,11 @@ export function SiteFooter({ locale }: { locale: Locale }) {
     <footer className="site-footer">
       <div className="site-container footer-grid">
         <div className="footer-brand">
-          <p className="footer-wordmark" translate="no">
-            {businessFacts.publicName}
-          </p>
+          <BrandLockup
+            href={localizedHref("home", locale)}
+            homeLabel={content.nav.home}
+            inverse
+          />
           <p>{content.common.footerSummary}</p>
         </div>
         <nav aria-label={locale === "en" ? "Services" : "Servicios"}>

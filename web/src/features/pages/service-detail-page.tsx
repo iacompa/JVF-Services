@@ -31,22 +31,18 @@ export function ServiceDetailPage({
           </div>
           <AssetSlot
             variant="landscape"
-            placeholderText={locale === "en" ? "Placeholder" : "Marcador visual"}
+            placeholderText={
+              locale === "en"
+                ? "JVF service direction"
+                : "Dirección de servicio JVF"
+            }
             notRealWorkText={
               locale === "en"
-                ? "This is not a photograph of completed JVF work."
-                : "Esta no es una fotografía de un trabajo terminado de JVF."
+                ? "This is original abstract artwork, not a photograph of completed JVF work."
+                : "Esta es una ilustración abstracta original, no una fotografía de un trabajo terminado de JVF."
             }
-            label={
-              locale === "en"
-                ? "Future service image"
-                : "Próxima imagen del servicio"
-            }
-            description={
-              locale === "en"
-                ? "A verified JVF service photograph will replace this art-directed placeholder."
-                : "Una fotografía verificada de JVF reemplazará este espacio visual."
-            }
+            label={copy.eyebrow}
+            description={copy.summary}
           />
         </div>
       </section>

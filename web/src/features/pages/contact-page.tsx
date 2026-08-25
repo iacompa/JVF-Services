@@ -12,18 +12,49 @@ export function ContactPage({
   initialService?: ServiceId;
 }) {
   const content = getContent(locale);
+  const process =
+    locale === "en"
+      ? [
+          ["01", "Choose the service"],
+          ["02", "Share practical details"],
+          ["03", "Receive a personal response"],
+        ]
+      : [
+          ["01", "Elija el servicio"],
+          ["02", "Comparta detalles prácticos"],
+          ["03", "Reciba una respuesta personal"],
+        ];
+
   return (
     <>
       <section className="page-hero contact-hero">
-        <div className="site-container narrow-heading">
-          <p className="page-kicker">{content.contact.eyebrow}</p>
-          <h1>{content.contact.title}</h1>
-          <p>{content.contact.intro}</p>
+        <div className="site-container contact-hero-grid">
+          <div className="narrow-heading">
+            <p className="page-kicker">{content.contact.eyebrow}</p>
+            <h1>{content.contact.title}</h1>
+            <p>{content.contact.intro}</p>
+          </div>
+          <ol
+            className="contact-process"
+            aria-label={
+              locale === "en" ? "What happens next" : "Qué sucede después"
+            }
+          >
+            {process.map(([number, label]) => (
+              <li key={number}>
+                <span>{number}</span>
+                {label}
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
-      <section className="page-section">
+      <section className="page-section contact-section">
         <div className="site-container contact-layout">
           <aside className="contact-direct">
+            <p className="contact-direct-label">
+              {locale === "en" ? "Direct contact" : "Contacto directo"}
+            </p>
             <h2>{content.contact.directTitle}</h2>
             <p>{content.contact.directBody}</p>
             <a className="button button-primary" href={businessFacts.phoneHref}>

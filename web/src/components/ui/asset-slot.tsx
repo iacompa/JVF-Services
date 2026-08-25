@@ -27,6 +27,10 @@ export function AssetSlot({
       aria-label={`${placeholderText}: ${label}. ${description} ${notRealWorkText}`}
       data-aspect-ratio={aspectRatio[variant]}
     >
+      <div className="asset-edition" aria-hidden="true">
+        <span>JVF / VISUAL DIRECTION</span>
+        <span>01</span>
+      </div>
       <div className="asset-architecture" aria-hidden="true">
         <span />
         <span />

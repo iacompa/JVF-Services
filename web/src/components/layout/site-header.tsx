@@ -4,6 +4,7 @@ import { getContent } from "@/content/content";
 import type { Locale } from "@/content/types";
 import { localizedHref } from "@/lib/i18n";
 import type { RouteKey } from "@/lib/routes";
+import { BrandLockup } from "@/components/ui/brand-lockup";
 import { LanguageSwitcher } from "./language-switcher";
 import { MobileNav } from "./mobile-nav";
 import { ServicesMenu } from "./services-menu";
@@ -25,15 +26,10 @@ export function SiteHeader({
         </div>
       </div>
       <div className="site-container header-inner">
-        <Link
-          className="wordmark"
+        <BrandLockup
           href={localizedHref("home", locale)}
-          aria-label={`${businessFacts.publicName} — ${content.nav.home}`}
-          translate="no"
-        >
-          <span>JVF</span>
-          <span>Services</span>
-        </Link>
+          homeLabel={content.nav.home}
+        />
         <nav
           className="desktop-navigation"
           aria-label={

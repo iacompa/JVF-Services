@@ -3,7 +3,7 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { StructuredData } from "@/components/seo/structured-data";
 import { HydrationMarker } from "@/components/layout/hydration-marker";
-import { bodyFont, displayFont } from "./fonts";
+import { displayFont } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,11 +17,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${bodyFont.variable} ${displayFont.variable}`}
-    >
+    <html lang="en" suppressHydrationWarning className={displayFont.variable}>
       <body>
         <Script id="document-language" strategy="beforeInteractive">
           {
