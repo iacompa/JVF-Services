@@ -1,5 +1,5 @@
 import { PublicPage } from "@/features/pages/public-page";
-import { getRequestedService } from "@/features/contact/contact-form";
+import { getRequestedService } from "@/features/contact/service-param";
 import { buildPageMetadata } from "@/lib/metadata";
 export const metadata = buildPageMetadata("en", "contact");
 export default async function Page({

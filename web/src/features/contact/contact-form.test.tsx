@@ -7,8 +7,9 @@ import {
 } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, test, vi } from "vitest";
-import { ContactForm, getRequestedService } from "./contact-form";
+import { ContactForm } from "./contact-form";
 import { DemoQuoteDelivery } from "./demo-delivery";
+import { getRequestedService } from "./service-param";
 import type { QuoteRequest } from "./types";
 
 const failureAction = vi.fn(async (_previous: unknown, formData: FormData) => ({
@@ -96,6 +97,10 @@ describe("accessible contact form", () => {
       screen.getByRole("link", { name: /email address/i }),
     ).toHaveAttribute("href", "#email");
     expect(screen.getByLabelText(/full name/i)).toHaveValue("Marta Rivera");
+    expect(screen.getByLabelText(/phone number/i)).toHaveValue("7165550199");
+    expect(screen.getByLabelText(/email address/i)).toHaveValue("bad-email");
+    expect(screen.getByLabelText(/^city/i)).toHaveValue("Buffalo");
+    expect(screen.getByLabelText(/zip code/i)).toHaveValue("14201");
     expect(screen.getByRole("link", { name: /^call/i })).toHaveAttribute(
       "href",
       "tel:+17167489117",
@@ -121,6 +126,28 @@ describe("accessible contact form", () => {
       ),
     );
     expect(screen.getByLabelText(/full name/i)).toHaveValue("");
+  });
+
+  test("restores dynamic select values after an action failure", async () => {
+    const user = userEvent.setup();
+    render(
+      <ContactForm
+        locale="en"
+        initialService="interpreting"
+        action={failureAction}
+      />,
+    );
+
+    await user.selectOptions(
+      screen.getByLabelText(/service format/i),
+      "in-person",
+    );
+    await act(async () => {
+      fireEvent.submit(screen.getByRole("form", { name: /request service/i }));
+    });
+
+    await screen.findByRole("alert");
+    expect(screen.getByLabelText(/service format/i)).toHaveValue("in-person");
   });
 });
 

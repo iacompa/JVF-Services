@@ -44,17 +44,6 @@ const services: Array<{
   },
 ];
 
-const serviceIds = new Set<ServiceId>(services.map(({ value }) => value));
-
-export function getRequestedService(
-  value: string | string[] | undefined,
-): ServiceId {
-  const candidate = Array.isArray(value) ? value[0] : value;
-  return candidate && serviceIds.has(candidate as ServiceId)
-    ? (candidate as ServiceId)
-    : "general";
-}
-
 function startingValues(
   locale: Locale,
   service: ServiceId,
@@ -145,37 +134,50 @@ export function ContactForm({
   action?: FormAction;
 }) {
   const copy = commonLabels[locale];
-  const [state, formAction, pending] = useActionState(action, initialState);
   const [values, setValues] = useState(() =>
     startingValues(locale, initialService),
   );
-  const [editedAfterSuccess, setEditedAfterSuccess] = useState(false);
+  const [dirty, setDirty] = useState(false);
+  const [state, formAction, pending] = useActionState(action, initialState);
   const errorSummaryRef = useRef<HTMLDivElement>(null);
-  const showingSuccess = state.status === "success" && !editedAfterSuccess;
 
   useEffect(() => {
-    if (state.status === "error") errorSummaryRef.current?.focus();
-  }, [state]);
+    if (state.status === "error") {
+      if (state.values) {
+        // React resets native form controls after an action; restore the validated response values afterward.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setValues((current) => ({ ...current, ...state.values }));
+      }
+      errorSummaryRef.current?.focus();
+    }
+    if (state.status === "success") {
+      setDirty(false);
+      setValues((current) =>
+        startingValues(locale, current.service as ServiceId),
+      );
+    }
+  }, [locale, state]);
+
+  useEffect(() => {
+    if (!dirty) return;
+    const warnBeforeLeaving = (event: BeforeUnloadEvent) => {
+      event.preventDefault();
+    };
+    window.addEventListener("beforeunload", warnBeforeLeaving);
+    return () => window.removeEventListener("beforeunload", warnBeforeLeaving);
+  }, [dirty]);
 
   function displayedValue(name: string) {
-    if (showingSuccess) return "";
     return values[name] ?? "";
   }
 
   function updateValue(name: string, value: string) {
-    if (state.status === "success" && !editedAfterSuccess) {
-      setEditedAfterSuccess(true);
-      setValues({
-        ...startingValues(locale, values.service as ServiceId),
-        [name]: value,
-      });
-      return;
-    }
+    setDirty(true);
     setValues((current) => ({ ...current, [name]: value }));
   }
 
   function changeService(service: ServiceId) {
-    setEditedAfterSuccess(state.status === "success");
+    setDirty(true);
     setValues((current) => ({
       ...current,
       service,
@@ -256,6 +258,7 @@ export function ContactForm({
             id="service"
             name="service"
             required
+            autoComplete="off"
             value={selectedService}
             onChange={(event) => changeService(event.target.value as ServiceId)}
           >
@@ -281,6 +284,16 @@ export function ContactForm({
               name={name}
               type={type}
               autoComplete={autoComplete}
+              inputMode={
+                name === "phone"
+                  ? "tel"
+                  : name === "email"
+                    ? "email"
+                    : name === "zip"
+                      ? "numeric"
+                      : undefined
+              }
+              spellCheck={name === "email" ? false : undefined}
               required
               value={displayedValue(name)}
               onChange={(event) => updateValue(name, event.target.value)}
@@ -319,6 +332,7 @@ export function ContactForm({
             id: name,
             name,
             required: conditionallyRequired,
+            autoComplete: "off",
             value: displayedValue(name),
             onChange: (
               event: React.ChangeEvent<
@@ -378,6 +392,7 @@ export function ContactForm({
             name="note"
             rows={4}
             maxLength={1_000}
+            autoComplete="off"
             value={displayedValue("note")}
             onChange={(event) => updateValue("note", event.target.value)}
             aria-invalid={Boolean(fieldErrors.note)}
@@ -397,9 +412,7 @@ export function ContactForm({
             type="checkbox"
             value="on"
             required
-            checked={
-              showingSuccess ? false : Boolean(values.privacyAcknowledged)
-            }
+            checked={Boolean(values.privacyAcknowledged)}
             onChange={(event) =>
               updateValue(
                 "privacyAcknowledged",
