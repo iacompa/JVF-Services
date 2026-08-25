@@ -1,9 +1,8 @@
-import { SiteShell } from "@/components/layout/site-shell";
+import { PublicPage } from "@/features/pages/public-page";
+import { buildPageMetadata } from "@/lib/metadata";
+
+export const metadata = buildPageMetadata("en", "home");
 
 export default function Home() {
-  return (
-    <SiteShell locale="en" route="home">
-      <h1>JVF Services</h1>
-    </SiteShell>
-  );
+  return <PublicPage locale="en" route="home" />;
 }

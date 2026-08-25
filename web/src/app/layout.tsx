@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { StructuredData } from "@/components/seo/structured-data";
 import { bodyFont, displayFont } from "./fonts";
 import "./globals.css";
 
@@ -10,7 +11,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${bodyFont.variable} ${displayFont.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <StructuredData />
+      </body>
     </html>
   );
 }
