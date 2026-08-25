@@ -1,7 +1,9 @@
+import { SiteShell } from "@/components/layout/site-shell";
+
 export default function Home() {
   return (
-    <main>
+    <SiteShell locale="en" route="home">
       <h1>JVF Services</h1>
-    </main>
+    </SiteShell>
   );
 }
