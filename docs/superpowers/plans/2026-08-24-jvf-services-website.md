@@ -4,7 +4,13 @@
 
 **Goal:** Design, build, verify, and run a polished bilingual JVF Services lead-generation website locally without connecting production hosting, a domain, or a real email provider.
 
-**Architecture:** Use an approved Superdesign homepage and page-flow draft as the visual source of truth, then implement a static-first Next.js App Router application under `web/`. English and Spanish pages share typed content and page templates; a discriminated-union quote form submits to a provider-neutral delivery interface that runs in safe demo mode until launch configuration exists.
+> **Execution amendment — 2026-08-25:** At the user's direction, Superdesign is removed from this implementation. Tasks 1-2 are superseded and require no external design approval. The product specification, the supplied flyer as loose visual inspiration, and the locked warm-premium design tokens below are the visual source of truth. Implementation proceeds directly under the executing-plans workflow.
+
+> **Toolchain compatibility note — 2026-08-25:** TypeScript 7.0 ships without the compiler API required by `typescript-eslint`. Keep the pinned TypeScript 7.0.2 CLI as `@typescript/native` and install Microsoft's `@typescript/typescript6` compatibility package under the `typescript` alias for ESLint, following Microsoft's documented side-by-side configuration. `npm run typecheck` invokes the TypeScript 7 `tsc` binary; Next's build uses the TypeScript 6 API via `experimental.useTypeScriptCli: false`. Local production builds use Next's documented `--webpack` option because this managed sandbox blocks the ephemeral worker port Turbopack uses while processing CSS.
+
+> **Lint compatibility note — 2026-08-25:** `eslint-config-next@16.3.2` bundles React lint plugins that fail under ESLint 10.9.1. Pin ESLint 9.39.5 until the bundled plugins support ESLint 10; Next.js 16 uses the direct ESLint CLI and flat configuration with this compatible version.
+
+**Architecture:** Implement a static-first Next.js App Router application under `web/` from the approved product specification and locked design system. English and Spanish pages share typed content and page templates; a discriminated-union quote form submits to a provider-neutral delivery interface that runs in safe demo mode until launch configuration exists.
 
 **Tech Stack:** Next.js 16.3.2, React 19.2.8, TypeScript 7.0.2, Tailwind CSS 4.3.3, Zod 4.4.3, Vercel Web Analytics 2.0.1, Vitest 4.1.11, Testing Library 16.3.2, Playwright 1.62.1, Axe 4.13.0, Lighthouse 13.4.1.
 
@@ -21,7 +27,7 @@
 - Notary is in-person only, by appointment, at `$5 per in-person notarial act` plus a travel fee agreed in advance.
 - Interpreting is in person from 8:00 a.m.-6:00 p.m. ET and phone/virtual 24/7; after 6:00 p.m. ET, in-person requests are invalid.
 - WCAG 2.2 AA is an engineering target; do not claim guaranteed ADA compliance.
-- The approved Superdesign drafts are the visual source of truth. Do not write application code before the homepage and page-flow designs are approved.
+- The approved product specification and this plan's locked design tokens are the visual source of truth. Superdesign is explicitly out of scope for this execution.
 
 ---
 
