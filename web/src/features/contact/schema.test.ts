@@ -97,6 +97,18 @@ describe("quote request validation", () => {
     }
   });
 
+  test("accepts migrated remodeling project details", () => {
+    const result = parseQuoteRequest(
+      requestForm("remodeling", {
+        areas: "Basement",
+        projectGoal: "Finish walls, flooring, and lighting",
+        desiredDate: "2026-09-07",
+      }),
+    );
+
+    expect(result.success).toBe(true);
+  });
+
   test("accepts only in-person notary requests", () => {
     const valid = parseQuoteRequest(
       requestForm("notary", {

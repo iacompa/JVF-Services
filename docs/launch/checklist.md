@@ -1,4 +1,4 @@
-# JVF Services launch-readiness checklist
+# JVF HomeWorks Pro launch-readiness checklist
 
 This checklist is for a future public release. The current site is a local demo and must not be deployed or used to collect real customer requests yet.
 
@@ -14,10 +14,12 @@ This checklist is for a future public release. The current site is a local demo 
 
 ## Business identity and content
 
-- [ ] Confirm that `JVF Services` is the final public name and complete Ohio name-availability and trademark review; the website does not claim that the name is registered.
-- [ ] Choose and verify the production domain before updating canonical URLs, structured data, sitemap, and environment settings.
-- [ ] Provide an owner-approved horizontal logo, square favicon, and one-color logo. The generation brief is in `docs/brand/logo-generation-prompt.md`.
-- [ ] Provide rights-cleared, genuine service photos and an owner portrait; remove every asset placeholder.
+- [ ] Confirm that `JVF HomeWorks Pro` is the final public name and complete Ohio name-availability and trademark review; the website does not claim that the name is registered.
+- [ ] Confirm continued ownership of `jvfhomeworkspro.com` before updating canonical URLs, structured data, sitemap, and environment settings.
+- [x] Migrate the owner-identified horizontal logo from the existing JVF website.
+- [ ] Provide a square favicon and one-color logo variation.
+- [x] Migrate selected owner-identified images from the existing JVF website and add localized alternative text.
+- [ ] Provide an owner portrait and confirm permission and context for every additional image before publication.
 - [ ] Approve the owner name, story, qualifications, and claims.
 - [ ] Add reviews only with the customer's permission and exact, verifiable wording. Do not fabricate or imply that stock imagery shows JVF work.
 - [ ] Have a fluent owner or professional reviewer approve every Spanish page, form label, legal page, and confirmation message.
@@ -27,8 +29,9 @@ This checklist is for a future public release. The current site is a local demo 
 - [ ] Consult the Ohio Secretary of State resources and, when needed, an Ohio attorney or qualified filing professional before filing.
 - [ ] Select a real statutory agent who is eligible and has an eligible Ohio street address. The owner must authorize its use.
 - [ ] Do not use a made-up address, P.O. box, rented private mailbox/CMRA, or an address found online merely to complete the filing.
-- [ ] Decide separately whether a lawful business mailing address should appear publicly on the website. A statutory-agent address is not automatically the right public customer address.
-- [ ] Keep the website address-free until that decision is complete; update the privacy and legal pages if the business later publishes or collects different location information.
+- [ ] Verify that JVF is authorized to publish and receive mail at `2590 Walnut St, Denver, CO 80205`, which was migrated from the existing public website.
+- [ ] Decide whether the Denver address is only a mailing address. It is not represented by this project as an Ohio statutory-agent address, storefront, or customer service location.
+- [ ] Update or remove the public mailing address immediately if verification fails; a statutory-agent address is not automatically the right public customer address.
 
 Current official Ohio guidance says an entity must maintain a statutory agent. An individual agent must be an Ohio resident; an entity agent must qualify and have an Ohio business address. The agent address must be an Ohio street address such as the agent's primary residence or usual place of business, with an authorized person available during normal hours; a P.O. box or private mailbox/CMRA is not allowed. Review the [Ohio Secretary of State business FAQ](https://www.ohiosos.gov/business/ohio-business-roadmap/frequently-asked-questions) and the current [Ohio LLC filing instructions](https://www.ohiosos.gov/globalassets/business/forms/610_instructions.pdf). This is launch guidance, not legal advice.
 
@@ -47,6 +50,7 @@ Google specifically identifies cleaning services as service-area businesses and 
 - [ ] Confirm that `$5 per in-person notarial act` remains accurate; confirm how travel fees are calculated, quoted, and accepted.
 - [ ] Confirm that no wording implies legal advice, document selection, certified interpreting, licensed interior design, remote online notarization, or guaranteed availability.
 - [ ] Confirm the service area, ordinary cleaning/decoration hours, appointment policy, cancellations, travel rules, and excluded work.
+- [ ] Confirm that the migrated starting rates remain current: housekeeping $39/hour, remodeling $59/hour, and decoration $59/hour.
 - [ ] Confirm interpreting operations: virtual/phone/Zoom requests are accepted 24/7; in-person interpreting is offered only from 8:00 a.m. to 6:00 p.m. Eastern Time; after 6:00 p.m. service is virtual only.
 - [ ] Have qualified counsel review the Terms, Privacy Notice, accessibility language, form consent, business claims, and intended customer-data handling.
 - [ ] Review the accessibility-demand letter with qualified counsel, calendar every response deadline, and preserve the letter plus remediation/QA records.

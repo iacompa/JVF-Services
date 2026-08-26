@@ -1,10 +1,17 @@
 export const businessFacts = Object.freeze({
-  publicName: "JVF Services",
+  publicName: "JVF HomeWorks Pro",
   phoneDisplay: "(716) 748-9117",
   phoneHref: "tel:+17167489117",
   smsHref: "sms:+17167489117",
-  email: null,
-  address: null,
+  email: "info@jvfhomeworkspro.com",
+  emailHref: "mailto:info@jvfhomeworkspro.com",
+  mailingAddress: {
+    street: "2590 Walnut St",
+    city: "Denver",
+    region: "CO",
+    postalCode: "80205",
+    formatted: "2590 Walnut St, Denver, CO 80205",
+  },
   owner: null,
   legalEntitySuffix: null,
   reviews: [] as const,
@@ -14,10 +21,21 @@ export const businessFacts = Object.freeze({
       audiences: ["homes", "small offices"],
       types: ["standard", "deep", "recurring", "move-in/move-out", "one-time"],
       excluded: ["hazardous work", "biohazard work"],
+      hourlyRate: 39,
+    },
+    remodeling: {
+      hourlyRate: 59,
+      scope: [
+        "kitchen and bathroom upgrades",
+        "flooring",
+        "painting",
+        "fixtures",
+      ],
     },
     decoration: {
       scope: ["room styling", "decor selection", "arrangement", "setup"],
       licensedInteriorDesignClaim: false,
+      hourlyRate: 59,
     },
     notary: {
       credential: "Ohio-commissioned Notary Public",

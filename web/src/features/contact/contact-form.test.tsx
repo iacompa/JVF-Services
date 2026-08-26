@@ -35,6 +35,8 @@ describe("accessible contact form", () => {
 
   test("normalizes service preselection from a query value", () => {
     expect(getRequestedService("notary")).toBe("notary");
+    expect(getRequestedService("landscaping")).toBe("general");
+    expect(getRequestedService("remodeling")).toBe("remodeling");
     expect(getRequestedService(["interpreting"])).toBe("interpreting");
     expect(getRequestedService("unknown")).toBe("general");
   });

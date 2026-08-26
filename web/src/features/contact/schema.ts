@@ -61,6 +61,14 @@ const decorationSchema = z.object({
   desiredDate: date,
 });
 
+const remodelingSchema = z.object({
+  ...baseShape,
+  service: z.literal("remodeling"),
+  areas: requiredText(300),
+  projectGoal: requiredText(500),
+  desiredDate: date,
+});
+
 const notarySchema = z.object({
   ...baseShape,
   service: z.literal("notary"),
@@ -95,6 +103,7 @@ function minutesFromTime(value: string) {
 export const quoteRequestSchema = z
   .discriminatedUnion("service", [
     housekeepingSchema,
+    remodelingSchema,
     decorationSchema,
     notarySchema,
     interpretingSchema,

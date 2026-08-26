@@ -1,7 +1,7 @@
 export type Locale = "en" | "es";
 
 export type ServiceKey =
-  "housekeeping" | "decoration" | "notary" | "interpreting";
+  "housekeeping" | "remodeling" | "decoration" | "notary" | "interpreting";
 
 export type ReviewStatus = "approved" | "owner-review-required";
 
@@ -14,6 +14,7 @@ export interface ServiceCopy {
   scheduleTitle: string;
   scheduleBody: string;
   price: string;
+  cardPrice: string;
   note: string;
   cta: string;
 }
@@ -34,6 +35,7 @@ export interface SiteContent {
   nav: {
     home: string;
     services: string;
+    gallery: string;
     about: string;
     contact: string;
     homeServices: string;
@@ -70,6 +72,8 @@ export interface SiteContent {
     whyItems: string[];
     closingTitle: string;
     closingBody: string;
+    stepsHeading: string;
+    steps: Array<{ number: string; title: string; body: string }>;
   };
   services: {
     eyebrow: string;
@@ -89,6 +93,13 @@ export interface SiteContent {
     values: Array<{ title: string; body: string }>;
     placeholderTitle: string;
     placeholderBody: string;
+  };
+  gallery: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    firstCaption: string;
+    secondCaption: string;
   };
   contact: {
     eyebrow: string;

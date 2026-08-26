@@ -24,6 +24,7 @@ export function ServiceCard({
           <Link href={href}>{service.title}</Link>
         </h3>
         <p>{service.summary}</p>
+        <p className="service-card-price">{service.price}</p>
       </div>
       <Link
         className="service-arrow"

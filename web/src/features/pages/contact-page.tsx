@@ -50,7 +50,7 @@ export function ContactPage({
         </div>
       </section>
       <section className="page-section contact-section">
-        <div className="site-container contact-layout">
+        <div className="site-container contact-layout" data-reveal>
           <aside className="contact-direct">
             <p className="contact-direct-label">
               {locale === "en" ? "Direct contact" : "Contacto directo"}
@@ -63,6 +63,20 @@ export function ContactPage({
             <a className="button button-secondary" href={businessFacts.smsHref}>
               {content.common.text}
             </a>
+            <dl className="contact-facts">
+              <div>
+                <dt>{locale === "en" ? "Email" : "Correo electrónico"}</dt>
+                <dd>
+                  <a href={businessFacts.emailHref}>{businessFacts.email}</a>
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  {locale === "en" ? "Mailing address" : "Dirección postal"}
+                </dt>
+                <dd>{businessFacts.mailingAddress.formatted}</dd>
+              </div>
+            </dl>
           </aside>
           <div className="form-stage">
             <ContactForm locale={locale} initialService={initialService} />

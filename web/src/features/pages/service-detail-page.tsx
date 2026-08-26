@@ -2,8 +2,8 @@ import { businessFacts } from "@/content/business";
 import { getContent } from "@/content/content";
 import type { Locale, ServiceKey } from "@/content/types";
 import { localizedHref } from "@/lib/i18n";
-import { AssetSlot } from "@/components/ui/asset-slot";
 import { CallToAction } from "@/components/ui/call-to-action";
+import { ServiceVisual } from "@/components/ui/service-visual";
 
 export function ServiceDetailPage({
   locale,
@@ -29,25 +29,16 @@ export function ServiceDetailPage({
               {copy.cta}
             </a>
           </div>
-          <AssetSlot
-            variant="landscape"
-            placeholderText={
-              locale === "en"
-                ? "JVF service direction"
-                : "Dirección de servicio JVF"
-            }
-            notRealWorkText={
-              locale === "en"
-                ? "This is original abstract artwork, not a photograph of completed JVF work."
-                : "Esta es una ilustración abstracta original, no una fotografía de un trabajo terminado de JVF."
-            }
+          <ServiceVisual
+            locale={locale}
+            service={service}
             label={copy.eyebrow}
             description={copy.summary}
           />
         </div>
       </section>
       <section className="service-story page-section">
-        <div className="site-container service-story-grid">
+        <div className="site-container service-story-grid" data-reveal>
           <div className="service-intro">
             <h2>{locale === "en" ? "What to expect" : "Qué puede esperar"}</h2>
             <p>{copy.intro}</p>
@@ -63,7 +54,7 @@ export function ServiceDetailPage({
         </div>
       </section>
       <section className="service-detail-band">
-        <div className="site-container detail-band-grid">
+        <div className="site-container detail-band-grid" data-reveal>
           <div>
             <p className="detail-label">{copy.scheduleTitle}</p>
             <p>{copy.scheduleBody}</p>

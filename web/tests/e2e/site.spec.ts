@@ -54,6 +54,26 @@ test("Services disclosure supports Enter and Escape", async ({ page }) => {
   await expect(trigger).toBeFocused();
 });
 
+test("migrated pricing, contact details, and gallery are public", async ({
+  page,
+}) => {
+  await page.goto("/services");
+  await waitForHydration(page);
+  await expect(page.getByText("$39 per hour")).toBeVisible();
+  await expect(page.getByText("$59 per hour")).toHaveCount(2);
+
+  await page.goto("/contact");
+  await expect(
+    page.getByRole("link", { name: "info@jvfhomeworkspro.com" }).first(),
+  ).toHaveAttribute("href", "mailto:info@jvfhomeworkspro.com");
+  await expect(
+    page.getByText("2590 Walnut St, Denver, CO 80205").first(),
+  ).toBeVisible();
+
+  await page.goto("/gallery");
+  await expect(page.locator("main").getByRole("img")).toHaveCount(2);
+});
+
 test("service CTA preselects interpreting and direct actions remain available", async ({
   page,
 }) => {

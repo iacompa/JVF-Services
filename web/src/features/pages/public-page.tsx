@@ -4,6 +4,7 @@ import { routeKeys, type RouteKey } from "@/lib/routes";
 import { SiteShell } from "@/components/layout/site-shell";
 import { AboutPage } from "./about-page";
 import { ContactPage } from "./contact-page";
+import { GalleryPage } from "./gallery-page";
 import { HomePage } from "./home-page";
 import { LegalPage } from "./legal-page";
 import { ServiceDetailPage } from "./service-detail-page";
@@ -15,6 +16,7 @@ export const publicPageEntries = (["en", "es"] as const).flatMap((locale) =>
 
 const serviceByRoute: Partial<Record<RouteKey, ServiceKey>> = {
   housekeeping: "housekeeping",
+  remodeling: "remodeling",
   decoration: "decoration",
   notary: "notary",
   interpreting: "interpreting",
@@ -36,6 +38,7 @@ export function PublicPage({
     page = (
       <ServiceDetailPage locale={locale} service={serviceByRoute[route]} />
     );
+  else if (route === "gallery") page = <GalleryPage locale={locale} />;
   else if (route === "about") page = <AboutPage locale={locale} />;
   else if (route === "contact")
     page = <ContactPage locale={locale} initialService={initialService} />;

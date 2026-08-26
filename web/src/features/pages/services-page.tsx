@@ -1,14 +1,14 @@
 import { getContent } from "@/content/content";
 import type { Locale } from "@/content/types";
 import { localizedHref } from "@/lib/i18n";
-import { ServiceCard } from "@/components/ui/service-card";
+import { FeaturedServiceCard } from "@/components/ui/featured-service-card";
 
 export function ServicesPage({ locale }: { locale: Locale }) {
   const content = getContent(locale);
   return (
     <>
       <section className="page-hero simple-page-hero">
-        <div className="site-container narrow-heading">
+        <div className="site-container narrow-heading" data-reveal>
           <p className="page-kicker">{content.services.eyebrow}</p>
           <h1>{content.services.title}</h1>
           <p>{content.services.intro}</p>
@@ -16,37 +16,48 @@ export function ServicesPage({ locale }: { locale: Locale }) {
       </section>
       <section className="page-section">
         <div className="site-container grouped-services">
-          <div className="service-group">
+          <div className="service-group" data-reveal>
             <h2>{content.services.homeGroup}</h2>
-            <div className="service-list">
-              <ServiceCard
+            <div className="featured-service-list">
+              <FeaturedServiceCard
+                locale={locale}
+                serviceKey="housekeeping"
                 number="01"
                 service={content.serviceDetails.housekeeping}
                 href={localizedHref("housekeeping", locale)}
-                learnMore={content.common.learnMore}
               />
-              <ServiceCard
+              <FeaturedServiceCard
+                locale={locale}
+                serviceKey="remodeling"
                 number="02"
+                service={content.serviceDetails.remodeling}
+                href={localizedHref("remodeling", locale)}
+              />
+              <FeaturedServiceCard
+                locale={locale}
+                serviceKey="decoration"
+                number="03"
                 service={content.serviceDetails.decoration}
                 href={localizedHref("decoration", locale)}
-                learnMore={content.common.learnMore}
               />
             </div>
           </div>
-          <div className="service-group">
+          <div className="service-group" data-reveal>
             <h2>{content.services.professionalGroup}</h2>
-            <div className="service-list">
-              <ServiceCard
-                number="03"
+            <div className="featured-service-list">
+              <FeaturedServiceCard
+                locale={locale}
+                serviceKey="notary"
+                number="04"
                 service={content.serviceDetails.notary}
                 href={localizedHref("notary", locale)}
-                learnMore={content.common.learnMore}
               />
-              <ServiceCard
-                number="04"
+              <FeaturedServiceCard
+                locale={locale}
+                serviceKey="interpreting"
+                number="05"
                 service={content.serviceDetails.interpreting}
                 href={localizedHref("interpreting", locale)}
-                learnMore={content.common.learnMore}
               />
             </div>
           </div>

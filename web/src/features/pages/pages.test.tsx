@@ -4,8 +4,8 @@ import { PublicPage, publicPageEntries } from "./public-page";
 import { buildPageMetadata, professionalServiceJsonLd } from "@/lib/metadata";
 
 describe("public page registry", () => {
-  test("renders all 22 localized routes with one page heading", () => {
-    expect(publicPageEntries).toHaveLength(22);
+  test("renders all 26 localized routes with one page heading", () => {
+    expect(publicPageEntries).toHaveLength(26);
 
     for (const entry of publicPageEntries) {
       const { unmount } = render(
@@ -46,14 +46,11 @@ describe("public page registry", () => {
     }
   });
 
-  test("does not expose a street address or legal suffix", () => {
-    const { container } = render(<PublicPage locale="en" route="home" />);
-    const copy = container.textContent?.toLowerCase() ?? "";
+  test("publishes migrated home-service prices", () => {
+    render(<PublicPage locale="en" route="services" />);
 
-    expect(copy).not.toContain(" llc");
-    expect(copy).not.toMatch(
-      /\d{2,}\s+[a-z]+\s+(street|st\.|road|rd\.|avenue|ave\.)/i,
-    );
+    expect(screen.getByText(/^\$39 per hour$/i)).toBeVisible();
+    expect(screen.getAllByText(/^\$59 per hour$/i)).toHaveLength(2);
   });
 });
 
@@ -70,14 +67,17 @@ describe("localized search metadata", () => {
     });
   });
 
-  test("describes Ohio service without inventing a postal address", () => {
+  test("describes the migrated business identity and service area", () => {
     expect(professionalServiceJsonLd).toMatchObject({
       "@type": "ProfessionalService",
-      name: "JVF Services",
+      name: "JVF HomeWorks Pro",
       telephone: "+17167489117",
       areaServed: "Ohio",
+      email: "info@jvfhomeworkspro.com",
     });
-    expect(professionalServiceJsonLd).not.toHaveProperty("address");
-    expect(professionalServiceJsonLd).not.toHaveProperty("email");
+    expect(professionalServiceJsonLd.serviceType).toEqual(
+      expect.arrayContaining(["Housekeeping", "Home remodeling"]),
+    );
+    expect(professionalServiceJsonLd.serviceType).not.toContain("Landscaping");
   });
 });

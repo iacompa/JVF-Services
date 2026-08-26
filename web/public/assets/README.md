@@ -1,21 +1,22 @@
-# JVF Services public asset handoff
+# JVF HomeWorks Pro public assets
 
-The current site deliberately renders accessible CSS placeholders when these files are absent. Do not rename the files: the names and dimensions form the future asset contract.
+The `jvf/` directory contains the logo and selected images migrated from the owner-identified existing JVF HomeWorks Pro website on August 25, 2026. They are bundled locally so the Next.js site does not depend on the previous host at runtime.
 
-| File | Required format and size | Intended use |
-| --- | --- | --- |
-| `logo-horizontal.svg` | Vector preferred; `1200×360` transparent PNG fallback (10:3) | Header and footer wordmark |
-| `favicon-source.png` | `512×512`, transparent | Favicon source |
-| `hero-home.jpg` | `1600×1200` (4:3) | Home-page hero |
-| `service-housekeeping.jpg` | `1200×900` (4:3) | Housekeeping page |
-| `service-decoration.jpg` | `1200×900` (4:3) | Decoration page |
-| `service-notary.jpg` | `1200×900` (4:3) | Notary page |
-| `service-interpreting.jpg` | `1200×900` (4:3) | Interpreting page |
-| `owner-portrait.jpg` | `800×1000` (4:5) | About page |
+| File                              | Required format and size  | Intended use                          |
+| --------------------------------- | ------------------------- | ------------------------------------- |
+| `jvf/jvf-homeworks-pro-logo.png`  | `300×195` transparent PNG | Header and footer wordmark            |
+| `jvf/cleaning-hero.jpg`           | `1600×1000` JPEG          | Home hero and housekeeping page       |
+| `jvf/decoration-chair.png`        | `626×416` transparent PNG | Housekeeping card and decoration page |
+| `jvf/remodeling-team.png`         | `413×374` transparent PNG | Remodeling service card               |
+| `jvf/decoration-cabinet.png`      | `452×444` transparent PNG | Decoration service card               |
+| `jvf/project-basement-wide.jpg`   | `948×706` JPEG            | About and Gallery pages               |
+| `jvf/project-basement-detail.jpg` | `1290×948` JPEG           | Remodeling and Gallery pages          |
+| `favicon-source.png`              | `512×512`, transparent    | Favicon source                        |
+| `owner-portrait.jpg`              | `800×1000` (4:5)          | About page                            |
 
 Before adding an asset:
 
-1. Confirm that JVF Services owns the image or has written permission to publish it.
+1. Confirm that JVF HomeWorks Pro owns the image or has written permission to publish it.
 2. Optimize the file without baking words or logos into photography.
 3. Replace the matching CSS placeholder with `next/image` and preserve the listed aspect ratio.
 4. Add meaningful localized English and Spanish alternative text when the image communicates information. Use empty alternative text only when it is genuinely decorative.

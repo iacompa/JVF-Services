@@ -52,7 +52,7 @@ describe("accessibility statement", () => {
     expect(copy).toMatch(/screen reader/i);
     expect(copy).toMatch(/does not use an accessibility overlay/i);
     expect(copy).toMatch(/\(716\) 748-9117/);
-    expect(copy).toMatch(/email contact will be added/i);
+    expect(copy).toMatch(/info@jvfhomeworkspro\.com/i);
     expect(copy).toMatch(/not a guarantee of legal compliance/i);
   });
 });

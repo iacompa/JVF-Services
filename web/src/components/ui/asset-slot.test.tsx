@@ -21,7 +21,9 @@ describe("missing visual asset slots", () => {
     expect(slot).toBeVisible();
     expect(slot).toHaveAttribute("data-aspect-ratio", ratio);
     expect(slot).toHaveTextContent(/placeholder/i);
-    expect(slot).toHaveAccessibleName(/not a photograph of completed JVF work/i);
+    expect(slot).toHaveAccessibleName(
+      /not a photograph of completed JVF work/i,
+    );
   });
 
   test("never emits a broken image or describes a placeholder as real work", () => {

@@ -44,6 +44,12 @@ export function SiteHeader({
           </Link>
           <ServicesMenu locale={locale} />
           <Link
+            href={localizedHref("gallery", locale)}
+            aria-current={route === "gallery" ? "page" : undefined}
+          >
+            {content.nav.gallery}
+          </Link>
+          <Link
             href={localizedHref("about", locale)}
             aria-current={route === "about" ? "page" : undefined}
           >

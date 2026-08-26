@@ -13,12 +13,14 @@ const pageLabels: Record<RouteKey, { en: string; es: string }> = {
   home: { en: "Home", es: "Inicio" },
   services: { en: "Services", es: "Servicios" },
   housekeeping: { en: "Housekeeping", es: "Limpieza" },
+  remodeling: { en: "Home Remodeling", es: "Remodelación del hogar" },
   decoration: { en: "Home Decoration", es: "Decoración del hogar" },
   notary: { en: "Ohio Notary Public", es: "Notaría en Ohio" },
   interpreting: {
     en: "Spanish-English Interpreting",
     es: "Interpretación español-inglés",
   },
+  gallery: { en: "Gallery", es: "Galería" },
   about: { en: "About", es: "Nosotros" },
   contact: { en: "Contact & Quote", es: "Contacto y cotización" },
   terms: { en: "Terms and Conditions", es: "Términos y condiciones" },
@@ -32,16 +34,18 @@ function descriptionFor(locale: Locale, route: RouteKey): string {
   if (route === "services") return content.services.intro;
   if (
     route === "housekeeping" ||
+    route === "remodeling" ||
     route === "decoration" ||
     route === "notary" ||
     route === "interpreting"
   )
     return content.serviceDetails[route].summary;
+  if (route === "gallery") return content.gallery.intro;
   if (route === "about") return content.about.intro;
   if (route === "contact") return content.contact.intro;
   return locale === "en"
-    ? `${pageLabels[route].en} for the JVF Services website.`
-    : `${pageLabels[route].es} del sitio web de JVF Services.`;
+    ? `${pageLabels[route].en} for the JVF HomeWorks Pro website.`
+    : `${pageLabels[route].es} del sitio web de JVF HomeWorks Pro.`;
 }
 
 export function absoluteLocalizedUrl(route: RouteKey, locale: Locale): string {
@@ -56,8 +60,8 @@ export function buildPageMetadata(locale: Locale, route: RouteKey): Metadata {
   return {
     title:
       route === "home"
-        ? "JVF Services | Home & Professional Services"
-        : `${label} | JVF Services`,
+        ? "JVF HomeWorks Pro | Home & Professional Services"
+        : `${label} | JVF HomeWorks Pro`,
     description,
     alternates: {
       canonical,
@@ -71,9 +75,17 @@ export function buildPageMetadata(locale: Locale, route: RouteKey): Metadata {
       type: "website",
       locale: locale === "en" ? "en_US" : "es_US",
       siteName: businessFacts.publicName,
-      title: `${label} | JVF Services`,
+      title: `${label} | JVF HomeWorks Pro`,
       description,
       url: canonical,
+      images: [
+        {
+          url: `${siteUrl}/assets/jvf/cleaning-hero.jpg`,
+          width: 1600,
+          height: 1000,
+          alt: "JVF HomeWorks Pro home services",
+        },
+      ],
     },
   };
 }
@@ -83,9 +95,11 @@ export const professionalServiceJsonLd = {
   "@type": "ProfessionalService",
   name: businessFacts.publicName,
   telephone: "+17167489117",
+  email: businessFacts.email,
   areaServed: "Ohio",
   serviceType: [
     "Housekeeping",
+    "Home remodeling",
     "Home decoration",
     "In-person notary service",
     "Spanish-English interpreting",

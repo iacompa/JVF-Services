@@ -1,6 +1,6 @@
-# JVF Services web application
+# JVF HomeWorks Pro web application
 
-The Next.js application for the JVF Services local-review website.
+The Next.js application for the JVF HomeWorks Pro local-review website.
 
 Run commands from this directory:
 

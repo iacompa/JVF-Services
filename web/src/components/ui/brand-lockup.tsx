@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { businessFacts } from "@/content/business";
 
 export function BrandLockup({
   href,
@@ -13,21 +15,17 @@ export function BrandLockup({
     <Link
       className={`brand-lockup${inverse ? " brand-lockup-inverse" : ""}`}
       href={href}
-      aria-label={`JVF Services — ${homeLabel}`}
+      aria-label={`${businessFacts.publicName} — ${homeLabel}`}
       translate="no"
     >
-      <span className="brand-symbol" aria-hidden="true">
-        <svg viewBox="0 0 44 44" focusable="false">
-          <path className="brand-roof" d="M5 24 22 9l17 15" />
-          <path className="brand-home" d="M10 23v14h24V23" />
-          <path className="brand-door" d="M19 37V25h6v12" />
-          <path className="brand-spark" d="M34 5v8M30 9h8" />
-        </svg>
-      </span>
-      <span className="brand-name">
-        <span>JVF</span>
-        <strong>Services</strong>
-      </span>
+      <Image
+        className="brand-logo-image"
+        src="/assets/jvf/jvf-homeworks-pro-logo.png"
+        alt=""
+        width={300}
+        height={195}
+        sizes="(max-width: 720px) 124px, 154px"
+      />
     </Link>
   );
 }

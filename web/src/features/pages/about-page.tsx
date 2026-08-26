@@ -1,7 +1,7 @@
+import Image from "next/image";
 import { getContent } from "@/content/content";
 import type { Locale } from "@/content/types";
 import { localizedHref } from "@/lib/i18n";
-import { AssetSlot } from "@/components/ui/asset-slot";
 import { CallToAction } from "@/components/ui/call-to-action";
 
 export function AboutPage({ locale }: { locale: Locale }) {
@@ -15,29 +15,28 @@ export function AboutPage({ locale }: { locale: Locale }) {
             <h1>{content.about.title}</h1>
             <p className="hero-summary">{content.about.intro}</p>
           </div>
-          <AssetSlot
-            variant="portrait"
-            placeholderText={
-              locale === "en"
-                ? "JVF profile direction"
-                : "Dirección del perfil JVF"
-            }
-            notRealWorkText={
-              locale === "en"
-                ? "This is original abstract artwork, not a portrait or photograph of completed JVF work."
-                : "Esta es una ilustración abstracta original, no un retrato ni una fotografía de un trabajo terminado de JVF."
-            }
-            label={
-              locale === "en"
-                ? "An owner-led service approach"
-                : "Un servicio dirigido personalmente"
-            }
-            description={content.about.missionTitle}
-          />
+          <figure className="about-project-image">
+            <Image
+              src="/assets/jvf/project-basement-wide.jpg"
+              alt={
+                locale === "en"
+                  ? "Finished basement lounge and built-in storage from the JVF project gallery"
+                  : "Sala de sótano terminada con almacenamiento integrado de la galería de JVF"
+              }
+              width={948}
+              height={706}
+              sizes="(max-width: 900px) 100vw, 42vw"
+            />
+            <figcaption>
+              {locale === "en"
+                ? "A finished space featured in the JVF project gallery"
+                : "Un espacio terminado de la galería de proyectos de JVF"}
+            </figcaption>
+          </figure>
         </div>
       </section>
       <section className="page-section">
-        <div className="site-container mission-grid">
+        <div className="site-container mission-grid" data-reveal>
           <h2>{content.about.missionTitle}</h2>
           <p>{content.about.missionBody}</p>
         </div>
@@ -47,7 +46,7 @@ export function AboutPage({ locale }: { locale: Locale }) {
           <h2>{content.about.valuesHeading}</h2>
           <div className="values-list">
             {content.about.values.map((value, index) => (
-              <article key={value.title}>
+              <article key={value.title} data-reveal>
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <h3>{value.title}</h3>
                 <p>{value.body}</p>
@@ -61,8 +60,8 @@ export function AboutPage({ locale }: { locale: Locale }) {
           locale={locale}
           title={
             locale === "en"
-              ? "How can JVF Services help?"
-              : "¿Cómo puede ayudarle JVF Services?"
+              ? "How can JVF HomeWorks Pro help?"
+              : "¿Cómo puede ayudarle JVF HomeWorks Pro?"
           }
           body={
             locale === "en"

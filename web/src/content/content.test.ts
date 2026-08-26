@@ -19,14 +19,19 @@ function getObjectPaths(value: unknown, prefix = ""): string[] {
 }
 
 describe("business facts", () => {
-  test("keeps public identity and unverified fields within the approved scope", () => {
+  test("keeps the migrated public identity and contact details in one source of truth", () => {
     expect(businessFacts).toMatchObject({
-      publicName: "JVF Services",
+      publicName: "JVF HomeWorks Pro",
       phoneDisplay: "(716) 748-9117",
       phoneHref: "tel:+17167489117",
       smsHref: "sms:+17167489117",
-      email: null,
-      address: null,
+      email: "info@jvfhomeworkspro.com",
+      mailingAddress: {
+        street: "2590 Walnut St",
+        city: "Denver",
+        region: "CO",
+        postalCode: "80205",
+      },
       owner: null,
       legalEntitySuffix: null,
       reviews: [],
@@ -56,16 +61,16 @@ describe("localized content", () => {
     expect(localizedHref("home", "es")).toBe("/es");
   });
 
-  test("does not publish superseded brands or prohibited service claims", () => {
+  test("publishes the migrated home services without prohibited professional claims", () => {
     const publicCopy = JSON.stringify({
       businessFacts,
       en: getContent("en"),
       es: getContent("es"),
     }).toLowerCase();
 
-    expect(publicCopy).not.toContain("jvf homeworks pro");
+    expect(publicCopy).toContain("jvf homeworks pro");
     expect(publicCopy).not.toContain("landscaping");
-    expect(publicCopy).not.toContain("remodeling");
+    expect(publicCopy).toContain("remodeling");
     expect(publicCopy).not.toContain("certified interpreter");
   });
 });

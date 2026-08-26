@@ -23,6 +23,9 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           <Link href={localizedHref("housekeeping", locale)}>
             {content.serviceDetails.housekeeping.title}
           </Link>
+          <Link href={localizedHref("remodeling", locale)}>
+            {content.serviceDetails.remodeling.title}
+          </Link>
           <Link href={localizedHref("decoration", locale)}>
             {content.serviceDetails.decoration.title}
           </Link>
@@ -41,6 +44,11 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           <p className="footer-heading">{content.nav.contact}</p>
           <a href={businessFacts.phoneHref}>{content.common.call}</a>
           <a href={businessFacts.smsHref}>{content.common.text}</a>
+          <a href={businessFacts.emailHref}>{businessFacts.email}</a>
+          <address>{businessFacts.mailingAddress.formatted}</address>
+          <Link href={localizedHref("gallery", locale)}>
+            {content.nav.gallery}
+          </Link>
           <Link href={localizedHref("about", locale)}>{content.nav.about}</Link>
           <Link href={localizedHref("contact", locale)}>
             {content.nav.requestQuote}

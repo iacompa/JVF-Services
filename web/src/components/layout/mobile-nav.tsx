@@ -64,6 +64,9 @@ export function MobileNav({
           <Link href={localizedHref("housekeeping", locale)}>
             {content.serviceDetails.housekeeping.title}
           </Link>
+          <Link href={localizedHref("remodeling", locale)}>
+            {content.serviceDetails.remodeling.title}
+          </Link>
           <Link href={localizedHref("decoration", locale)}>
             {content.serviceDetails.decoration.title}
           </Link>
@@ -77,6 +80,12 @@ export function MobileNav({
             {content.serviceDetails.interpreting.title}
           </Link>
         </div>
+        <Link
+          href={localizedHref("gallery", locale)}
+          aria-current={route === "gallery" ? "page" : undefined}
+        >
+          {content.nav.gallery}
+        </Link>
         <Link
           href={localizedHref("about", locale)}
           aria-current={route === "about" ? "page" : undefined}

@@ -1,6 +1,6 @@
-# JVF Services website
+# JVF HomeWorks Pro website
 
-An accessible, bilingual lead-generation website for JVF Services. It presents housekeeping, home decoration, Ohio notary, and Spanish-English interpreting services in English and Spanish.
+An accessible, bilingual Next.js website for JVF HomeWorks Pro. It presents housekeeping, home remodeling, home decoration, Ohio notary, and Spanish-English interpreting services in English and Spanish, plus an owner-provided project gallery.
 
 The project is a local review build. It is not connected to Vercel, a public domain, a database, or an email provider.
 
@@ -36,7 +36,6 @@ The current automated results and the human accessibility checks still required 
 - The source lives in `web/` and uses the Next.js App Router, React, and TypeScript.
 - English pages use root routes; Spanish equivalents use `/es`.
 - The public phone number is `(716) 748-9117`.
-- No street address is published. See [docs/launch/checklist.md](docs/launch/checklist.md) before choosing an LLC, statutory-agent, or Google Business Profile address.
-- The final owner-approved logo, favicon, photographs, story, qualifications, and reviews are still required.
+- The phone, email, mailing address, logo, selected photos, service descriptions, and starting prices were migrated from the owner-identified existing website. The Denver mailing address still requires separate verification before it is used for an Ohio filing or Google Business Profile.
+- The final favicon, owner story, qualifications, any additional photographs, and reviews are still required.
 - Deployment to Vercel is explicitly deferred until the owner approves the local experience and completes the launch checklist.
-

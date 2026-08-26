@@ -6,6 +6,7 @@ export const es = {
   nav: {
     home: "Inicio",
     services: "Servicios",
+    gallery: "Galería",
     about: "Nosotros",
     contact: "Contacto",
     homeServices: "Servicios para el hogar",
@@ -31,15 +32,15 @@ export const es = {
   },
   home: {
     eyebrow: "Cuidado del hogar y apoyo profesional bilingüe",
-    title: "Ayuda confiable para los espacios y momentos importantes.",
+    title: "Servicios confiables para el hogar. Un equipo de confianza.",
     summary:
-      "JVF Services ofrece limpieza atenta, decoración del hogar, notaría e interpretación español-inglés para clientes en Ohio.",
+      "JVF HomeWorks Pro ofrece servicios profesionales y detallistas para el hogar, además de notaría e interpretación español-inglés. Facilitamos la solicitud con expectativas claras.",
     primaryCta: "Solicitar cotización",
     secondaryCta: "Explorar servicios",
     availabilityTitle: "Interpretación cuando la necesita",
     availabilityBody:
       "La interpretación español-inglés por teléfono y medios virtuales está disponible las 24 horas. La interpretación en persona está disponible de 8:00 a. m. a 6:00 p. m., hora del Este; después de las 6:00 p. m., el servicio es únicamente virtual.",
-    servicesHeading: "Un solo contacto de confianza",
+    servicesHeading: "Servicios populares de JVF HomeWorks Pro",
     servicesIntro:
       "Elija el servicio que necesita. Cada solicitud se revisa personalmente según disponibilidad, viaje y alcance.",
     whyHeading: "Atención clara desde el primer contacto",
@@ -51,13 +52,31 @@ export const es = {
     ],
     closingTitle: "Cuéntenos qué le ayudaría a vivir con más tranquilidad.",
     closingBody:
-      "Comparta algunos detalles prácticos y JVF Services se comunicará para confirmar el siguiente paso adecuado.",
+      "Comparta algunos detalles prácticos y JVF HomeWorks Pro se comunicará para confirmar el siguiente paso adecuado.",
+    stepsHeading: "Servicio profesional en tres pasos sencillos",
+    steps: [
+      {
+        number: "01",
+        title: "Solicite una consulta",
+        body: "Llame, envíe un mensaje o use el formulario accesible para explicarnos lo que necesita.",
+      },
+      {
+        number: "02",
+        title: "Confirme su servicio",
+        body: "Revisamos con usted el alcance, horario, ubicación y precio antes de comenzar.",
+      },
+      {
+        number: "03",
+        title: "Nos ponemos a trabajar",
+        body: "Realizamos el servicio con atención al detalle y comunicación clara.",
+      },
+    ],
   },
   services: {
     eyebrow: "Servicios",
     title: "Apoyo práctico, brindado con atención.",
     intro:
-      "Desde renovar la sensación de su hogar hasta una solicitud urgente de interpretación, JVF Services ofrece ayuda receptiva con expectativas claras y coordinación personal.",
+      "Desde renovar la sensación de su hogar hasta una solicitud urgente de interpretación, JVF HomeWorks Pro ofrece ayuda receptiva con expectativas claras y coordinación personal.",
     homeGroup: "Servicios para el hogar",
     professionalGroup: "Servicios profesionales",
   },
@@ -78,9 +97,31 @@ export const es = {
       scheduleTitle: "Un plan adecuado para su espacio",
       scheduleBody:
         "Indique si el espacio es un hogar o una oficina pequeña, el tipo y la frecuencia de limpieza, la fecha preferida y algunos datos básicos del tamaño.",
-      price: "Precio personalizado después de revisar el alcance",
-      note: "No se ofrecen trabajos peligrosos ni de riesgo biológico.",
+      price: "Desde $39 por hora",
+      cardPrice: "$39 por hora",
+      note: "El tiempo y el precio final dependen del alcance confirmado. No se ofrecen trabajos peligrosos ni de riesgo biológico.",
       cta: "Solicitar cotización de limpieza",
+    },
+    remodeling: {
+      eyebrow: "Servicios para el hogar",
+      title: "Remodelación del hogar",
+      summary:
+        "Mejoras prácticas planificadas según su espacio, prioridades y presupuesto.",
+      intro:
+        "Converse con nosotros sobre mejoras de cocina o baño, pisos, pintura, reemplazo de accesorios y otros proyectos. Revisamos cada solicitud antes de confirmar alcance, horario o precio.",
+      features: [
+        "Mejoras de cocina y baño",
+        "Instalación de pisos",
+        "Pintura y acabados interiores",
+        "Reemplazo de accesorios",
+      ],
+      scheduleTitle: "Comience con el objetivo del proyecto",
+      scheduleBody:
+        "Comparta las habitaciones, el resultado deseado, las condiciones actuales, el plazo y cualquier requisito conocido de permiso u oficio especializado.",
+      price: "Desde $59 por hora",
+      cardPrice: "$59 por hora",
+      note: "Los materiales, permisos, oficios especializados y costos específicos se cotizan por separado cuando corresponda.",
+      cta: "Solicitar consulta de remodelación",
     },
     decoration: {
       eyebrow: "Servicios para el hogar",
@@ -88,7 +129,7 @@ export const es = {
       summary:
         "Apoyo cálido y práctico para que una habitación se sienta completa y personal.",
       intro:
-        "JVF Services puede ayudar con selección de decoración, organización, estilo y preparación de habitaciones residenciales. Describa el espacio y el ambiente que desea crear para conversar sobre opciones prácticas.",
+        "JVF HomeWorks Pro puede ayudar con selección de decoración, organización, estilo y preparación de habitaciones residenciales. Describa el espacio y el ambiente que desea crear para conversar sobre opciones prácticas.",
       features: [
         "Estilo de habitaciones y detalles finales",
         "Apoyo para elegir decoración",
@@ -98,8 +139,9 @@ export const es = {
       scheduleTitle: "Comience con la habitación y su objetivo",
       scheduleBody:
         "Indique qué habitaciones necesitan atención, qué le gustaría cambiar y cuándo prefiere hacerlo. No se pide presupuesto en la solicitud inicial.",
-      price: "Cotización personalizada después de una consulta",
-      note: "Este es un servicio de decoración y estilo, no un servicio profesional de diseño interior con licencia.",
+      price: "Desde $59 por hora",
+      cardPrice: "$59 por hora",
+      note: "El precio final se confirma después de una consulta. Este es un servicio de decoración y estilo, no un servicio profesional de diseño interior con licencia.",
       cta: "Solicitar apoyo de decoración",
     },
     notary: {
@@ -117,9 +159,10 @@ export const es = {
       ],
       scheduleTitle: "Antes de su cita",
       scheduleBody:
-        "La persona firmante debe presentarse en persona con identificación aceptable. JVF Services no ofrece asesoría legal ni elige el acto notarial por el cliente.",
+        "La persona firmante debe presentarse en persona con identificación aceptable. JVF HomeWorks Pro no ofrece asesoría legal ni elige el acto notarial por el cliente.",
       price:
         "$5 por cada acto notarial presencial; cualquier tarifa de viaje móvil se cotiza y acuerda por adelantado.",
+      cardPrice: "$5 por acto",
       note: "No se ofrece notarización remota en línea.",
       cta: "Solicitar una cita de notaría",
     },
@@ -140,16 +183,17 @@ export const es = {
       scheduleBody:
         "La interpretación por teléfono y medios virtuales está disponible las 24 horas. La interpretación en persona está disponible de 8:00 a. m. a 6:00 p. m., hora del Este. Después de las 6:00 p. m., las solicitudes deben ser por teléfono o reunión virtual.",
       price: "El precio se confirma después de revisar la solicitud",
+      cardPrice: "Precio personalizado",
       note: "Si la línea está ocupada o no recibe respuesta, envíe un mensaje al (716) 748-9117 o solicite una devolución de llamada urgente.",
       cta: "Solicitar intérprete",
     },
   },
   about: {
-    eyebrow: "Acerca de JVF Services",
+    eyebrow: "Acerca de JVF HomeWorks Pro",
     title:
       "Un negocio de servicios basado en atención, claridad y cumplimiento.",
     intro:
-      "JVF Services apoya a hogares, oficinas pequeñas y clientes de Ohio que necesitan servicios atentos para el hogar o apoyo profesional bilingüe.",
+      "JVF HomeWorks Pro apoya a hogares, oficinas pequeñas y clientes de Ohio que necesitan servicios atentos para el hogar o apoyo profesional bilingüe.",
     missionTitle: "Ayuda práctica con un trato más personal",
     missionBody:
       "Nuestro objetivo es sencillo: escuchar con atención, establecer expectativas claras y ofrecer un servicio que respete su tiempo, su espacio y su privacidad.",
@@ -173,6 +217,14 @@ export const es = {
     placeholderBody:
       "Esta versión de revisión no publica el nombre, el retrato, las credenciales ni la historia personal de la propietaria hasta que se verifiquen.",
   },
+  gallery: {
+    eyebrow: "Galería de proyectos",
+    title: "Trabajo cuidadoso, terminado con atención.",
+    intro:
+      "Una vista más cercana de una sala de sótano terminada que aparece en la galería existente de JVF HomeWorks Pro.",
+    firstCaption: "Sala de sótano terminada con almacenamiento integrado",
+    secondCaption: "Área renovada para convivir en el sótano",
+  },
   contact: {
     eyebrow: "Contacto y solicitud de cotización",
     title: "Encontremos el siguiente paso adecuado.",
@@ -192,31 +244,32 @@ export const es = {
       title: "Términos y condiciones",
       status: "Borrador para revisión — aún no publicado",
       introduction:
-        "Estos términos conceptuales explican cómo funcionarán el sitio web y el proceso de solicitud de JVF Services. Requieren revisión legal antes de publicar el sitio.",
+        "Estos términos conceptuales explican cómo funcionarán el sitio web y el proceso de solicitud de JVF HomeWorks Pro. Requieren revisión legal antes de publicar el sitio.",
       sections: [
         {
           title: "Propósito del sitio web",
           paragraphs: [
-            "Este sitio ofrece información general sobre JVF Services y permite solicitar una cotización. El contenido es informativo y no constituye una oferta vinculante, asesoramiento profesional ni garantía de disponibilidad.",
+            "Este sitio ofrece información general sobre JVF HomeWorks Pro y permite solicitar una cotización. El contenido es informativo y no constituye una oferta vinculante, asesoramiento profesional ni garantía de disponibilidad.",
           ],
         },
         {
           title: "Cotizaciones y confirmación del servicio",
           paragraphs: [
-            "Enviar una solicitud no crea una cita ni un contrato de servicio. JVF Services debe confirmar directamente el alcance, precio, posibles tarifas de viaje, horario, lugar y disponibilidad antes de comenzar el trabajo.",
+            "Enviar una solicitud no crea una cita ni un contrato de servicio. JVF HomeWorks Pro debe confirmar directamente el alcance, precio, posibles tarifas de viaje, horario, lugar y disponibilidad antes de comenzar el trabajo.",
             "Una cotización personalizada puede cambiar si cambia el alcance o la información. El cliente debe proporcionar datos exactos y no confidenciales para evaluar la solicitud.",
           ],
         },
         {
           title: "Servicios para el hogar",
           paragraphs: [
-            "La limpieza se ofrece para hogares y oficinas pequeñas y no incluye trabajos peligrosos ni de riesgo biológico. La decoración incluye estilo de habitaciones, selección, distribución y montaje de decoraciones; no es un servicio autorizado de diseño de interiores, ingeniería, construcción ni arquitectura.",
+            "Las tarifas iniciales publicadas son $39 por hora para limpieza y $59 por hora para remodelación o decoración. Antes de comenzar se deben confirmar el alcance, horas, materiales, equipo, viaje, permisos, oficios especializados y precio total.",
+            "La limpieza se ofrece para hogares y oficinas pequeñas y no incluye trabajos peligrosos ni de riesgo biológico. La decoración incluye estilo, selección, distribución y montaje; no es diseño de interiores con licencia. La remodelación se limita al alcance confirmado y no incluye trabajo regulado no aprobado.",
           ],
         },
         {
           title: "Servicio de notaría",
           paragraphs: [
-            "El servicio de notaría se ofrece con cita y solo en persona. El firmante debe comparecer con identificación aceptable y estar dispuesto y capacitado para firmar. JVF Services no ofrece notarización remota en línea, asesoramiento legal ni selección de documentos.",
+            "El servicio de notaría se ofrece con cita y solo en persona. El firmante debe comparecer con identificación aceptable y estar dispuesto y capacitado para firmar. JVF HomeWorks Pro no ofrece notarización remota en línea, asesoramiento legal ni selección de documentos.",
             "La tarifa indicada es de $5 por acto notarial en persona. Cualquier tarifa razonable de viaje móvil se cotizará y acordará antes del acto. La notarización puede rechazarse si no se cumplen los requisitos legales o de identificación.",
           ],
         },
@@ -245,7 +298,7 @@ export const es = {
       title: "Aviso de privacidad",
       status: "Borrador para revisión — aún no publicado",
       introduction:
-        "Este aviso conceptual describe la información que maneja la versión local de revisión del sitio de JVF Services. Debe actualizarse y revisarse legalmente antes del lanzamiento público.",
+        "Este aviso conceptual describe la información que maneja la versión local de revisión del sitio de JVF HomeWorks Pro. Debe actualizarse y revisarse legalmente antes del lanzamiento público.",
       sections: [
         {
           title: "Información que proporciona el visitante",
@@ -264,7 +317,7 @@ export const es = {
         {
           title: "Futuro proveedor de entrega por correo",
           paragraphs: [
-            "Antes del lanzamiento, JVF Services podrá configurar un proveedor de correo para enviar solicitudes validadas al negocio. Este aviso deberá identificar al proveedor, la información enviada, reglas de retención, controles de acceso y un contacto de privacidad activo antes de recopilar datos.",
+            "Antes del lanzamiento, JVF HomeWorks Pro podrá configurar un proveedor de correo para enviar solicitudes validadas al negocio. Este aviso deberá identificar al proveedor, la información enviada, reglas de retención, controles de acceso y un contacto de privacidad activo antes de recopilar datos.",
           ],
         },
         {
@@ -276,13 +329,13 @@ export const es = {
         {
           title: "Uso e intercambio",
           paragraphs: [
-            "JVF Services usaría la información solo para comprender, responder, proteger y mejorar las solicitudes. No vendemos los datos del formulario. Solo se compartirían con proveedores necesarios para operar el sitio o cuando la ley lo exija, sujeto a la política final.",
+            "JVF HomeWorks Pro usaría la información solo para comprender, responder, proteger y mejorar las solicitudes. No vendemos los datos del formulario. Solo se compartirían con proveedores necesarios para operar el sitio o cuando la ley lo exija, sujeto a la política final.",
           ],
         },
         {
           title: "Sus opciones y contacto",
           paragraphs: [
-            "Puede llamar al (716) 748-9117 en vez de usar el formulario. Antes del lanzamiento se añadirán un correo de privacidad, período de retención, proceso de eliminación y dirección comercial verificada.",
+            "Puede llamar al (716) 748-9117 o escribir a info@jvfhomeworkspro.com en vez de usar el formulario. La dirección postal pública es 2590 Walnut St, Denver, CO 80205. Antes del lanzamiento se deben aprobar el período final de retención y el proceso de eliminación.",
           ],
         },
       ],
@@ -291,7 +344,7 @@ export const es = {
       title: "Declaración de accesibilidad",
       status: "Borrador para revisión — aún no publicado",
       introduction:
-        "JVF Services desea que las personas con discapacidades puedan conocer los servicios, navegar el sitio y pedir ayuda con dignidad e independencia.",
+        "JVF HomeWorks Pro desea que las personas con discapacidades puedan conocer los servicios, navegar el sitio y pedir ayuda con dignidad e independencia.",
       sections: [
         {
           title: "Nuestro objetivo de accesibilidad",
@@ -309,15 +362,15 @@ export const es = {
         {
           title: "Limitaciones conocidas de esta revisión",
           paragraphs: [
-            "El concepto usa espacios visuales claramente identificados mientras se preparan fotografías, logotipo y materiales de la propietaria. Los recursos finales necesitarán texto alternativo apropiado y otra revisión de accesibilidad.",
+            "La versión actual usa el logotipo y algunas imágenes migradas del sitio existente de JVF HomeWorks Pro. Un perfil de la propietaria, fotografías adicionales y futuros cambios visuales requerirán texto alternativo apropiado y otra revisión de accesibilidad.",
             "Las pruebas automáticas ayudan a encontrar barreras, pero no sustituyen las pruebas manuales con teclado, lector de pantalla, zoom y usuarios. El sitio se volverá a revisar cuando cambien contenidos, integraciones o recursos visuales.",
           ],
         },
         {
           title: "Comentarios y asistencia de accesibilidad",
           paragraphs: [
-            "Si una página o formulario es difícil de usar, llame o envíe un mensaje al (716) 748-9117 y describa la página, la tarea y, si se siente cómodo, la tecnología de asistencia o navegador. JVF Services puede ofrecer información y tomar una solicitud por teléfono.",
-            "Antes del lanzamiento se añadirá un correo de accesibilidad. Se revisarán los comentarios y se harán esfuerzos razonables para ofrecer una alternativa accesible mientras se corrige una barrera.",
+            "Si una página o formulario es difícil de usar, llame o envíe un mensaje al (716) 748-9117 y describa la página, la tarea y, si se siente cómodo, la tecnología de asistencia o navegador. JVF HomeWorks Pro puede ofrecer información y tomar una solicitud por teléfono.",
+            "También puede enviar comentarios de accesibilidad a info@jvfhomeworkspro.com. Se revisarán los comentarios y se harán esfuerzos razonables para ofrecer una alternativa accesible mientras se corrige una barrera.",
           ],
         },
       ],

@@ -1,17 +1,18 @@
+import Image from "next/image";
 import Link from "next/link";
 import { businessFacts } from "@/content/business";
 import { getContent } from "@/content/content";
 import type { Locale, ServiceKey } from "@/content/types";
 import { localizedHref } from "@/lib/i18n";
 import { CallToAction } from "@/components/ui/call-to-action";
-import { ServiceCard } from "@/components/ui/service-card";
-import { ServiceLedger } from "@/components/ui/service-ledger";
+import { FeaturedServiceCard } from "@/components/ui/featured-service-card";
 
 const serviceRoutes: Record<
   ServiceKey,
-  "housekeeping" | "decoration" | "notary" | "interpreting"
+  "housekeeping" | "remodeling" | "decoration" | "notary" | "interpreting"
 > = {
   housekeeping: "housekeeping",
+  remodeling: "remodeling",
   decoration: "decoration",
   notary: "notary",
   interpreting: "interpreting",
@@ -26,6 +27,15 @@ export function HomePage({ locale }: { locale: Locale }) {
   return (
     <>
       <section className="home-hero page-section">
+        <Image
+          className="home-hero-image"
+          src="/assets/jvf/cleaning-hero.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          preload
+        />
+        <div className="home-hero-shade" aria-hidden="true" />
         <div className="site-container hero-grid">
           <div className="hero-copy">
             <p className="page-kicker">{content.home.eyebrow}</p>
@@ -54,12 +64,51 @@ export function HomePage({ locale }: { locale: Locale }) {
               <a href={businessFacts.phoneHref}>{content.common.call}</a>
             </div>
           </div>
-          <ServiceLedger locale={locale} />
+          <aside
+            className="hero-service-note"
+            aria-label={
+              locale === "en" ? "Service highlights" : "Aspectos destacados"
+            }
+          >
+            <p>
+              {locale === "en"
+                ? "Five ways we can help"
+                : "Cinco maneras de ayudarle"}
+            </p>
+            <strong>
+              {locale === "en" ? "Home + professional" : "Hogar + profesional"}
+            </strong>
+            <span>
+              {locale === "en"
+                ? "24/7 virtual interpretation"
+                : "Interpretación virtual 24/7"}
+            </span>
+          </aside>
+        </div>
+      </section>
+
+      <section className="process-section page-section">
+        <div className="site-container">
+          <div className="section-intro process-intro">
+            <p className="page-kicker">
+              {locale === "en" ? "How it works" : "Cómo funciona"}
+            </p>
+            <h2>{content.home.stepsHeading}</h2>
+          </div>
+          <div className="process-grid">
+            {content.home.steps.map((step) => (
+              <article key={step.number} data-reveal>
+                <span aria-hidden="true">{step.number}</span>
+                <h3>{step.title}</h3>
+                <p>{step.body}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="availability-band">
-        <div className="site-container availability-grid">
+        <div className="site-container availability-grid" data-reveal>
           <p className="availability-index" aria-hidden="true">
             24/7
           </p>
@@ -79,18 +128,24 @@ export function HomePage({ locale }: { locale: Locale }) {
 
       <section className="page-section service-index-section">
         <div className="site-container">
-          <div className="section-intro split-intro">
+          <div className="section-intro popular-services-intro" data-reveal>
+            <p className="popular-services-kicker">
+              {locale === "en"
+                ? "Spotless spaces. Zero stress."
+                : "Espacios impecables. Cero estrés."}
+            </p>
             <h2>{content.home.servicesHeading}</h2>
             <p>{content.home.servicesIntro}</p>
           </div>
-          <div className="service-list">
+          <div className="featured-service-list">
             {services.map(([key, service], index) => (
-              <ServiceCard
+              <FeaturedServiceCard
                 key={key}
+                locale={locale}
+                serviceKey={key}
                 number={String(index + 1).padStart(2, "0")}
                 service={service}
                 href={localizedHref(serviceRoutes[key], locale)}
-                learnMore={content.common.learnMore}
               />
             ))}
           </div>
@@ -98,7 +153,7 @@ export function HomePage({ locale }: { locale: Locale }) {
       </section>
 
       <section className="why-section page-section">
-        <div className="site-container why-grid">
+        <div className="site-container why-grid" data-reveal>
           <div className="why-heading">
             <span aria-hidden="true">✦</span>
             <h2>{content.home.whyHeading}</h2>

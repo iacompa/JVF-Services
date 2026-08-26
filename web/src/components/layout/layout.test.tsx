@@ -35,6 +35,12 @@ describe("services menu keyboard behavior", () => {
     expect(
       screen.getByRole("link", { name: /home decoration/i }),
     ).toBeVisible();
+    expect(
+      screen.queryByRole("link", { name: /landscaping/i }),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: /home remodeling/i }),
+    ).toBeVisible();
     expect(screen.getByRole("link", { name: /notary/i })).toBeVisible();
     expect(
       screen.getByRole("link", { name: /spanish-english interpreting/i }),

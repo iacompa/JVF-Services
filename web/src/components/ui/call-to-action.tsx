@@ -20,7 +20,11 @@ export function CallToAction({
   showDirectActions = false,
 }: CallToActionProps) {
   return (
-    <section className="closing-cta" aria-labelledby="closing-cta-title">
+    <section
+      className="closing-cta"
+      aria-labelledby="closing-cta-title"
+      data-reveal
+    >
       <div>
         <h2 id="closing-cta-title">{title}</h2>
         <p>{body}</p>
