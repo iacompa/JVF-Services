@@ -34,7 +34,7 @@ export const businessFacts = Object.freeze({
       date: "2026-03-31",
       rating: 5,
       body: [
-        "“Great response time, staff was on time and got the job done. JVF Services made the house look great. If anyone needs a clean home, contact them.”",
+        "“Great response time, staff was on time and got the job done pretty JVF Services. House looked great when they finished. If anyone needs a clean home contact them.”",
       ],
     },
     {
