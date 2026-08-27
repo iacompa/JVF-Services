@@ -36,10 +36,6 @@ describe("business facts", () => {
       legalEntitySuffix: null,
       reviews: [
         {
-          author: "Hellen Smith",
-          rating: 5,
-        },
-        {
           author: "Rebecca Hawland",
           rating: 5,
         },
@@ -86,7 +82,8 @@ describe("localized content", () => {
       ["jvf", "home", "works"].join(""),
     );
     expect(publicCopy).not.toContain("landscaping");
-    expect(publicCopy).toContain("remodeling");
+    expect(publicCopy).not.toContain("remodel");
+    expect(publicCopy).not.toContain("remodelación");
     expect(publicCopy).not.toContain("certified interpreter");
   });
 });

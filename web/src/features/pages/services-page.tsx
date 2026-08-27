@@ -28,15 +28,8 @@ export function ServicesPage({ locale }: { locale: Locale }) {
               />
               <FeaturedServiceCard
                 locale={locale}
-                serviceKey="remodeling"
-                number="02"
-                service={content.serviceDetails.remodeling}
-                href={localizedHref("remodeling", locale)}
-              />
-              <FeaturedServiceCard
-                locale={locale}
                 serviceKey="decoration"
-                number="03"
+                number="02"
                 service={content.serviceDetails.decoration}
                 href={localizedHref("decoration", locale)}
               />
@@ -48,14 +41,14 @@ export function ServicesPage({ locale }: { locale: Locale }) {
               <FeaturedServiceCard
                 locale={locale}
                 serviceKey="notary"
-                number="04"
+                number="03"
                 service={content.serviceDetails.notary}
                 href={localizedHref("notary", locale)}
               />
               <FeaturedServiceCard
                 locale={locale}
                 serviceKey="interpreting"
-                number="05"
+                number="04"
                 service={content.serviceDetails.interpreting}
                 href={localizedHref("interpreting", locale)}
               />

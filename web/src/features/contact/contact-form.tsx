@@ -24,10 +24,6 @@ const services: Array<{
     label: { en: "Housekeeping & cleaning", es: "Limpieza del hogar" },
   },
   {
-    value: "remodeling",
-    label: { en: "Home remodeling", es: "Remodelación del hogar" },
-  },
-  {
     value: "decoration",
     label: { en: "Home decoration", es: "Decoración del hogar" },
   },

@@ -2,7 +2,6 @@ import type { ServiceId } from "./types";
 
 const serviceIds = new Set<ServiceId>([
   "housekeeping",
-  "remodeling",
   "decoration",
   "notary",
   "interpreting",

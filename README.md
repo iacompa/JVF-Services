@@ -1,6 +1,6 @@
 # JVF Services website
 
-An accessible, bilingual Next.js website for JVF Services. It presents housekeeping, home remodeling, home decoration, Ohio notary, and Spanish-English interpreting services in English and Spanish, plus an owner-provided project gallery.
+An accessible, bilingual Next.js website for JVF Services. It presents housekeeping, home decoration, Ohio notary, and Spanish-English interpreting services in English and Spanish, plus an owner-provided project gallery.
 
 The project is a local review build. It is not connected to Vercel, a public domain, a database, or an email provider.
 

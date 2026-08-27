@@ -31,7 +31,7 @@ describe("ReviewsSection", () => {
     expect(screen.getByText("Reviews from Google")).toBeVisible();
     expect(screen.getByText("From our previous website")).toBeVisible();
     expect(screen.getByText("Google Customer")).toBeVisible();
-    expect(screen.getByText("Hellen Smith")).toBeVisible();
+    expect(screen.getByText("Rebecca Hawland")).toBeVisible();
     expect(
       screen.getByRole("link", { name: "Leave a review on Google" }),
     ).toHaveAttribute("href", "https://g.page/r/example/review");

@@ -20,7 +20,6 @@ export const publicPageEntries = (["en", "es"] as const).flatMap((locale) =>
 
 const serviceByRoute: Partial<Record<RouteKey, ServiceKey>> = {
   housekeeping: "housekeeping",
-  remodeling: "remodeling",
   decoration: "decoration",
   notary: "notary",
   interpreting: "interpreting",

@@ -7,10 +7,9 @@ The `jvf/` directory contains the current logo and selected images migrated from
 | `jvf/jvf-services-logo.png`       | `1376×768` transparent PNG | Header and footer brand mark           |
 | `jvf/cleaning-hero.jpg`           | `1600×1000` JPEG          | Home hero and housekeeping page       |
 | `jvf/decoration-chair.png`        | `626×416` transparent PNG | Housekeeping card and decoration page |
-| `jvf/remodeling-team.png`         | `413×374` transparent PNG | Remodeling service card               |
 | `jvf/decoration-cabinet.png`      | `452×444` transparent PNG | Decoration service card               |
 | `jvf/project-basement-wide.jpg`   | `948×706` JPEG            | About and Gallery pages               |
-| `jvf/project-basement-detail.jpg` | `1290×948` JPEG           | Remodeling and Gallery pages          |
+| `jvf/project-basement-detail.jpg` | `1290×948` JPEG           | Gallery page                           |
 | `favicon-source.png`              | `512×512`, transparent    | Favicon source                        |
 | `owner-portrait.jpg`              | `800×1000` (4:5)          | About page                            |
 

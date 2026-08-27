@@ -1,7 +1,7 @@
 export type Locale = "en" | "es";
 
 export type ServiceKey =
-  "housekeeping" | "remodeling" | "decoration" | "notary" | "interpreting";
+  "housekeeping" | "decoration" | "notary" | "interpreting";
 
 export type ReviewStatus = "approved" | "owner-review-required";
 

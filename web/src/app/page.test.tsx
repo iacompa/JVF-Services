@@ -18,7 +18,6 @@ test("renders the JVF Services homepage", async () => {
       name: /what our clients say/i,
     }),
   ).toBeInTheDocument();
-  expect(screen.getByText("Hellen Smith")).toBeInTheDocument();
   expect(screen.getByText("Rebecca Hawland")).toBeInTheDocument();
   expect(screen.getByText("Michelle")).toBeInTheDocument();
 });

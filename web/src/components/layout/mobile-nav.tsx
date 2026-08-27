@@ -64,9 +64,6 @@ export function MobileNav({
           <Link href={localizedHref("housekeeping", locale)}>
             {content.serviceDetails.housekeeping.title}
           </Link>
-          <Link href={localizedHref("remodeling", locale)}>
-            {content.serviceDetails.remodeling.title}
-          </Link>
           <Link href={localizedHref("decoration", locale)}>
             {content.serviceDetails.decoration.title}
           </Link>

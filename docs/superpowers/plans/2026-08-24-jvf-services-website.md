@@ -349,7 +349,7 @@ git commit -m "build: scaffold pinned Next.js application"
 
 - [ ] **Step 1: Write failing parity and business-fact tests**
 
-Test that English and Spanish expose identical keys, all route keys resolve in both locales, the phone is `(716) 748-9117`, public name is `JVF Services`, email/address are `null`, reviews are empty, and no content contains the former brand name, `landscaping`, `remodeling`, or `certified interpreter`.
+Test that English and Spanish expose identical keys, all route keys resolve in both locales, the phone is `(716) 748-9117`, public name is `JVF Services`, email/address are `null`, reviews are empty, and no content contains the former brand name, discontinued services, or `certified interpreter`.
 
 - [ ] **Step 2: Run the content tests and verify failure**
 

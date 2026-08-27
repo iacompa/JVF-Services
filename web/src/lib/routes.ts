@@ -2,7 +2,6 @@ export const routePaths = {
   home: "/",
   services: "/services",
   housekeeping: "/services/housekeeping",
-  remodeling: "/services/home-remodeling",
   decoration: "/services/home-decoration",
   notary: "/services/notary",
   interpreting: "/services/interpreting",

@@ -102,27 +102,6 @@ export const en = {
       note: "Final time and price depend on the confirmed scope. Hazardous and biohazard work is not offered.",
       cta: "Request a housekeeping quote",
     },
-    remodeling: {
-      eyebrow: "Home services",
-      title: "Home remodeling",
-      summary:
-        "Practical improvement work planned around your space, priorities, and budget.",
-      intro:
-        "Discuss kitchen or bathroom updates, flooring, painting, fixture replacement, and other improvement projects. Every request is reviewed before scope, scheduling, or price is confirmed.",
-      features: [
-        "Kitchen and bathroom upgrades",
-        "Flooring installation",
-        "Interior painting and finishing",
-        "Fixture replacements",
-      ],
-      scheduleTitle: "Begin with the project goal",
-      scheduleBody:
-        "Share the rooms involved, the result you want, current conditions, desired timing, and any known permit or trade requirements.",
-      price: "From $59 per hour",
-      cardPrice: "$59 per hour",
-      note: "Materials, permits, specialist trades, and project-specific costs are quoted separately when applicable.",
-      cta: "Request a remodeling consultation",
-    },
     decoration: {
       eyebrow: "Home services",
       title: "Home decoration and room styling",
@@ -221,7 +200,7 @@ export const en = {
     intro:
       "A closer look at a finished basement living space featured in the existing JVF Services project gallery.",
     firstCaption: "Finished basement lounge and built-in storage",
-    secondCaption: "Renovated basement living area",
+    secondCaption: "Finished lower-level living area",
   },
   contact: {
     eyebrow: "Contact & quote request",
@@ -260,8 +239,8 @@ export const en = {
         {
           title: "Home services",
           paragraphs: [
-            "Published starting rates are $39 per hour for housekeeping and $59 per hour for remodeling or home decoration. Final scope, hours, materials, equipment, travel, permits, specialist trades, and total price must be confirmed before work begins.",
-            "Housekeeping is intended for homes and small offices and does not include hazardous or biohazard work. Decoration covers styling, selection, arrangement, and setup; it is not licensed interior-design service. Remodeling work is limited to the confirmed scope and does not include unapproved regulated work.",
+            "Published starting rates are $39 per hour for housekeeping and $59 per hour for home decoration. Final scope, hours, materials, equipment, travel, and total price must be confirmed before work begins.",
+            "Housekeeping is intended for homes and small offices and does not include hazardous or biohazard work. Decoration covers styling, selection, arrangement, and setup; it is not licensed interior-design service.",
           ],
         },
         {

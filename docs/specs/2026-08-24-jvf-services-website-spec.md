@@ -11,7 +11,7 @@ The concept must run locally for review before any Vercel project, domain, email
 - Public brand: `JVF Services`; do not use the former brand name or an `LLC` suffix.
 - Visual direction: warm premium, forest green, sage, warm ivory, graphite text, generous whitespace, restrained motion, no blue.
 - The supplied JVF flyer is visual inspiration only. Preserve the general home/service/sparkle idea but do not copy the existing logo.
-- The supplied proposal contributes applicable scope ideas only. Do not copy its black-and-white visual style, agency details, confidentiality text, prices, timelines, landscaping, remodeling, payment, or admin-dashboard promises.
+- The supplied proposal contributes applicable scope ideas only. Do not copy its black-and-white visual style, agency details, confidentiality text, prices, timelines, discontinued service offerings, payment, or admin-dashboard promises.
 - The first concept uses explicit asset placeholders with fixed dimensions for the logo, favicon, owner portrait, service photography, and future testimonials. Never present stock imagery or fabricated reviews as JVF work.
 - Later content insertion uses structured local content files, not a CMS or authenticated editor.
 

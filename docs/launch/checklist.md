@@ -50,7 +50,7 @@ Google specifically identifies cleaning services as service-area businesses and 
 - [ ] Confirm that `$5 per in-person notarial act` remains accurate; confirm how travel fees are calculated, quoted, and accepted.
 - [ ] Confirm that no wording implies legal advice, document selection, certified interpreting, licensed interior design, remote online notarization, or guaranteed availability.
 - [ ] Confirm the service area, ordinary cleaning/decoration hours, appointment policy, cancellations, travel rules, and excluded work.
-- [ ] Confirm that the migrated starting rates remain current: housekeeping $39/hour, remodeling $59/hour, and decoration $59/hour.
+- [ ] Confirm that the migrated starting rates remain current: housekeeping $39/hour and decoration $59/hour.
 - [ ] Confirm interpreting operations: virtual/phone/Zoom requests are accepted 24/7; in-person interpreting is offered only from 8:00 a.m. to 6:00 p.m. Eastern Time; after 6:00 p.m. service is virtual only.
 - [ ] Have qualified counsel review the Terms, Privacy Notice, accessibility language, form consent, business claims, and intended customer-data handling.
 - [ ] Review the accessibility-demand letter with qualified counsel, calendar every response deadline, and preserve the letter plus remediation/QA records.

@@ -102,27 +102,6 @@ export const es = {
       note: "El tiempo y el precio final dependen del alcance confirmado. No se ofrecen trabajos peligrosos ni de riesgo biológico.",
       cta: "Solicitar cotización de limpieza",
     },
-    remodeling: {
-      eyebrow: "Servicios para el hogar",
-      title: "Remodelación del hogar",
-      summary:
-        "Mejoras prácticas planificadas según su espacio, prioridades y presupuesto.",
-      intro:
-        "Converse con nosotros sobre mejoras de cocina o baño, pisos, pintura, reemplazo de accesorios y otros proyectos. Revisamos cada solicitud antes de confirmar alcance, horario o precio.",
-      features: [
-        "Mejoras de cocina y baño",
-        "Instalación de pisos",
-        "Pintura y acabados interiores",
-        "Reemplazo de accesorios",
-      ],
-      scheduleTitle: "Comience con el objetivo del proyecto",
-      scheduleBody:
-        "Comparta las habitaciones, el resultado deseado, las condiciones actuales, el plazo y cualquier requisito conocido de permiso u oficio especializado.",
-      price: "Desde $59 por hora",
-      cardPrice: "$59 por hora",
-      note: "Los materiales, permisos, oficios especializados y costos específicos se cotizan por separado cuando corresponda.",
-      cta: "Solicitar consulta de remodelación",
-    },
     decoration: {
       eyebrow: "Servicios para el hogar",
       title: "Decoración y estilo para el hogar",
@@ -223,7 +202,7 @@ export const es = {
     intro:
       "Una vista más cercana de una sala de sótano terminada que aparece en la galería existente de JVF Services.",
     firstCaption: "Sala de sótano terminada con almacenamiento integrado",
-    secondCaption: "Área renovada para convivir en el sótano",
+    secondCaption: "Área terminada para convivir en el nivel inferior",
   },
   contact: {
     eyebrow: "Contacto y solicitud de cotización",
@@ -262,8 +241,8 @@ export const es = {
         {
           title: "Servicios para el hogar",
           paragraphs: [
-            "Las tarifas iniciales publicadas son $39 por hora para limpieza y $59 por hora para remodelación o decoración. Antes de comenzar se deben confirmar el alcance, horas, materiales, equipo, viaje, permisos, oficios especializados y precio total.",
-            "La limpieza se ofrece para hogares y oficinas pequeñas y no incluye trabajos peligrosos ni de riesgo biológico. La decoración incluye estilo, selección, distribución y montaje; no es diseño de interiores con licencia. La remodelación se limita al alcance confirmado y no incluye trabajo regulado no aprobado.",
+            "Las tarifas iniciales publicadas son $39 por hora para limpieza y $59 por hora para decoración. Antes de comenzar se deben confirmar el alcance, horas, materiales, equipo, viaje y precio total.",
+            "La limpieza se ofrece para hogares y oficinas pequeñas y no incluye trabajos peligrosos ni de riesgo biológico. La decoración incluye estilo, selección, distribución y montaje; no es diseño de interiores con licencia.",
           ],
         },
         {

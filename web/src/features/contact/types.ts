@@ -2,7 +2,6 @@ import type { Locale } from "@/content/types";
 
 export type ServiceId =
   | "housekeeping"
-  | "remodeling"
   | "decoration"
   | "notary"
   | "interpreting"
@@ -40,13 +39,6 @@ export interface DecorationRequest extends BaseQuoteRequest {
   desiredDate: string;
 }
 
-export interface RemodelingRequest extends BaseQuoteRequest {
-  service: "remodeling";
-  areas: string;
-  projectGoal: string;
-  desiredDate: string;
-}
-
 export interface NotaryRequest extends BaseQuoteRequest {
   service: "notary";
   mode: "in-person";
@@ -72,7 +64,6 @@ export interface GeneralRequest extends BaseQuoteRequest {
 
 export type QuoteRequest =
   | HousekeepingRequest
-  | RemodelingRequest
   | DecorationRequest
   | NotaryRequest
   | InterpretingRequest

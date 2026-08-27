@@ -10,11 +10,6 @@ const artwork: Partial<
     width: 1600,
     height: 1000,
   },
-  remodeling: {
-    src: "/assets/jvf/remodeling-team.png",
-    width: 413,
-    height: 374,
-  },
   decoration: {
     src: "/assets/jvf/decoration-cabinet.png",
     width: 452,

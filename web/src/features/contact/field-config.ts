@@ -74,23 +74,6 @@ export const serviceFieldConfig = {
       required: false,
     },
   },
-  remodeling: {
-    areas: {
-      kind: "text",
-      label: { en: "Rooms or project areas", es: "Habitaciones o áreas" },
-      required: true,
-    },
-    projectGoal: {
-      kind: "textarea",
-      label: { en: "Project goal", es: "Objetivo del proyecto" },
-      required: true,
-    },
-    desiredDate: {
-      kind: "date",
-      label: { en: "Desired start date", es: "Fecha deseada de inicio" },
-      required: true,
-    },
-  },
   decoration: {
     areas: {
       kind: "text",

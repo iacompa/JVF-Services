@@ -16,18 +16,6 @@ export const businessFacts = Object.freeze({
   legalEntitySuffix: null,
   reviews: [
     {
-      id: "hellen-smith-basement-remodel",
-      title: "Basement remodel",
-      author: "Hellen Smith",
-      date: "2026-05-18",
-      rating: 5,
-      body: [
-        "I recently had my basement remodeled by JVF Services, and I couldn’t be happier with the results. From the very beginning, they truly listened to my ideas and made me feel like my vision mattered. Their attention to detail, professionalism, and quality of work exceeded my expectations.",
-        "The entire team was amazing to work with, and the finished project turned out beautifully. The owner was especially professional, polite, understanding, and genuinely passionate about delivering great service. Their kindness and dedication made the whole experience even better.",
-        "I am extremely grateful for all their hard work and highly recommend JVF Services 100%. I will definitely be contacting them again for future projects. Thank you so much!",
-      ],
-    },
-    {
       id: "rebecca-hawland-cleaning",
       title: "Client",
       author: "Rebecca Hawland",
@@ -55,15 +43,6 @@ export const businessFacts = Object.freeze({
       types: ["standard", "deep", "recurring", "move-in/move-out", "one-time"],
       excluded: ["hazardous work", "biohazard work"],
       hourlyRate: 39,
-    },
-    remodeling: {
-      hourlyRate: 59,
-      scope: [
-        "kitchen and bathroom upgrades",
-        "flooring",
-        "painting",
-        "fixtures",
-      ],
     },
     decoration: {
       scope: ["room styling", "decor selection", "arrangement", "setup"],

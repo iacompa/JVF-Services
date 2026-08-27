@@ -4,8 +4,8 @@ import { PublicPage, publicPageEntries } from "./public-page";
 import { buildPageMetadata, professionalServiceJsonLd } from "@/lib/metadata";
 
 describe("public page registry", () => {
-  test("renders all 26 localized routes with one page heading", () => {
-    expect(publicPageEntries).toHaveLength(26);
+  test("renders all 24 localized routes with one page heading", () => {
+    expect(publicPageEntries).toHaveLength(24);
 
     for (const entry of publicPageEntries) {
       const { unmount } = render(
@@ -50,7 +50,7 @@ describe("public page registry", () => {
     render(<PublicPage locale="en" route="services" />);
 
     expect(screen.getByText(/^\$39 per hour$/i)).toBeVisible();
-    expect(screen.getAllByText(/^\$59 per hour$/i)).toHaveLength(2);
+    expect(screen.getAllByText(/^\$59 per hour$/i)).toHaveLength(1);
   });
 });
 
@@ -76,8 +76,9 @@ describe("localized search metadata", () => {
       email: "services.jvf@gmail.com",
     });
     expect(professionalServiceJsonLd.serviceType).toEqual(
-      expect.arrayContaining(["Housekeeping", "Home remodeling"]),
+      expect.arrayContaining(["Housekeeping", "Home decoration"]),
     );
+    expect(professionalServiceJsonLd.serviceType).toHaveLength(4);
     expect(professionalServiceJsonLd.serviceType).not.toContain("Landscaping");
   });
 });

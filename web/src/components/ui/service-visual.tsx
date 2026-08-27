@@ -13,11 +13,6 @@ const serviceImages: Partial<
     width: 1600,
     height: 1000,
   },
-  remodeling: {
-    src: "/assets/jvf/project-basement-detail.jpg",
-    width: 1290,
-    height: 948,
-  },
   decoration: {
     src: "/assets/jvf/decoration-chair.png",
     width: 626,
@@ -62,13 +57,9 @@ export function ServiceVisual({
       ? locale === "en"
         ? "Two cleaners wiping surfaces in a bright room"
         : "Dos personas limpiando superficies en una habitación iluminada"
-      : service === "remodeling"
-        ? locale === "en"
-          ? "Renovated basement living area from the JVF project gallery"
-          : "Área renovada de sótano de la galería de proyectos de JVF"
-        : locale === "en"
-          ? "Styled reading chair with a blanket, books, plant, and side table"
-          : "Sillón decorado con manta, libros, planta y mesa auxiliar";
+      : locale === "en"
+        ? "Styled reading chair with a blanket, books, plant, and side table"
+        : "Sillón decorado con manta, libros, planta y mesa auxiliar";
 
   return (
     <figure

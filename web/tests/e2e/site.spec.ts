@@ -60,7 +60,7 @@ test("migrated pricing, contact details, and gallery are public", async ({
   await page.goto("/services");
   await waitForHydration(page);
   await expect(page.getByText("$39 per hour")).toBeVisible();
-  await expect(page.getByText("$59 per hour")).toHaveCount(2);
+  await expect(page.getByText("$59 per hour")).toHaveCount(1);
 
   await page.goto("/contact");
   await expect(
@@ -72,6 +72,17 @@ test("migrated pricing, contact details, and gallery are public", async ({
 
   await page.goto("/gallery");
   await expect(page.locator("main").getByRole("img")).toHaveCount(2);
+});
+
+test("discontinued service URLs return not found", async ({ page }) => {
+  const removedPath = ["home", "remodeling"].join("-");
+  for (const route of [
+    `/services/${removedPath}`,
+    `/es/services/${removedPath}`,
+  ]) {
+    const response = await page.goto(route);
+    expect(response?.status()).toBe(404);
+  }
 });
 
 test("service CTA preselects interpreting and direct actions remain available", async ({

@@ -13,7 +13,6 @@ const pageLabels: Record<RouteKey, { en: string; es: string }> = {
   home: { en: "Home", es: "Inicio" },
   services: { en: "Services", es: "Servicios" },
   housekeeping: { en: "Housekeeping", es: "Limpieza" },
-  remodeling: { en: "Home Remodeling", es: "Remodelación del hogar" },
   decoration: { en: "Home Decoration", es: "Decoración del hogar" },
   notary: { en: "Ohio Notary Public", es: "Notaría en Ohio" },
   interpreting: {
@@ -34,7 +33,6 @@ function descriptionFor(locale: Locale, route: RouteKey): string {
   if (route === "services") return content.services.intro;
   if (
     route === "housekeeping" ||
-    route === "remodeling" ||
     route === "decoration" ||
     route === "notary" ||
     route === "interpreting"
@@ -99,7 +97,6 @@ export const professionalServiceJsonLd = {
   areaServed: "Ohio",
   serviceType: [
     "Housekeeping",
-    "Home remodeling",
     "Home decoration",
     "In-person notary service",
     "Spanish-English interpreting",

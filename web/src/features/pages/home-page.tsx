@@ -14,10 +14,9 @@ import { ReviewsSection } from "@/components/ui/reviews-section";
 
 const serviceRoutes: Record<
   ServiceKey,
-  "housekeeping" | "remodeling" | "decoration" | "notary" | "interpreting"
+  "housekeeping" | "decoration" | "notary" | "interpreting"
 > = {
   housekeeping: "housekeeping",
-  remodeling: "remodeling",
   decoration: "decoration",
   notary: "notary",
   interpreting: "interpreting",
@@ -85,8 +84,8 @@ export function HomePage({
           >
             <p>
               {locale === "en"
-                ? "Five ways we can help"
-                : "Cinco maneras de ayudarle"}
+                ? "Four ways we can help"
+                : "Cuatro maneras de ayudarle"}
             </p>
             <strong>
               {locale === "en" ? "Home + professional" : "Hogar + profesional"}
