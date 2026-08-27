@@ -4,7 +4,8 @@ The `jvf/` directory contains the logo and selected images migrated from the own
 
 | File                              | Required format and size  | Intended use                          |
 | --------------------------------- | ------------------------- | ------------------------------------- |
-| `jvf/jvf-homeworks-pro-logo.png`  | `300×195` transparent PNG | Header and footer wordmark            |
+| `jvf/jvf-services-logo.png`       | `1376×768` transparent PNG | Header and footer brand mark           |
+| `jvf/jvf-homeworks-pro-logo.png`  | `300×195` transparent PNG  | Previous brand mark (retained archive) |
 | `jvf/cleaning-hero.jpg`           | `1600×1000` JPEG          | Home hero and housekeeping page       |
 | `jvf/decoration-chair.png`        | `626×416` transparent PNG | Housekeeping card and decoration page |
 | `jvf/remodeling-team.png`         | `413×374` transparent PNG | Remodeling service card               |

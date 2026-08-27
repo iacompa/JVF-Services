@@ -20,11 +20,11 @@ export function BrandLockup({
     >
       <Image
         className="brand-logo-image"
-        src="/assets/jvf/jvf-homeworks-pro-logo.png"
+        src="/assets/jvf/jvf-services-logo.png"
         alt=""
-        width={300}
-        height={195}
-        sizes="(max-width: 720px) 124px, 154px"
+        width={1376}
+        height={768}
+        sizes="(max-width: 680px) 156px, (max-width: 1080px) 180px, 230px"
       />
     </Link>
   );

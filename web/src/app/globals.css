@@ -1,24 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --evergreen-950: #082820;
-  --evergreen-900: #10372e;
-  --forest-700: #1b5946;
-  --forest-600: #2a6c56;
-  --moss-500: #788b75;
-  --sage-300: #b8cbb9;
-  --sage-100: #e7eee6;
-  --ivory: #f6f1e7;
-  --paper: #fdfbf6;
+  --evergreen-950: #082b45;
+  --evergreen-900: #123f5d;
+  --forest-700: #1f6541;
+  --forest-600: #2d7650;
+  --moss-500: #3b7891;
+  --sage-300: #a9cfc0;
+  --sage-100: #dfeee6;
+  --ivory: #f4f7f5;
+  --paper: #fbfcfb;
   --white: #ffffff;
-  --graphite: #202723;
-  --muted-graphite: #5b625e;
-  --brass: #7f551f;
-  --brass-soft: #ead8b8;
+  --graphite: #172a35;
+  --muted-graphite: #52636c;
+  --brass: #8a6200;
+  --brass-soft: #f5df9a;
+  --gold: #d5a51f;
   --error: #9b2c2c;
-  --border: #c9d1c9;
-  --shadow-soft: 0 24px 70px rgb(8 40 32 / 0.11);
-  --shadow-card: 0 14px 35px rgb(8 40 32 / 0.08);
+  --border: #c7d4d0;
+  --shadow-soft: 0 24px 70px rgb(8 43 69 / 0.12);
+  --shadow-card: 0 14px 35px rgb(8 43 69 / 0.09);
   --site-width: 1240px;
 }
 
@@ -63,8 +64,9 @@ button {
   color: inherit;
 }
 :focus-visible {
-  outline: 3px solid var(--evergreen-900);
+  outline: 3px solid var(--gold);
   outline-offset: 3px;
+  box-shadow: 0 0 0 5px var(--evergreen-950);
 }
 ::selection {
   background: var(--sage-300);
@@ -921,7 +923,7 @@ li {
 }
 .popular-services-intro .popular-services-kicker {
   margin-bottom: 0.6rem;
-  color: #367942;
+  color: var(--forest-600);
   font-family: var(--font-display), Georgia, serif;
   font-size: clamp(1rem, 2vw, 1.25rem);
   font-style: italic;
@@ -944,7 +946,7 @@ li {
   margin-inline: auto;
 }
 .featured-service-card {
-  --service-green: #2f763b;
+  --service-green: #246a47;
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -956,11 +958,11 @@ li {
   border: 1px solid rgb(255 255 255 / 0.18);
   border-radius: 1.75rem;
   background: var(--service-green);
-  box-shadow: 0 22px 55px rgb(8 40 32 / 0.14);
+  box-shadow: 0 22px 55px rgb(8 43 69 / 0.16);
   color: var(--white);
 }
 .featured-service-card:nth-child(even) {
-  --service-green: #34753f;
+  --service-green: #245c74;
 }
 .featured-service-card::before,
 .featured-service-card::after {
@@ -1111,7 +1113,7 @@ li {
   display: block;
   width: 100%;
   max-height: 19rem;
-  filter: drop-shadow(0 20px 20px rgb(4 30 15 / 0.2));
+  filter: drop-shadow(0 20px 20px rgb(6 31 51 / 0.24));
   object-fit: contain;
 }
 .featured-service-housekeeping .featured-service-artwork img {
@@ -1225,7 +1227,7 @@ li {
   background:
     radial-gradient(
       circle at 88% 8%,
-      rgb(184 203 185 / 0.42),
+      rgb(169 207 192 / 0.42),
       transparent 27rem
     ),
     var(--paper);
@@ -2169,6 +2171,14 @@ li {
 .footer-brand .brand-lockup {
   width: fit-content;
   margin-bottom: 1.35rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgb(255 255 255 / 0.2);
+  border-radius: 0.5rem;
+  background: var(--paper);
+  box-shadow: 0 16px 42px rgb(3 21 35 / 0.28);
+}
+.footer-brand .brand-logo-image {
+  width: 240px;
 }
 .footer-brand p:last-child {
   color: var(--sage-100);
@@ -2332,51 +2342,51 @@ li {
   }
 }
 
-/* Migrated JVF HomeWorks Pro brand direction */
+/* JVF Services eagle-mark brand direction */
 .site-header {
-  border-bottom-color: rgb(255 255 255 / 0.16);
-  background: rgb(8 40 32 / 0.97);
-  box-shadow: 0 10px 36px rgb(4 24 19 / 0.22);
+  border-bottom-color: var(--border);
+  background: rgb(251 252 251 / 0.97);
+  box-shadow: 0 10px 36px rgb(8 43 69 / 0.1);
 }
 .announcement-bar {
   border-bottom: 1px solid rgb(255 255 255 / 0.12);
-  background: #061d17;
+  background: var(--evergreen-950);
 }
 .header-inner {
-  min-height: 98px;
+  min-height: 118px;
 }
 .brand-lockup {
-  color: var(--white);
+  color: var(--evergreen-950);
 }
 .brand-logo-image {
   display: block;
-  width: 154px;
+  width: 208px;
   height: auto;
 }
 .desktop-navigation > a,
 .nav-disclosure,
 .language-switcher a {
-  color: var(--white);
-  font-weight: 680;
+  color: var(--graphite);
+  font-weight: 720;
 }
 .desktop-navigation > a:hover,
 .nav-disclosure:hover,
 .desktop-navigation > a[aria-current="page"],
 .language-switcher a[aria-current="page"] {
-  color: #bfe5b7;
+  color: var(--forest-700);
 }
 .disclosure-mark {
-  border-color: rgb(255 255 255 / 0.45);
-  color: #bfe5b7;
+  border-color: var(--sage-300);
+  color: var(--forest-700);
 }
 .header-quote-link {
-  border-color: var(--white);
-  background: var(--white);
-  color: var(--evergreen-950);
+  border-color: var(--forest-700);
+  background: var(--forest-700);
+  color: var(--white);
 }
 .header-quote-link:hover {
-  border-color: var(--sage-100);
-  background: var(--sage-100);
+  border-color: var(--evergreen-950);
+  background: var(--evergreen-950);
 }
 
 .home-hero {
@@ -2403,11 +2413,11 @@ li {
   background:
     linear-gradient(
       90deg,
-      rgb(3 27 20 / 0.94) 0%,
-      rgb(3 27 20 / 0.78) 49%,
-      rgb(3 27 20 / 0.34) 100%
+      rgb(6 31 51 / 0.95) 0%,
+      rgb(8 43 69 / 0.8) 49%,
+      rgb(24 74 94 / 0.34) 100%
     ),
-    linear-gradient(0deg, rgb(3 27 20 / 0.26), transparent 45%);
+    linear-gradient(0deg, rgb(6 31 51 / 0.3), transparent 45%);
 }
 .home-hero .hero-grid {
   position: relative;
@@ -2417,10 +2427,10 @@ li {
   align-items: end;
 }
 .home-hero .page-kicker {
-  color: #cfe9c9;
+  color: #dcefe5;
 }
 .home-hero .page-kicker::before {
-  background: #92cb84;
+  background: var(--gold);
 }
 .home-hero .hero-copy h1 {
   max-width: 13ch;
@@ -2436,12 +2446,12 @@ li {
   color: rgb(255 255 255 / 0.88);
 }
 .home-hero .button-primary {
-  border-color: #2f763b;
-  background: #2f763b;
+  border-color: var(--forest-700);
+  background: var(--forest-700);
 }
 .home-hero .button-primary:hover {
-  border-color: #367034;
-  background: #367034;
+  border-color: var(--moss-500);
+  background: var(--moss-500);
 }
 .home-hero .button-secondary {
   border-color: rgb(255 255 255 / 0.78);
@@ -2462,15 +2472,15 @@ li {
   align-content: end;
   gap: 0.35rem;
   padding: 1.7rem;
-  border-top: 4px solid #92cb84;
-  background: rgb(5 34 25 / 0.82);
+  border-top: 4px solid var(--gold);
+  background: rgb(8 43 69 / 0.86);
   box-shadow: 0 24px 60px rgb(0 0 0 / 0.22);
   color: var(--white);
   backdrop-filter: blur(10px);
 }
 .hero-service-note p {
   margin: 0;
-  color: #cfe9c9;
+  color: #dcefe5;
   font-size: 0.72rem;
   font-weight: 850;
   letter-spacing: 0.12em;
@@ -2588,9 +2598,9 @@ li {
   min-height: 26rem;
   display: flex;
   align-items: center;
-  border-bottom: 4px solid #78b569;
+  border-bottom: 4px solid var(--gold);
   background:
-    linear-gradient(90deg, rgb(5 37 28 / 0.96), rgb(5 37 28 / 0.7)),
+    linear-gradient(90deg, rgb(6 31 51 / 0.96), rgb(8 43 69 / 0.72)),
     url("/assets/jvf/cleaning-hero.jpg") center 43% / cover;
   color: var(--white);
 }
@@ -2599,7 +2609,7 @@ li {
   color: var(--white);
 }
 .gallery-hero .page-kicker {
-  color: #cfe9c9;
+  color: #dcefe5;
 }
 .gallery-hero .narrow-heading > p:last-child {
   color: rgb(255 255 255 / 0.84);
@@ -2651,7 +2661,7 @@ li {
 
 @media (max-width: 1080px) {
   .brand-logo-image {
-    width: 138px;
+    width: 178px;
   }
   .desktop-navigation {
     gap: 0.8rem;
@@ -2663,11 +2673,11 @@ li {
 
 @media (max-width: 960px) {
   .mobile-menu-trigger {
-    border-color: rgb(255 255 255 / 0.5);
+    border-color: var(--sage-300);
     background: transparent;
   }
   .mobile-menu-trigger span {
-    background: var(--white);
+    background: var(--evergreen-950);
   }
   .mobile-nav-panel .language-switcher a {
     color: var(--graphite);
@@ -2707,10 +2717,13 @@ li {
 
 @media (max-width: 680px) {
   .header-inner {
-    min-height: 82px;
+    min-height: 96px;
   }
   .brand-logo-image {
-    width: 122px;
+    width: 156px;
+  }
+  .footer-brand .brand-logo-image {
+    width: 210px;
   }
   .home-hero {
     min-height: 44rem;
@@ -2721,8 +2734,8 @@ li {
   .home-hero-shade {
     background: linear-gradient(
       90deg,
-      rgb(3 27 20 / 0.93),
-      rgb(3 27 20 / 0.68)
+      rgb(6 31 51 / 0.94),
+      rgb(8 43 69 / 0.7)
     );
   }
   .process-grid,
