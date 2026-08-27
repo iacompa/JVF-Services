@@ -64,8 +64,8 @@ test("migrated pricing, contact details, and gallery are public", async ({
 
   await page.goto("/contact");
   await expect(
-    page.getByRole("link", { name: "info@jvfhomeworkspro.com" }).first(),
-  ).toHaveAttribute("href", "mailto:info@jvfhomeworkspro.com");
+    page.getByRole("link", { name: "services.jvf@gmail.com" }).first(),
+  ).toHaveAttribute("href", "mailto:services.jvf@gmail.com");
   await expect(
     page.getByText("2590 Walnut St, Denver, CO 80205").first(),
   ).toBeVisible();

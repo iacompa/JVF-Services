@@ -335,7 +335,7 @@ export const es = {
         {
           title: "Sus opciones y contacto",
           paragraphs: [
-            "Puede llamar al (716) 748-9117 o escribir a info@jvfhomeworkspro.com en vez de usar el formulario. La dirección postal pública es 2590 Walnut St, Denver, CO 80205. Antes del lanzamiento se deben aprobar el período final de retención y el proceso de eliminación.",
+            "Puede llamar al (716) 748-9117 o escribir a services.jvf@gmail.com en vez de usar el formulario. La dirección postal pública es 2590 Walnut St, Denver, CO 80205. Antes del lanzamiento se deben aprobar el período final de retención y el proceso de eliminación.",
           ],
         },
       ],
@@ -370,7 +370,7 @@ export const es = {
           title: "Comentarios y asistencia de accesibilidad",
           paragraphs: [
             "Si una página o formulario es difícil de usar, llame o envíe un mensaje al (716) 748-9117 y describa la página, la tarea y, si se siente cómodo, la tecnología de asistencia o navegador. JVF HomeWorks Pro puede ofrecer información y tomar una solicitud por teléfono.",
-            "También puede enviar comentarios de accesibilidad a info@jvfhomeworkspro.com. Se revisarán los comentarios y se harán esfuerzos razonables para ofrecer una alternativa accesible mientras se corrige una barrera.",
+            "También puede enviar comentarios de accesibilidad a services.jvf@gmail.com. Se revisarán los comentarios y se harán esfuerzos razonables para ofrecer una alternativa accesible mientras se corrige una barrera.",
           ],
         },
       ],

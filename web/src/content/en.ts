@@ -333,7 +333,7 @@ export const en = {
         {
           title: "Your choices and contact",
           paragraphs: [
-            "Visitors may call (716) 748-9117 or email info@jvfhomeworkspro.com instead of using the form. The public mailing address is 2590 Walnut St, Denver, CO 80205. A final retention period and deletion-request process must be approved before public launch.",
+            "Visitors may call (716) 748-9117 or email services.jvf@gmail.com instead of using the form. The public mailing address is 2590 Walnut St, Denver, CO 80205. A final retention period and deletion-request process must be approved before public launch.",
           ],
         },
       ],
@@ -368,7 +368,7 @@ export const en = {
           title: "Accessibility feedback and assistance",
           paragraphs: [
             "If a page or form is difficult to use, call or text (716) 748-9117 and describe the page, the task you were trying to complete, and the assistive technology or browser involved if you are comfortable sharing it. JVF HomeWorks Pro can provide service information and take a request by phone.",
-            "You may also email accessibility feedback to info@jvfhomeworkspro.com. Feedback will be reviewed and reasonable efforts will be made to provide an accessible alternative while a barrier is addressed.",
+            "You may also email accessibility feedback to services.jvf@gmail.com. Feedback will be reviewed and reasonable efforts will be made to provide an accessible alternative while a barrier is addressed.",
           ],
         },
       ],

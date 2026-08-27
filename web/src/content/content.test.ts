@@ -25,7 +25,7 @@ describe("business facts", () => {
       phoneDisplay: "(716) 748-9117",
       phoneHref: "tel:+17167489117",
       smsHref: "sms:+17167489117",
-      email: "info@jvfhomeworkspro.com",
+      email: "services.jvf@gmail.com",
       mailingAddress: {
         street: "2590 Walnut St",
         city: "Denver",

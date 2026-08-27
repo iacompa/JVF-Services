@@ -73,7 +73,7 @@ describe("localized search metadata", () => {
       name: "JVF HomeWorks Pro",
       telephone: "+17167489117",
       areaServed: "Ohio",
-      email: "info@jvfhomeworkspro.com",
+      email: "services.jvf@gmail.com",
     });
     expect(professionalServiceJsonLd.serviceType).toEqual(
       expect.arrayContaining(["Housekeeping", "Home remodeling"]),
