@@ -4,11 +4,12 @@ import { Analytics } from "@vercel/analytics/react";
 import { StructuredData } from "@/components/seo/structured-data";
 import { HydrationMarker } from "@/components/layout/hydration-marker";
 import { ScrollReveal } from "@/components/motion/scroll-reveal";
+import { businessFacts } from "@/content/business";
 import { displayFont } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "JVF HomeWorks Pro",
+  title: businessFacts.publicName,
   description: "Home and professional services for customers across Ohio.",
 };
 

@@ -18,7 +18,7 @@
 
 ## Global Constraints
 
-- Public name is exactly `JVF Services`; do not use `JVF HomeWorks Pro` or an `LLC` suffix.
+- Public name is exactly `JVF Services`; do not use the former brand name or an `LLC` suffix.
 - Public phone/text number is exactly `(716) 748-9117`.
 - No blue; use the approved forest-green, sage, ivory, and graphite design system.
 - English uses root routes and Spanish mirrors use `/es` with the same slugs.
@@ -349,7 +349,7 @@ git commit -m "build: scaffold pinned Next.js application"
 
 - [ ] **Step 1: Write failing parity and business-fact tests**
 
-Test that English and Spanish expose identical keys, all route keys resolve in both locales, the phone is `(716) 748-9117`, public name is `JVF Services`, email/address are `null`, reviews are empty, and no content contains `JVF HomeWorks Pro`, `landscaping`, `remodeling`, or `certified interpreter`.
+Test that English and Spanish expose identical keys, all route keys resolve in both locales, the phone is `(716) 748-9117`, public name is `JVF Services`, email/address are `null`, reviews are empty, and no content contains the former brand name, `landscaping`, `remodeling`, or `certified interpreter`.
 
 - [ ] **Step 2: Run the content tests and verify failure**
 

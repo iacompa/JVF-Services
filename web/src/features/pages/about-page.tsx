@@ -3,6 +3,7 @@ import { getContent } from "@/content/content";
 import type { Locale } from "@/content/types";
 import { localizedHref } from "@/lib/i18n";
 import { CallToAction } from "@/components/ui/call-to-action";
+import { businessFacts } from "@/content/business";
 
 export function AboutPage({ locale }: { locale: Locale }) {
   const content = getContent(locale);
@@ -60,8 +61,8 @@ export function AboutPage({ locale }: { locale: Locale }) {
           locale={locale}
           title={
             locale === "en"
-              ? "How can JVF HomeWorks Pro help?"
-              : "¿Cómo puede ayudarle JVF HomeWorks Pro?"
+              ? `How can ${businessFacts.publicName} help?`
+              : `¿Cómo puede ayudarle ${businessFacts.publicName}?`
           }
           body={
             locale === "en"

@@ -10,7 +10,7 @@ const copy = {
     eyebrow: "Client reviews",
     heading: "What our clients say",
     previousIntro:
-      "Real feedback originally submitted and published on the previous JVF HomeWorks Pro website.",
+      "Real feedback originally submitted and published on our previous company website.",
     average: "Average rating",
     previousCount: (count: number) =>
       `${count} ${count === 1 ? "review" : "reviews"} from our previous website`,
@@ -31,7 +31,7 @@ const copy = {
     eyebrow: "Reseñas de clientes",
     heading: "Lo que dicen nuestros clientes",
     previousIntro:
-      "Opiniones reales enviadas y publicadas originalmente en el sitio web anterior de JVF HomeWorks Pro.",
+      "Opiniones reales enviadas y publicadas originalmente en el sitio web anterior de la empresa.",
     average: "Calificación promedio",
     previousCount: (count: number) =>
       `${count} ${count === 1 ? "reseña" : "reseñas"} de nuestro sitio web anterior`,

@@ -34,13 +34,13 @@ export const en = {
     eyebrow: "Home care & bilingual professional support",
     title: "Reliable Home Services. One Trusted Team.",
     summary:
-      "JVF HomeWorks Pro delivers professional, detail-focused home services plus notary and Spanish-English interpreting support. We make requesting service simple and expectations clear.",
+      "JVF Services delivers professional, detail-focused home services plus notary and Spanish-English interpreting support. We make requesting service simple and expectations clear.",
     primaryCta: "Request a quote",
     secondaryCta: "Explore services",
     availabilityTitle: "Interpretation when you need it",
     availabilityBody:
       "Phone and virtual Spanish-English interpreting is available 24/7. In-person interpreting is available from 8:00 a.m. to 6:00 p.m. Eastern Time; after 6:00 p.m., service is virtual only.",
-    servicesHeading: "Popular Services by JVF HomeWorks Pro",
+    servicesHeading: "Popular Services by JVF Services",
     servicesIntro:
       "Choose the service that fits your need. Every request is reviewed personally for availability, travel, and scope.",
     whyHeading: "Care that feels clear from the start",
@@ -52,7 +52,7 @@ export const en = {
     ],
     closingTitle: "Tell us what would make life feel easier.",
     closingBody:
-      "Share a few practical details and JVF HomeWorks Pro will follow up to confirm the right next step.",
+      "Share a few practical details and JVF Services will follow up to confirm the right next step.",
     stepsHeading: "Professional service in three simple steps",
     steps: [
       {
@@ -76,7 +76,7 @@ export const en = {
     eyebrow: "Services",
     title: "Practical support, thoughtfully delivered.",
     intro:
-      "From a refreshed home to an urgent interpreting request, JVF HomeWorks Pro offers responsive help with clear expectations and personal coordination.",
+      "From a refreshed home to an urgent interpreting request, JVF Services offers responsive help with clear expectations and personal coordination.",
     homeGroup: "Home services",
     professionalGroup: "Professional services",
   },
@@ -129,7 +129,7 @@ export const en = {
       summary:
         "Warm, practical styling support that helps a room feel finished and personal.",
       intro:
-        "JVF HomeWorks Pro can help with residential decor selection, arrangement, room styling, and setup. Describe the room and the feeling you want to create, and we will discuss what is practical.",
+        "JVF Services can help with residential decor selection, arrangement, room styling, and setup. Describe the room and the feeling you want to create, and we will discuss what is practical.",
       features: [
         "Room styling and finishing touches",
         "Decor selection support",
@@ -159,7 +159,7 @@ export const en = {
       ],
       scheduleTitle: "Before your appointment",
       scheduleBody:
-        "The signer must appear in person with acceptable identification. JVF HomeWorks Pro does not provide legal advice or choose the notarial act for a customer.",
+        "The signer must appear in person with acceptable identification. JVF Services does not provide legal advice or choose the notarial act for a customer.",
       price:
         "$5 per in-person notarial act; any mobile travel fee is quoted and agreed in advance.",
       cardPrice: "$5 per act",
@@ -189,10 +189,10 @@ export const en = {
     },
   },
   about: {
-    eyebrow: "About JVF HomeWorks Pro",
+    eyebrow: "About JVF Services",
     title: "A service business built around care, clarity, and follow-through.",
     intro:
-      "JVF HomeWorks Pro supports Ohio households, small offices, and customers who need attentive home or bilingual professional services.",
+      "JVF Services supports Ohio households, small offices, and customers who need attentive home or bilingual professional services.",
     missionTitle: "Making practical help feel more personal",
     missionBody:
       "Our goal is simple: listen carefully, set clear expectations, and provide thoughtful service that respects your time, space, and privacy.",
@@ -219,7 +219,7 @@ export const en = {
     eyebrow: "Project gallery",
     title: "Thoughtful work, finished with care.",
     intro:
-      "A closer look at a finished basement living space featured in the existing JVF HomeWorks Pro project gallery.",
+      "A closer look at a finished basement living space featured in the existing JVF Services project gallery.",
     firstCaption: "Finished basement lounge and built-in storage",
     secondCaption: "Renovated basement living area",
   },
@@ -242,18 +242,18 @@ export const en = {
       title: "Terms and conditions",
       status: "Draft for review — not yet published",
       introduction:
-        "These concept terms explain how the JVF HomeWorks Pro website and request process are intended to work. They require legal review before this website is published.",
+        "These concept terms explain how the JVF Services website and request process are intended to work. They require legal review before this website is published.",
       sections: [
         {
           title: "Website purpose",
           paragraphs: [
-            "This website provides general information about JVF HomeWorks Pro and lets a visitor request a quote. Website content is informational and is not a binding offer, professional advice, or a guarantee that a service is available.",
+            "This website provides general information about JVF Services and lets a visitor request a quote. Website content is informational and is not a binding offer, professional advice, or a guarantee that a service is available.",
           ],
         },
         {
           title: "Quotes and service confirmation",
           paragraphs: [
-            "Submitting a request does not create an appointment or service agreement. Scope, price, travel fees, timing, location, and availability must be confirmed directly by JVF HomeWorks Pro before work begins.",
+            "Submitting a request does not create an appointment or service agreement. Scope, price, travel fees, timing, location, and availability must be confirmed directly by JVF Services before work begins.",
             "A personalized quote may change if the requested scope or information changes. Customers are responsible for providing accurate, non-sensitive details needed to evaluate the request.",
           ],
         },
@@ -267,7 +267,7 @@ export const en = {
         {
           title: "Notary service",
           paragraphs: [
-            "Notary service is offered by appointment and in person only. The signer must personally appear with acceptable identification and must be willing and able to sign. JVF HomeWorks Pro does not offer remote online notarization and does not provide legal advice or choose documents for a customer.",
+            "Notary service is offered by appointment and in person only. The signer must personally appear with acceptable identification and must be willing and able to sign. JVF Services does not offer remote online notarization and does not provide legal advice or choose documents for a customer.",
             "The stated fee is $5 per in-person notarial act. Any reasonable mobile travel fee will be quoted and agreed before the notarial act. A notarization may be declined when legal or identification requirements are not met.",
           ],
         },
@@ -296,7 +296,7 @@ export const en = {
       title: "Privacy notice",
       status: "Draft for review — not yet published",
       introduction:
-        "This concept notice describes the information handled by the local review version of the JVF HomeWorks Pro website. It must be updated and legally reviewed before public launch.",
+        "This concept notice describes the information handled by the local review version of the JVF Services website. It must be updated and legally reviewed before public launch.",
       sections: [
         {
           title: "Information a visitor provides",
@@ -315,7 +315,7 @@ export const en = {
         {
           title: "Future email delivery provider",
           paragraphs: [
-            "Before launch, JVF HomeWorks Pro may configure a future email delivery provider to send validated requests to the business. This notice must then identify that provider, the information sent, retention rules, access controls, and a working privacy contact before collection begins.",
+            "Before launch, JVF Services may configure a future email delivery provider to send validated requests to the business. This notice must then identify that provider, the information sent, retention rules, access controls, and a working privacy contact before collection begins.",
           ],
         },
         {
@@ -327,7 +327,7 @@ export const en = {
         {
           title: "Use and sharing",
           paragraphs: [
-            "JVF HomeWorks Pro would use request information only to understand, respond to, secure, and improve service inquiries. We do not sell form data. Information may be shared only with service providers needed to operate the website or when required by law, subject to the final launch policy.",
+            "JVF Services would use request information only to understand, respond to, secure, and improve service inquiries. We do not sell form data. Information may be shared only with service providers needed to operate the website or when required by law, subject to the final launch policy.",
           ],
         },
         {
@@ -342,7 +342,7 @@ export const en = {
       title: "Accessibility statement",
       status: "Draft for review — not yet published",
       introduction:
-        "JVF HomeWorks Pro wants people with disabilities to be able to learn about services, navigate the website, and request help with dignity and independence.",
+        "JVF Services wants people with disabilities to be able to learn about services, navigate the website, and request help with dignity and independence.",
       sections: [
         {
           title: "Our accessibility target",
@@ -360,14 +360,14 @@ export const en = {
         {
           title: "Known review-stage limitations",
           paragraphs: [
-            "The current build uses the logo and selected images migrated from the existing JVF HomeWorks Pro website. An owner profile, any additional photographs, and all future visual changes require appropriate alternative text and another accessibility review before launch.",
+            "The current build uses the logo and selected images migrated from the existing JVF Services website. An owner profile, any additional photographs, and all future visual changes require appropriate alternative text and another accessibility review before launch.",
             "Automated tests help identify barriers but cannot replace manual keyboard, screen reader, zoom, and user testing. The site will be rechecked when content, integrations, or visual assets change.",
           ],
         },
         {
           title: "Accessibility feedback and assistance",
           paragraphs: [
-            "If a page or form is difficult to use, call or text (716) 748-9117 and describe the page, the task you were trying to complete, and the assistive technology or browser involved if you are comfortable sharing it. JVF HomeWorks Pro can provide service information and take a request by phone.",
+            "If a page or form is difficult to use, call or text (716) 748-9117 and describe the page, the task you were trying to complete, and the assistive technology or browser involved if you are comfortable sharing it. JVF Services can provide service information and take a request by phone.",
             "You may also email accessibility feedback to services.jvf@gmail.com. Feedback will be reviewed and reasonable efforts will be made to provide an accessible alternative while a barrier is addressed.",
           ],
         },

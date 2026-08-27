@@ -44,8 +44,8 @@ function descriptionFor(locale: Locale, route: RouteKey): string {
   if (route === "about") return content.about.intro;
   if (route === "contact") return content.contact.intro;
   return locale === "en"
-    ? `${pageLabels[route].en} for the JVF HomeWorks Pro website.`
-    : `${pageLabels[route].es} del sitio web de JVF HomeWorks Pro.`;
+    ? `${pageLabels[route].en} for the ${businessFacts.publicName} website.`
+    : `${pageLabels[route].es} del sitio web de ${businessFacts.publicName}.`;
 }
 
 export function absoluteLocalizedUrl(route: RouteKey, locale: Locale): string {
@@ -60,8 +60,8 @@ export function buildPageMetadata(locale: Locale, route: RouteKey): Metadata {
   return {
     title:
       route === "home"
-        ? "JVF HomeWorks Pro | Home & Professional Services"
-        : `${label} | JVF HomeWorks Pro`,
+        ? `${businessFacts.publicName} | Home & Professional Services`
+        : `${label} | ${businessFacts.publicName}`,
     description,
     alternates: {
       canonical,
@@ -75,7 +75,7 @@ export function buildPageMetadata(locale: Locale, route: RouteKey): Metadata {
       type: "website",
       locale: locale === "en" ? "en_US" : "es_US",
       siteName: businessFacts.publicName,
-      title: `${label} | JVF HomeWorks Pro`,
+      title: `${label} | ${businessFacts.publicName}`,
       description,
       url: canonical,
       images: [
@@ -83,7 +83,7 @@ export function buildPageMetadata(locale: Locale, route: RouteKey): Metadata {
           url: `${siteUrl}/assets/jvf/cleaning-hero.jpg`,
           width: 1600,
           height: 1000,
-          alt: "JVF HomeWorks Pro home services",
+          alt: `${businessFacts.publicName} home services`,
         },
       ],
     },

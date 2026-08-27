@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { expect, test } from "vitest";
 import Home from "./page";
 
-test("renders the migrated JVF HomeWorks Pro homepage", async () => {
+test("renders the JVF Services homepage", async () => {
   render(await Home());
 
   expect(

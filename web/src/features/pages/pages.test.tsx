@@ -70,7 +70,7 @@ describe("localized search metadata", () => {
   test("describes the migrated business identity and service area", () => {
     expect(professionalServiceJsonLd).toMatchObject({
       "@type": "ProfessionalService",
-      name: "JVF HomeWorks Pro",
+      name: "JVF Services",
       telephone: "+17167489117",
       areaServed: "Ohio",
       email: "services.jvf@gmail.com",

@@ -8,7 +8,7 @@ The concept must run locally for review before any Vercel project, domain, email
 
 ## Brand and experience
 
-- Public brand: `JVF Services`; do not use `JVF HomeWorks Pro` or an `LLC` suffix.
+- Public brand: `JVF Services`; do not use the former brand name or an `LLC` suffix.
 - Visual direction: warm premium, forest green, sage, warm ivory, graphite text, generous whitespace, restrained motion, no blue.
 - The supplied JVF flyer is visual inspiration only. Preserve the general home/service/sparkle idea but do not copy the existing logo.
 - The supplied proposal contributes applicable scope ideas only. Do not copy its black-and-white visual style, agency details, confidentiality text, prices, timelines, landscaping, remodeling, payment, or admin-dashboard promises.
@@ -128,4 +128,3 @@ If delivery fails, preserve the visitor's entered fields, announce the error in 
 - Real operating base for Google Business Profile verification; do not use a fabricated, mailbox, or unstaffed virtual-office address.
 - Review of the prior accessibility letter, its deadline, and any counsel-directed remediation or external audit.
 - Verification of the active Ohio notary commission and any business insurance/bonding claims before publication.
-

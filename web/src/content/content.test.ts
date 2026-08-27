@@ -21,7 +21,7 @@ function getObjectPaths(value: unknown, prefix = ""): string[] {
 describe("business facts", () => {
   test("keeps the migrated public identity and contact details in one source of truth", () => {
     expect(businessFacts).toMatchObject({
-      publicName: "JVF HomeWorks Pro",
+      publicName: "JVF Services",
       phoneDisplay: "(716) 748-9117",
       phoneHref: "tel:+17167489117",
       smsHref: "sms:+17167489117",
@@ -81,7 +81,10 @@ describe("localized content", () => {
       es: getContent("es"),
     }).toLowerCase();
 
-    expect(publicCopy).toContain("jvf homeworks pro");
+    expect(publicCopy).toContain("jvf services");
+    expect(publicCopy.replaceAll(" ", "")).not.toContain(
+      ["jvf", "home", "works"].join(""),
+    );
     expect(publicCopy).not.toContain("landscaping");
     expect(publicCopy).toContain("remodeling");
     expect(publicCopy).not.toContain("certified interpreter");

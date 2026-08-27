@@ -1,4 +1,4 @@
-# JVF HomeWorks Pro launch-readiness checklist
+# JVF Services launch-readiness checklist
 
 This checklist is for a future public release. The current site is a local demo and must not be deployed or used to collect real customer requests yet.
 
@@ -14,8 +14,8 @@ This checklist is for a future public release. The current site is a local demo 
 
 ## Business identity and content
 
-- [ ] Confirm that `JVF HomeWorks Pro` is the final public name and complete Ohio name-availability and trademark review; the website does not claim that the name is registered.
-- [ ] Confirm continued ownership of `jvfhomeworkspro.com` before updating canonical URLs, structured data, sitemap, and environment settings.
+- [ ] Confirm that `JVF Services` is the final public name and complete Ohio name-availability and trademark review; the website does not claim that the name is registered.
+- [ ] Confirm continued ownership of `jvfservices.com` and any legacy domains before updating canonical URLs, structured data, sitemap, and environment settings.
 - [x] Migrate the owner-identified horizontal logo from the existing JVF website.
 - [ ] Provide a square favicon and one-color logo variation.
 - [x] Migrate selected owner-identified images from the existing JVF website and add localized alternative text.

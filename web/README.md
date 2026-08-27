@@ -1,6 +1,6 @@
-# JVF HomeWorks Pro web application
+# JVF Services web application
 
-The Next.js application for the JVF HomeWorks Pro local-review website.
+The Next.js application for the JVF Services local-review website.
 
 Run commands from this directory:
 
@@ -18,7 +18,7 @@ The home page keeps migrated testimonials labeled as reviews from the previous w
 
 To enable it:
 
-1. Claim and verify the JVF HomeWorks Pro Business Profile in the Google account that will manage it.
+1. Claim and verify the JVF Services Business Profile in the Google account that will manage it.
 2. Request Google Business Profile API access, create OAuth credentials with the `business.manage` scope, and obtain the account ID, location ID, and refresh token.
 3. Add the seven `GOOGLE_*` values documented in `.env.example` to Vercel as sensitive Production environment variables, then redeploy.
 

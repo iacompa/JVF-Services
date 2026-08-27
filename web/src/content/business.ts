@@ -1,5 +1,5 @@
 export const businessFacts = Object.freeze({
-  publicName: "JVF HomeWorks Pro",
+  publicName: "JVF Services",
   phoneDisplay: "(716) 748-9117",
   phoneHref: "tel:+17167489117",
   smsHref: "sms:+17167489117",
@@ -22,9 +22,9 @@ export const businessFacts = Object.freeze({
       date: "2026-05-18",
       rating: 5,
       body: [
-        "I recently had my basement remodeled by JVF HomeWorks, and I couldn’t be happier with the results. From the very beginning, they truly listened to my ideas and made me feel like my vision mattered. Their attention to detail, professionalism, and quality of work exceeded my expectations.",
+        "I recently had my basement remodeled by JVF Services, and I couldn’t be happier with the results. From the very beginning, they truly listened to my ideas and made me feel like my vision mattered. Their attention to detail, professionalism, and quality of work exceeded my expectations.",
         "The entire team was amazing to work with, and the finished project turned out beautifully. The owner was especially professional, polite, understanding, and genuinely passionate about delivering great service. Their kindness and dedication made the whole experience even better.",
-        "I am extremely grateful for all their hard work and highly recommend JVF HomeWorks 100%. I will definitely be contacting them again for future projects. Thank you so much!",
+        "I am extremely grateful for all their hard work and highly recommend JVF Services 100%. I will definitely be contacting them again for future projects. Thank you so much!",
       ],
     },
     {
@@ -34,7 +34,7 @@ export const businessFacts = Object.freeze({
       date: "2026-03-31",
       rating: 5,
       body: [
-        "“Great response time, staff was on time and got the job done pretty JVF Home works Pro. House looked great when they finished. If anyone needs a clean home contact them.”",
+        "“Great response time, staff was on time and got the job done. JVF Services made the house look great. If anyone needs a clean home, contact them.”",
       ],
     },
     {
