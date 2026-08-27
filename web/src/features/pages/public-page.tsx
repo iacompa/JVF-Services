@@ -1,4 +1,8 @@
 import type { Locale, ServiceKey } from "@/content/types";
+import type {
+  GoogleReviewLinks,
+  GoogleReviewsFeed,
+} from "@/lib/google-business-reviews";
 import type { ServiceId } from "@/features/contact/types";
 import { routeKeys, type RouteKey } from "@/lib/routes";
 import { SiteShell } from "@/components/layout/site-shell";
@@ -26,13 +30,24 @@ export function PublicPage({
   locale,
   route,
   initialService,
+  googleReviews,
+  googleReviewLinks,
 }: {
   locale: Locale;
   route: RouteKey;
   initialService?: ServiceId;
+  googleReviews?: GoogleReviewsFeed | null;
+  googleReviewLinks?: GoogleReviewLinks;
 }) {
   let page;
-  if (route === "home") page = <HomePage locale={locale} />;
+  if (route === "home")
+    page = (
+      <HomePage
+        locale={locale}
+        googleReviews={googleReviews}
+        googleReviewLinks={googleReviewLinks}
+      />
+    );
   else if (route === "services") page = <ServicesPage locale={locale} />;
   else if (serviceByRoute[route])
     page = (

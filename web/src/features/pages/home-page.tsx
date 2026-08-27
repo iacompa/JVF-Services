@@ -3,6 +3,10 @@ import Link from "next/link";
 import { businessFacts } from "@/content/business";
 import { getContent } from "@/content/content";
 import type { Locale, ServiceKey } from "@/content/types";
+import type {
+  GoogleReviewLinks,
+  GoogleReviewsFeed,
+} from "@/lib/google-business-reviews";
 import { localizedHref } from "@/lib/i18n";
 import { CallToAction } from "@/components/ui/call-to-action";
 import { FeaturedServiceCard } from "@/components/ui/featured-service-card";
@@ -19,7 +23,15 @@ const serviceRoutes: Record<
   interpreting: "interpreting",
 };
 
-export function HomePage({ locale }: { locale: Locale }) {
+export function HomePage({
+  locale,
+  googleReviews,
+  googleReviewLinks,
+}: {
+  locale: Locale;
+  googleReviews?: GoogleReviewsFeed | null;
+  googleReviewLinks?: GoogleReviewLinks;
+}) {
   const content = getContent(locale);
   const services = Object.entries(content.serviceDetails) as Array<
     [ServiceKey, (typeof content.serviceDetails)[ServiceKey]]
@@ -170,7 +182,11 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <ReviewsSection locale={locale} />
+      <ReviewsSection
+        locale={locale}
+        googleFeed={googleReviews}
+        googleLinks={googleReviewLinks}
+      />
 
       <div className="site-container page-section compact-section">
         <CallToAction

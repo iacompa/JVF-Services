@@ -2,8 +2,8 @@ import { render, screen } from "@testing-library/react";
 import { expect, test } from "vitest";
 import Home from "./page";
 
-test("renders the migrated JVF HomeWorks Pro homepage", () => {
-  render(<Home />);
+test("renders the migrated JVF HomeWorks Pro homepage", async () => {
+  render(await Home());
 
   expect(
     screen.getByRole("heading", {
