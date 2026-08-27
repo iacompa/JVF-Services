@@ -11,4 +11,14 @@ test("renders the migrated JVF HomeWorks Pro homepage", () => {
       name: /reliable home services\. one trusted team\./i,
     }),
   ).toBeInTheDocument();
+
+  expect(
+    screen.getByRole("heading", {
+      level: 2,
+      name: /what our clients say/i,
+    }),
+  ).toBeInTheDocument();
+  expect(screen.getByText("Hellen Smith")).toBeInTheDocument();
+  expect(screen.getByText("Rebecca Hawland")).toBeInTheDocument();
+  expect(screen.getByText("Michelle")).toBeInTheDocument();
 });

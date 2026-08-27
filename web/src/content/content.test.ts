@@ -34,7 +34,20 @@ describe("business facts", () => {
       },
       owner: null,
       legalEntitySuffix: null,
-      reviews: [],
+      reviews: [
+        {
+          author: "Hellen Smith",
+          rating: 5,
+        },
+        {
+          author: "Rebecca Hawland",
+          rating: 5,
+        },
+        {
+          author: "Michelle",
+          rating: 4,
+        },
+      ],
     });
   });
 });

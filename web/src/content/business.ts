@@ -14,7 +14,40 @@ export const businessFacts = Object.freeze({
   },
   owner: null,
   legalEntitySuffix: null,
-  reviews: [] as const,
+  reviews: [
+    {
+      id: "hellen-smith-basement-remodel",
+      title: "Basement remodel",
+      author: "Hellen Smith",
+      date: "2026-05-18",
+      rating: 5,
+      body: [
+        "I recently had my basement remodeled by JVF HomeWorks, and I couldn’t be happier with the results. From the very beginning, they truly listened to my ideas and made me feel like my vision mattered. Their attention to detail, professionalism, and quality of work exceeded my expectations.",
+        "The entire team was amazing to work with, and the finished project turned out beautifully. The owner was especially professional, polite, understanding, and genuinely passionate about delivering great service. Their kindness and dedication made the whole experience even better.",
+        "I am extremely grateful for all their hard work and highly recommend JVF HomeWorks 100%. I will definitely be contacting them again for future projects. Thank you so much!",
+      ],
+    },
+    {
+      id: "rebecca-hawland-cleaning",
+      title: "Client",
+      author: "Rebecca Hawland",
+      date: "2026-03-31",
+      rating: 5,
+      body: [
+        "“Great response time, staff was on time and got the job done pretty JVF Home works Pro. House looked great when they finished. If anyone needs a clean home contact them.”",
+      ],
+    },
+    {
+      id: "michelle-cleaning",
+      title: "Client",
+      author: "Michelle",
+      date: "2026-03-31",
+      rating: 4,
+      body: [
+        "Amazed with their work. The house looked spectacular. Got the job well done; very well cleaned. Definitely recommended will keep using their services!",
+      ],
+    },
+  ] as const,
   areaServed: "Ohio",
   services: {
     housekeeping: {

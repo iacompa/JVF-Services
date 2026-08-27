@@ -6,6 +6,7 @@ import type { Locale, ServiceKey } from "@/content/types";
 import { localizedHref } from "@/lib/i18n";
 import { CallToAction } from "@/components/ui/call-to-action";
 import { FeaturedServiceCard } from "@/components/ui/featured-service-card";
+import { ReviewsSection } from "@/components/ui/reviews-section";
 
 const serviceRoutes: Record<
   ServiceKey,
@@ -168,6 +169,8 @@ export function HomePage({ locale }: { locale: Locale }) {
           </ol>
         </div>
       </section>
+
+      <ReviewsSection locale={locale} />
 
       <div className="site-container page-section compact-section">
         <CallToAction
