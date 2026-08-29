@@ -191,10 +191,12 @@ export const es = {
         body: "Este sitio solo solicita detalles prácticos que no sean confidenciales.",
       },
     ],
-    placeholderTitle:
-      "La historia y el retrato de la propietaria se añadirán antes del lanzamiento",
-    placeholderBody:
-      "Esta versión de revisión no publica el nombre, el retrato, las credenciales ni la historia personal de la propietaria hasta que se verifiquen.",
+    founderEyebrow: "Un mensaje de la fundadora",
+    founderRole: "Fundadora",
+    founderStatement:
+      "Me enorgullece aportar claridad y atención a cada conversación que interpreto. Mi objetivo es ayudar a las personas a comprenderse de verdad, siempre con profesionalismo, empatía y dedicación. La comunicación es más que palabras; se trata de conexión, y eso es lo que priorizo cada vez que trabajo.",
+    founderImageAlt:
+      "Jacqueline Valentin, fundadora de JVF Services, con un blazer azul marino junto a una ventana iluminada",
   },
   gallery: {
     eyebrow: "Galería de proyectos",

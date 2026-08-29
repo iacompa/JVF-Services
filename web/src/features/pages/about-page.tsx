@@ -16,24 +16,34 @@ export function AboutPage({ locale }: { locale: Locale }) {
             <h1>{content.about.title}</h1>
             <p className="hero-summary">{content.about.intro}</p>
           </div>
-          <figure className="about-project-image">
+          <figure className="about-founder-portrait" data-reveal>
             <Image
-              src="/assets/jvf/project-basement-wide.jpg"
-              alt={
-                locale === "en"
-                  ? "Finished basement lounge and built-in storage from the JVF project gallery"
-                  : "Sala de sótano terminada con almacenamiento integrado de la galería de JVF"
-              }
-              width={948}
-              height={706}
+              src="/assets/jvf/jacqueline-valentin-founder.jpg"
+              alt={content.about.founderImageAlt}
+              width={1300}
+              height={1024}
               sizes="(max-width: 900px) 100vw, 42vw"
+              priority
             />
             <figcaption>
-              {locale === "en"
-                ? "A finished space featured in the JVF project gallery"
-                : "Un espacio terminado de la galería de proyectos de JVF"}
+              <strong>{businessFacts.owner}</strong>
+              <span>{content.about.founderRole}</span>
             </figcaption>
           </figure>
+        </div>
+      </section>
+      <section className="founder-statement-section page-section">
+        <div className="site-container founder-statement-grid" data-reveal>
+          <div className="founder-identity">
+            <span aria-hidden="true">01 /</span>
+            <p className="page-kicker">{content.about.founderEyebrow}</p>
+            <h2>{businessFacts.owner}</h2>
+            <p>{content.about.founderRole}</p>
+          </div>
+          <blockquote className="founder-statement">
+            <span aria-hidden="true">“</span>
+            <p>{content.about.founderStatement}</p>
+          </blockquote>
         </div>
       </section>
       <section className="page-section">

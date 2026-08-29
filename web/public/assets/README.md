@@ -5,13 +5,13 @@ The `jvf/` directory contains the current logo and selected images migrated from
 | File                              | Required format and size  | Intended use                          |
 | --------------------------------- | ------------------------- | ------------------------------------- |
 | `jvf/jvf-services-logo.png`       | `1376×768` transparent PNG | Header and footer brand mark           |
+| `jvf/jacqueline-valentin-founder.jpg` | `1300×1024` JPEG       | About page founder portrait           |
 | `jvf/cleaning-hero.jpg`           | `1600×1000` JPEG          | Home hero and housekeeping page       |
 | `jvf/decoration-chair.png`        | `626×416` transparent PNG | Housekeeping card and decoration page |
 | `jvf/decoration-cabinet.png`      | `452×444` transparent PNG | Decoration service card               |
-| `jvf/project-basement-wide.jpg`   | `948×706` JPEG            | About and Gallery pages               |
+| `jvf/project-basement-wide.jpg`   | `948×706` JPEG            | Gallery page                           |
 | `jvf/project-basement-detail.jpg` | `1290×948` JPEG           | Gallery page                           |
 | `favicon-source.png`              | `512×512`, transparent    | Favicon source                        |
-| `owner-portrait.jpg`              | `800×1000` (4:5)          | About page                            |
 
 Before adding an asset:
 

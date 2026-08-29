@@ -91,8 +91,10 @@ export interface SiteContent {
     missionBody: string;
     valuesHeading: string;
     values: Array<{ title: string; body: string }>;
-    placeholderTitle: string;
-    placeholderBody: string;
+    founderEyebrow: string;
+    founderRole: string;
+    founderStatement: string;
+    founderImageAlt: string;
   };
   gallery: {
     eyebrow: string;

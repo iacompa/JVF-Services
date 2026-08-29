@@ -32,7 +32,7 @@ describe("business facts", () => {
         region: "CO",
         postalCode: "80205",
       },
-      owner: null,
+      owner: "Jacqueline Valentin",
       legalEntitySuffix: null,
       reviews: [
         {
@@ -85,5 +85,20 @@ describe("localized content", () => {
     expect(publicCopy).not.toContain("remodel");
     expect(publicCopy).not.toContain("remodelación");
     expect(publicCopy).not.toContain("certified interpreter");
+  });
+
+  test("publishes the founder profile in both languages", () => {
+    expect(getContent("en").about).toMatchObject({
+      founderRole: "Founder",
+      founderStatement: expect.stringContaining(
+        "bringing clarity and care to every conversation",
+      ),
+    });
+    expect(getContent("es").about).toMatchObject({
+      founderRole: "Fundadora",
+      founderStatement: expect.stringContaining(
+        "aportar claridad y atención",
+      ),
+    });
   });
 });

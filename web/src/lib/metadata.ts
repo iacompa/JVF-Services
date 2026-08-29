@@ -92,6 +92,10 @@ export const professionalServiceJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: businessFacts.publicName,
+  founder: {
+    "@type": "Person",
+    name: businessFacts.owner,
+  },
   telephone: "+17167489117",
   email: businessFacts.email,
   areaServed: "Ohio",

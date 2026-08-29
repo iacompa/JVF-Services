@@ -52,6 +52,22 @@ describe("public page registry", () => {
     expect(screen.getByText(/^\$39 per hour$/i)).toBeVisible();
     expect(screen.getAllByText(/^\$59 per hour$/i)).toHaveLength(1);
   });
+
+  test("presents Jacqueline Valentin as the founder on the About page", () => {
+    render(<PublicPage locale="en" route="about" />);
+
+    expect(screen.getAllByText("Jacqueline Valentin")).toHaveLength(2);
+    expect(screen.getAllByText("Founder")).toHaveLength(2);
+    expect(
+      screen.getByText(/bringing clarity and care to every conversation/i),
+    ).toBeVisible();
+    expect(
+      screen.getByAltText(/Jacqueline Valentin, founder of JVF Services/i),
+    ).toHaveAttribute(
+      "src",
+      expect.stringContaining("jacqueline-valentin-founder.jpg"),
+    );
+  });
 });
 
 describe("localized search metadata", () => {
@@ -71,6 +87,10 @@ describe("localized search metadata", () => {
     expect(professionalServiceJsonLd).toMatchObject({
       "@type": "ProfessionalService",
       name: "JVF Services",
+      founder: {
+        "@type": "Person",
+        name: "Jacqueline Valentin",
+      },
       telephone: "+17167489117",
       areaServed: "Ohio",
       email: "services.jvf@gmail.com",

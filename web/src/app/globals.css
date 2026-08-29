@@ -1642,6 +1642,81 @@ li {
   max-width: 11ch;
   font-size: clamp(3rem, 6vw, 5.8rem);
 }
+.founder-statement-section {
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid var(--gold);
+  background:
+    radial-gradient(circle at 88% 18%, rgb(169 207 192 / 0.13), transparent 28rem),
+    var(--evergreen-950);
+  color: var(--white);
+}
+.founder-statement-section::after {
+  position: absolute;
+  right: -5rem;
+  bottom: -9rem;
+  width: 22rem;
+  aspect-ratio: 1;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 50%;
+  content: "";
+}
+.founder-statement-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.46fr) minmax(0, 1.54fr);
+  gap: clamp(3rem, 8vw, 7rem);
+  align-items: start;
+}
+.founder-identity > span {
+  display: block;
+  margin-bottom: 2.6rem;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+}
+.founder-identity .page-kicker {
+  color: var(--sage-300);
+}
+.founder-identity h2 {
+  max-width: 9ch;
+  margin: 1rem 0 0.35rem;
+  color: var(--white);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1;
+}
+.founder-identity > p:last-child {
+  margin: 0;
+  color: var(--brass-soft);
+  font-weight: 750;
+}
+.founder-statement {
+  position: relative;
+  margin: 0;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgb(255 255 255 / 0.2);
+}
+.founder-statement > span {
+  position: absolute;
+  top: -1.25rem;
+  left: -0.2rem;
+  color: var(--gold);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 5.5rem;
+  line-height: 1;
+}
+.founder-statement p {
+  margin: 0;
+  padding-left: clamp(2.4rem, 5vw, 4.2rem);
+  color: var(--white);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.65rem, 3.25vw, 3rem);
+  font-weight: 550;
+  line-height: 1.22;
+  text-wrap: balance;
+}
 .mission-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2016,9 +2091,13 @@ li {
   }
   .why-grid,
   .service-story-grid,
+  .founder-statement-grid,
   .mission-grid,
   .contact-layout {
     grid-template-columns: 1fr;
+  }
+  .founder-statement-grid {
+    gap: 3rem;
   }
   .contact-hero-grid {
     grid-template-columns: 1fr 0.8fr;
@@ -2032,6 +2111,13 @@ li {
 @media (max-width: 680px) {
   .page-section {
     padding-block: 4.2rem;
+  }
+  .founder-identity > span {
+    margin-bottom: 1.5rem;
+  }
+  .founder-statement p {
+    padding-left: 2.3rem;
+    font-size: clamp(1.55rem, 7.2vw, 2.2rem);
   }
   .hero-copy h1,
   .page-hero h1,
@@ -2552,7 +2638,7 @@ li {
 }
 
 .service-photo,
-.about-project-image,
+.about-founder-portrait,
 .gallery-feature {
   margin: 0;
   overflow: hidden;
@@ -2564,7 +2650,7 @@ li {
   aspect-ratio: 4 / 3;
 }
 .service-photo img,
-.about-project-image img,
+.about-founder-portrait img,
 .gallery-feature img {
   display: block;
   width: 100%;
@@ -2578,20 +2664,42 @@ li {
 .service-photo-contain img {
   object-fit: contain;
 }
-.about-project-image {
+.about-founder-portrait {
   justify-self: end;
   width: min(100%, 34rem);
 }
-.about-project-image img {
-  aspect-ratio: 4 / 3;
+.about-founder-portrait img {
+  aspect-ratio: 1300 / 1024;
+  object-position: center;
 }
-.about-project-image figcaption,
+.about-founder-portrait figcaption,
 .gallery-feature figcaption {
   padding: 0.85rem 1rem;
   border-top: 1px solid var(--border);
   background: var(--paper);
   color: var(--muted-graphite);
   font-size: 0.84rem;
+}
+.about-founder-portrait figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 1.3rem;
+  border-top-color: rgb(255 255 255 / 0.18);
+  background: var(--evergreen-950);
+  color: var(--white);
+}
+.about-founder-portrait figcaption strong {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.2rem;
+}
+.about-founder-portrait figcaption span {
+  color: var(--brass-soft);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .gallery-hero {
@@ -2693,7 +2801,7 @@ li {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  .about-project-image {
+  .about-founder-portrait {
     justify-self: start;
   }
 }

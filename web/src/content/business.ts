@@ -12,7 +12,7 @@ export const businessFacts = Object.freeze({
     postalCode: "80205",
     formatted: "2590 Walnut St, Denver, CO 80205",
   },
-  owner: null,
+  owner: "Jacqueline Valentin",
   legalEntitySuffix: null,
   reviews: [
     {
