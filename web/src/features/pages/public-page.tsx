@@ -7,6 +7,7 @@ import type { ServiceId } from "@/features/contact/types";
 import { routeKeys, type RouteKey } from "@/lib/routes";
 import { SiteShell } from "@/components/layout/site-shell";
 import { AboutPage } from "./about-page";
+import { BookPage } from "./book-page";
 import { ContactPage } from "./contact-page";
 import { GalleryPage } from "./gallery-page";
 import { HomePage } from "./home-page";
@@ -54,6 +55,7 @@ export function PublicPage({
     );
   else if (route === "gallery") page = <GalleryPage locale={locale} />;
   else if (route === "about") page = <AboutPage locale={locale} />;
+  else if (route === "book") page = <BookPage locale={locale} />;
   else if (route === "contact")
     page = <ContactPage locale={locale} initialService={initialService} />;
   else

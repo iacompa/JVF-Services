@@ -5,6 +5,7 @@ import { LanguageSwitcher } from "./language-switcher";
 import { MobileNav } from "./mobile-nav";
 import { ServicesMenu } from "./services-menu";
 import { SiteShell } from "./site-shell";
+import { SiteHeader } from "./site-header";
 
 describe("site shell accessibility", () => {
   test("connects the skip link to the main content", () => {
@@ -18,6 +19,20 @@ describe("site shell accessibility", () => {
       screen.getByRole("link", { name: /skip to main content/i }),
     ).toHaveAttribute("href", "#main-content");
     expect(screen.getByRole("main")).toHaveAttribute("id", "main-content");
+  });
+});
+
+describe("primary navigation", () => {
+  test("prioritizes service requests and removes the gallery from the header", () => {
+    render(<SiteHeader locale="en" route="home" />);
+
+    const primary = screen.getByRole("navigation", {
+      name: /primary navigation/i,
+    });
+    expect(primary).not.toHaveTextContent("Gallery");
+    expect(
+      screen.getByRole("link", { name: "Request Service" }),
+    ).toHaveAttribute("href", "/contact");
   });
 });
 

@@ -112,6 +112,24 @@ export interface SiteContent {
     formTitle: string;
     privacyNote: string;
   };
+  book: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    durationLabel: string;
+    minutes: string;
+    consultationTitle: string;
+    consultationBody: string;
+    consultationPoints: string[];
+    calendarLabel: string;
+    calendarTitle: string;
+    calendarBody: string;
+    openCalendar: string;
+    fallbackLabel: string;
+    fallbackTitle: string;
+    fallbackBody: string;
+    requestInstead: string;
+  };
   legal: {
     lastUpdated: string;
     terms: LegalPageCopy;

@@ -7,6 +7,7 @@ export const routePaths = {
   interpreting: "/services/interpreting",
   gallery: "/gallery",
   about: "/about",
+  book: "/book",
   contact: "/contact",
   terms: "/terms",
   privacy: "/privacy",

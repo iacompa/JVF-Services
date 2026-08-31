@@ -30,12 +30,12 @@ describe("privacy notice", () => {
     const copy = container.textContent ?? "";
 
     expect(copy).toMatch(/name, phone number, email address, city, ZIP code/i);
-    expect(copy).toMatch(/demo mode/i);
-    expect(copy).toMatch(/future email delivery provider/i);
+    expect(copy).toMatch(/google forms and calendar/i);
+    expect(copy).toMatch(/google processes the information/i);
     expect(copy).toMatch(/Vercel hosting and Web Analytics/i);
-    expect(copy).toMatch(/no customer database/i);
+    expect(copy).toMatch(/does not maintain customer accounts/i);
     expect(copy).toMatch(/no file uploads/i);
-    expect(copy).toMatch(/no automated customer email/i);
+    expect(copy).toMatch(/does not confirm service availability/i);
     expect(copy).toMatch(/do not sell/i);
   });
 });

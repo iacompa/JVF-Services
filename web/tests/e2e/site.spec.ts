@@ -4,18 +4,6 @@ async function waitForHydration(page: Page) {
   await expect(page.locator("html")).toHaveAttribute("data-hydrated", "true");
 }
 
-async function fillCommon(page: Page) {
-  await page.getByLabel("Full name", { exact: true }).fill("Website QA");
-  await page.getByLabel("Phone number", { exact: true }).fill("7165550100");
-  await page
-    .getByLabel("Email address", { exact: true })
-    .fill("qa@example.com");
-  await page.getByLabel("City in Ohio", { exact: true }).fill("Columbus");
-  await page.getByLabel("ZIP code", { exact: true }).fill("43215");
-  await page.getByRole("checkbox").check();
-  await page.waitForTimeout(2_100);
-}
-
 test("English and Spanish navigation preserve the current page", async ({
   page,
 }) => {
@@ -54,7 +42,7 @@ test("Services disclosure supports Enter and Escape", async ({ page }) => {
   await expect(trigger).toBeFocused();
 });
 
-test("migrated pricing, contact details, and gallery are public", async ({
+test("migrated pricing, unchanged contact address, and honest portfolio state are public", async ({
   page,
 }) => {
   await page.goto("/services");
@@ -71,7 +59,12 @@ test("migrated pricing, contact details, and gallery are public", async ({
   ).toBeVisible();
 
   await page.goto("/gallery");
-  await expect(page.locator("main").getByRole("img")).toHaveCount(2);
+  await expect(
+    page.getByRole("heading", {
+      name: "Our service portfolio is being refreshed",
+    }),
+  ).toBeVisible();
+  await expect(page.locator("main").getByRole("img")).toHaveCount(0);
 });
 
 test("discontinued service URLs return not found", async ({ page }) => {
@@ -91,13 +84,16 @@ test("service CTA preselects interpreting and direct actions remain available", 
   await page.goto("/services/interpreting");
   await waitForHydration(page);
   await page
-    .getByRole("link", { name: "Request an interpreter" })
+    .locator("main")
+    .getByRole("link", { name: "Request Service" })
     .first()
     .click();
 
   await expect(page).toHaveURL(/\/contact\?service=interpreting$/);
-  await expect(page.getByLabel("Service needed")).toHaveValue("interpreting");
-  await expect(page.getByLabel("Service format")).toBeVisible();
+  await expect(page.getByText("Selected service:")).toBeVisible();
+  await expect(
+    page.locator(".selected-service-note").getByText("Spanish-English interpreting"),
+  ).toBeVisible();
   await expect(
     page.getByRole("link", { name: /^Call/ }).first(),
   ).toHaveAttribute("href", "tel:+17167489117");
@@ -106,80 +102,26 @@ test("service CTA preselects interpreting and direct actions remain available", 
   ).toHaveAttribute("href", "sms:+17167489117");
 });
 
-test("submits a valid housekeeping demo request", async ({ page }) => {
-  await page.goto("/contact?service=housekeeping");
-  await waitForHydration(page);
-  await fillCommon(page);
-  await page.getByLabel("Cleaning type").selectOption("deep-cleaning");
-  await page.getByLabel("Frequency").selectOption("one-time");
-  await page.getByLabel("Desired date").fill("2026-09-01");
-  await page.getByLabel("Bedrooms").fill("3");
-  await page.getByLabel("Bathrooms").fill("2");
-  await page.getByRole("button", { name: "Send demo request" }).click();
-
-  await expect(page.getByRole("status")).toHaveText(
-    "Your demo request was received.",
-  );
-  await expect(page.getByLabel("Full name")).toHaveValue("");
-});
-
-test("submits a valid in-person notary demo request", async ({ page }) => {
-  await page.goto("/contact?service=notary");
-  await waitForHydration(page);
-  await fillCommon(page);
-  await page.getByLabel("Desired date").fill("2026-09-02");
-  await page.getByLabel("Desired time").fill("14:30");
-  await page.getByRole("button", { name: "Send demo request" }).click();
-
-  await expect(page.getByRole("status")).toHaveText(
-    "Your demo request was received.",
-  );
-});
-
-test("submits virtual interpreting after 6 PM", async ({ page }) => {
-  await page.goto("/contact?service=interpreting");
-  await waitForHydration(page);
-  await fillCommon(page);
-  await page.getByLabel("Service format").selectOption("phone");
-  await page
-    .getByLabel("Language direction")
-    .selectOption("spanish-to-english");
-  await page.getByLabel("Setting").selectOption("business");
-  await page.getByLabel("Timing").selectOption("scheduled");
-  await page.getByLabel("Desired date").fill("2026-09-03");
-  await page.getByLabel("Desired time (Eastern Time)").fill("23:45");
-  await page.getByLabel("Expected minutes").fill("60");
-  await page.getByRole("button", { name: "Send demo request" }).click();
-
-  await expect(page.getByRole("status")).toHaveText(
-    "Your demo request was received.",
-  );
-});
-
-test("rejects after-hours in-person interpreting and preserves fields", async ({
+test("contact and consultation routes expose safe fallbacks until Google links are configured", async ({
   page,
 }) => {
-  await page.goto("/contact?service=interpreting");
+  await page.goto("/contact");
   await waitForHydration(page);
-  await fillCommon(page);
-  await page.getByLabel("Service format").selectOption("in-person");
-  await page.getByLabel("Language direction").selectOption("both");
-  await page.getByLabel("Setting").selectOption("community");
-  await page.getByLabel("Timing").selectOption("scheduled");
-  await page.getByLabel("Desired date").fill("2026-09-03");
-  await page.getByLabel("Desired time (Eastern Time)").fill("18:01");
-  await page.getByLabel("Expected minutes").fill("90");
-  await page.getByRole("button", { name: "Send demo request" }).click();
-
-  const summary = page.getByRole("alert").first();
-  await expect(summary).toBeFocused();
+  await expect(page.getByRole("status")).toContainText(
+    "Online form setup in progress",
+  );
   await expect(
-    summary.getByRole("link", { name: "Desired time (Eastern Time)" }),
-  ).toHaveAttribute("href", "#desiredTime");
-  await expect(page.getByLabel("Full name")).toHaveValue("Website QA");
-  await expect(page.getByLabel("Phone number")).toHaveValue("7165550100");
-  await expect(page.getByLabel("Email address")).toHaveValue("qa@example.com");
-  await expect(page.getByLabel("Service format")).toHaveValue("in-person");
+    page.getByRole("button", { name: /send demo request/i }),
+  ).toHaveCount(0);
+
+  await page.goto("/book");
+  await waitForHydration(page);
+  await expect(
+    page.getByRole("heading", { level: 1, name: "Book a Consultation" }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("The online calendar is being connected."),
+  ).toBeVisible();
 });
 
 test("mobile navigation works and all required widths avoid horizontal overflow", async ({

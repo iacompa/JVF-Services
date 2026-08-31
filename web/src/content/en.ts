@@ -11,7 +11,7 @@ export const en = {
     contact: "Contact",
     homeServices: "Home services",
     professionalServices: "Professional services",
-    requestQuote: "Request a quote",
+    requestQuote: "Request Service",
     openMenu: "Open navigation menu",
     closeMenu: "Close navigation menu",
     language: "Language",
@@ -21,7 +21,7 @@ export const en = {
     call: "Call (716) 748-9117",
     text: "Text us",
     learnMore: "Learn more",
-    requestQuote: "Request a personalized quote",
+    requestQuote: "Request Service",
     availableInOhio: "Serving Ohio inquiries case by case",
     terms: "Terms",
     privacy: "Privacy",
@@ -35,8 +35,8 @@ export const en = {
     title: "Reliable Home Services. One Trusted Team.",
     summary:
       "JVF Services delivers professional, detail-focused home services plus notary and Spanish-English interpreting support. We make requesting service simple and expectations clear.",
-    primaryCta: "Request a quote",
-    secondaryCta: "Explore services",
+    primaryCta: "Request Service",
+    secondaryCta: "Book a Consultation",
     availabilityTitle: "Interpretation when you need it",
     availabilityBody:
       "Phone and virtual Spanish-English interpreting is available 24/7. In-person interpreting is available from 8:00 a.m. to 6:00 p.m. Eastern Time; after 6:00 p.m., service is virtual only.",
@@ -100,7 +100,7 @@ export const en = {
       price: "From $39 per hour",
       cardPrice: "$39 per hour",
       note: "Final time and price depend on the confirmed scope. Hazardous and biohazard work is not offered.",
-      cta: "Request a housekeeping quote",
+      cta: "Request Service",
     },
     decoration: {
       eyebrow: "Home services",
@@ -121,7 +121,7 @@ export const en = {
       price: "From $59 per hour",
       cardPrice: "$59 per hour",
       note: "Final price is confirmed after consultation. This is decoration and styling support, not licensed interior-design service.",
-      cta: "Request decoration support",
+      cta: "Request Service",
     },
     notary: {
       eyebrow: "Professional services",
@@ -143,7 +143,7 @@ export const en = {
         "$5 per in-person notarial act; any mobile travel fee is quoted and agreed in advance.",
       cardPrice: "$5 per act",
       note: "Remote online notarization is not offered.",
-      cta: "Request a notary appointment",
+      cta: "Request Service",
     },
     interpreting: {
       eyebrow: "Professional services",
@@ -164,7 +164,7 @@ export const en = {
       price: "Pricing confirmed after request review",
       cardPrice: "Custom pricing",
       note: "If the line is busy or unanswered, text (716) 748-9117 or submit an urgent callback request.",
-      cta: "Request an interpreter",
+      cta: "Request Service",
     },
   },
   about: {
@@ -198,15 +198,15 @@ export const en = {
       "Jacqueline Valentin, founder of JVF Services, wearing a navy blazer near a sunlit window",
   },
   gallery: {
-    eyebrow: "Project gallery",
-    title: "Thoughtful work, finished with care.",
+    eyebrow: "Service portfolio",
+    title: "Real work deserves an honest presentation.",
     intro:
-      "A closer look at a finished basement living space featured in the existing JVF Services project gallery.",
-    firstCaption: "Finished basement lounge and built-in storage",
-    secondCaption: "Finished lower-level living area",
+      "Our service portfolio is being refreshed with current housekeeping, home decoration, interpreting, and notary work.",
+    firstCaption: "Housekeeping and home decoration work",
+    secondCaption: "Professional interpreting and notary support",
   },
   contact: {
-    eyebrow: "Contact & quote request",
+    eyebrow: "Request service",
     title: "Let’s find the right next step.",
     intro:
       "Choose a service and share a few practical details. Your request will be reviewed personally before any appointment or price is confirmed.",
@@ -216,6 +216,32 @@ export const en = {
     formTitle: "Request service",
     privacyNote:
       "Do not submit documents, identification numbers, medical records, or confidential legal details.",
+  },
+  book: {
+    eyebrow: "15-minute phone consultation",
+    title: "Book a Consultation",
+    intro:
+      "Choose a convenient time for a short phone conversation about your service needs, timing, and next steps.",
+    durationLabel: "Consultation duration: 15 minutes",
+    minutes: "minutes",
+    consultationTitle: "A clear first conversation",
+    consultationBody:
+      "This consultation is for discussing your request. It does not confirm an appointment, final price, or service availability.",
+    consultationPoints: [
+      "Discuss the service and practical scope",
+      "Review timing, location, and availability",
+      "Understand the next step before committing",
+    ],
+    calendarLabel: "Google Calendar",
+    calendarTitle: "Choose an available time",
+    calendarBody:
+      "The secure Google scheduling page opens in the same browser. Your appointment will be added to the JVF Services calendar after you finish booking.",
+    openCalendar: "Open booking calendar",
+    fallbackLabel: "Booking setup in progress",
+    fallbackTitle: "Schedule directly for now",
+    fallbackBody:
+      "The online calendar is being connected. Call or text and we will help you choose a consultation time.",
+    requestInstead: "Request Service instead",
   },
   legal: {
     lastUpdated: "Last updated August 25, 2026",
@@ -263,7 +289,7 @@ export const en = {
         {
           title: "Payments and cancellations",
           paragraphs: [
-            "This website does not accept payments, create customer accounts, or complete bookings. Payment method, cancellation expectations, and any travel charge will be confirmed directly before service.",
+            "This website does not accept payments or create customer accounts. A calendar consultation is only a conversation and does not confirm a service appointment. Payment method, cancellation expectations, and any travel charge will be confirmed directly before service.",
           ],
         },
         {
@@ -283,21 +309,21 @@ export const en = {
         {
           title: "Information a visitor provides",
           paragraphs: [
-            "The request form asks for name, phone number, email address, city, ZIP code, selected service, scheduling preferences, and a short non-sensitive note. Service-specific questions may ask about a home or small office, decorating goals, a notary appointment, or interpreting format and duration.",
+            "The bilingual Google request form may ask for name, phone number, email address, city, ZIP code, selected service, scheduling preferences, and a short non-sensitive note. Service-specific questions may ask about a home or small office, decorating goals, a notary appointment, or interpreting format and duration.",
             "Do not submit documents, identification numbers, medical records, financial account details, or confidential legal information. The concept site has no file uploads.",
           ],
         },
         {
-          title: "Current demo mode",
+          title: "Google Forms and Calendar",
           paragraphs: [
-            "In demo mode, the server validates a request and returns a realistic success or error state. It records only redacted event metadata: a submission identifier, page language, selected service, and timestamp. It does not log the visitor’s name, phone, email, city, ZIP code, or message.",
-            "The concept has no customer database, no customer accounts, no automated customer email or text reply, and no production email delivery. Form contents are not intentionally retained after the request response completes.",
+            "When configured, service requests are submitted directly to Google Forms and consultation times are scheduled through Google Calendar. Google processes the information entered on those services under its own privacy terms and account settings.",
+            "JVF Services does not maintain customer accounts on this website. A submitted request or calendar consultation does not confirm service availability, a final price, or a service appointment.",
           ],
         },
         {
-          title: "Future email delivery provider",
+          title: "Direct contact alternatives",
           paragraphs: [
-            "Before launch, JVF Services may configure a future email delivery provider to send validated requests to the business. This notice must then identify that provider, the information sent, retention rules, access controls, and a working privacy contact before collection begins.",
+            "Visitors may call, text, or email instead of using Google Forms or Google Calendar. Do not send identity documents, medical records, financial account details, or confidential legal information through email or text.",
           ],
         },
         {

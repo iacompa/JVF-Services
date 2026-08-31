@@ -1,11 +1,11 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
 import { PublicPage, publicPageEntries } from "./public-page";
 import { buildPageMetadata, professionalServiceJsonLd } from "@/lib/metadata";
 
 describe("public page registry", () => {
-  test("renders all 24 localized routes with one page heading", () => {
-    expect(publicPageEntries).toHaveLength(24);
+  test("renders all 26 localized routes with one page heading", () => {
+    expect(publicPageEntries).toHaveLength(26);
 
     for (const entry of publicPageEntries) {
       const { unmount } = render(
@@ -17,11 +17,62 @@ describe("public page registry", () => {
     }
   });
 
-  test("links service calls to action to the correct preselected request", () => {
+  test("offers a dedicated consultation booking route in both languages", () => {
+    const { unmount } = render(<PublicPage locale="en" route="book" />);
+
+    expect(
+      screen.getByRole("heading", {
+        level: 1,
+        name: /book a consultation/i,
+      }),
+    ).toBeVisible();
+    expect(
+      within(screen.getByRole("main")).getByRole("link", {
+        name: /request service instead/i,
+      }),
+    ).toHaveAttribute("href", "/contact");
+
+    unmount();
+    render(<PublicPage locale="es" route="book" />);
+    expect(
+      screen.getByRole("heading", {
+        level: 1,
+        name: /reserve una consulta/i,
+      }),
+    ).toBeVisible();
+  });
+
+  test("keeps the homepage service overview compact", () => {
+    render(<PublicPage locale="en" route="home" />);
+
+    expect(screen.getAllByTestId("service-overview-card")).toHaveLength(4);
+    expect(screen.queryByText("What’s included?")).not.toBeInTheDocument();
+  });
+
+  test("keeps detailed service cards on the services page", () => {
+    render(<PublicPage locale="en" route="services" />);
+
+    expect(screen.getAllByText("What’s included?")).toHaveLength(4);
+  });
+
+  test("uses an honest gallery holding state instead of remodeling photos", () => {
+    render(<PublicPage locale="en" route="gallery" />);
+
+    expect(
+      screen.getByRole("heading", {
+        level: 2,
+        name: /service portfolio is being refreshed/i,
+      }),
+    ).toBeVisible();
+    expect(screen.queryByText(/basement/i)).not.toBeInTheDocument();
+    expect(screen.queryByRole("img")).not.toBeInTheDocument();
+  });
+
+  test("links standardized service calls to action to the correct preselected request", () => {
     render(<PublicPage locale="en" route="notary" />);
 
-    for (const link of screen.getAllByRole("link", {
-      name: /request a notary appointment/i,
+    for (const link of within(screen.getByRole("main")).getAllByRole("link", {
+      name: /request service/i,
     })) {
       expect(link).toHaveAttribute("href", "/contact?service=notary");
     }

@@ -78,12 +78,6 @@ export function MobileNav({
           </Link>
         </div>
         <Link
-          href={localizedHref("gallery", locale)}
-          aria-current={route === "gallery" ? "page" : undefined}
-        >
-          {content.nav.gallery}
-        </Link>
-        <Link
           href={localizedHref("about", locale)}
           aria-current={route === "about" ? "page" : undefined}
         >
@@ -94,6 +88,12 @@ export function MobileNav({
           aria-current={route === "contact" ? "page" : undefined}
         >
           {content.nav.contact}
+        </Link>
+        <Link
+          href={localizedHref("book", locale)}
+          aria-current={route === "book" ? "page" : undefined}
+        >
+          {locale === "en" ? "Book a Consultation" : "Reservar una consulta"}
         </Link>
         <LanguageSwitcher locale={locale} route={route} compact />
         <Link

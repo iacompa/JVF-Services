@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { getContent } from "@/content/content";
 import type { Locale } from "@/content/types";
 import { localizedHref } from "@/lib/i18n";
@@ -17,41 +16,36 @@ export function GalleryPage({ locale }: { locale: Locale }) {
         </div>
       </section>
       <section className="page-section gallery-section">
-        <div className="site-container gallery-grid">
-          <figure className="gallery-feature gallery-feature-wide">
-            <Image
-              src="/assets/jvf/project-basement-wide.jpg"
-              alt={content.gallery.firstCaption}
-              width={948}
-              height={706}
-              sizes="(max-width: 900px) 100vw, 58vw"
-            />
-            <figcaption>{content.gallery.firstCaption}</figcaption>
-          </figure>
-          <figure className="gallery-feature">
-            <Image
-              src="/assets/jvf/project-basement-detail.jpg"
-              alt={content.gallery.secondCaption}
-              width={1290}
-              height={948}
-              sizes="(max-width: 900px) 100vw, 42vw"
-            />
-            <figcaption>{content.gallery.secondCaption}</figcaption>
-          </figure>
+        <div className="site-container gallery-holding" data-reveal>
+          <div>
+            <p className="section-number" aria-hidden="true">
+              01 /
+            </p>
+            <h2>
+              {locale === "en"
+                ? "Our service portfolio is being refreshed"
+                : "Estamos actualizando nuestro portafolio de servicios"}
+            </h2>
+            <p>
+              {locale === "en"
+                ? "We removed older images that no longer represented the services JVF Services offers. Current, permission-approved work will be added here as it becomes available."
+                : "Quitamos imágenes anteriores que ya no representaban los servicios de JVF Services. Agregaremos aquí trabajos actuales con la autorización correspondiente."}
+            </p>
+          </div>
+          <ul>
+            <li>{content.gallery.firstCaption}</li>
+            <li>{content.gallery.secondCaption}</li>
+          </ul>
         </div>
       </section>
       <div className="site-container page-section compact-section">
         <CallToAction
           locale={locale}
-          title={
-            locale === "en"
-              ? "Have a project in mind?"
-              : "¿Tiene un proyecto en mente?"
-          }
+          title={locale === "en" ? "Need help now?" : "¿Necesita ayuda ahora?"}
           body={
             locale === "en"
-              ? "Tell us about the space, your goals, and your preferred timing."
-              : "Cuéntenos sobre el espacio, sus objetivos y el horario que prefiere."
+              ? "Tell us which service you need and your preferred timing."
+              : "Indique qué servicio necesita y el horario que prefiere."
           }
           href={localizedHref("contact", locale)}
           label={content.common.requestQuote}

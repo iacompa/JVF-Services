@@ -8,7 +8,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: absoluteLocalizedUrl(route, locale as "en" | "es"),
       changeFrequency:
         route === "home" ? ("weekly" as const) : ("monthly" as const),
-      priority: route === "home" ? 1 : route === "contact" ? 0.9 : 0.7,
+      priority:
+        route === "home"
+          ? 1
+          : route === "contact" || route === "book"
+            ? 0.9
+            : route === "gallery"
+              ? 0.4
+              : 0.7,
       alternates: {
         languages: {
           en: absoluteLocalizedUrl(route, "en"),

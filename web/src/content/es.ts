@@ -11,7 +11,7 @@ export const es = {
     contact: "Contacto",
     homeServices: "Servicios para el hogar",
     professionalServices: "Servicios profesionales",
-    requestQuote: "Solicitar cotización",
+    requestQuote: "Solicitar servicio",
     openMenu: "Abrir menú de navegación",
     closeMenu: "Cerrar menú de navegación",
     language: "Idioma",
@@ -21,7 +21,7 @@ export const es = {
     call: "Llamar al (716) 748-9117",
     text: "Enviar mensaje",
     learnMore: "Más información",
-    requestQuote: "Solicitar una cotización personalizada",
+    requestQuote: "Solicitar servicio",
     availableInOhio: "Atendemos solicitudes en Ohio según cada caso",
     terms: "Términos",
     privacy: "Privacidad",
@@ -35,8 +35,8 @@ export const es = {
     title: "Servicios confiables para el hogar. Un equipo de confianza.",
     summary:
       "JVF Services ofrece servicios profesionales y detallistas para el hogar, además de notaría e interpretación español-inglés. Facilitamos la solicitud con expectativas claras.",
-    primaryCta: "Solicitar cotización",
-    secondaryCta: "Explorar servicios",
+    primaryCta: "Solicitar servicio",
+    secondaryCta: "Reservar una consulta",
     availabilityTitle: "Interpretación cuando la necesita",
     availabilityBody:
       "La interpretación español-inglés por teléfono y medios virtuales está disponible las 24 horas. La interpretación en persona está disponible de 8:00 a. m. a 6:00 p. m., hora del Este; después de las 6:00 p. m., el servicio es únicamente virtual.",
@@ -100,7 +100,7 @@ export const es = {
       price: "Desde $39 por hora",
       cardPrice: "$39 por hora",
       note: "El tiempo y el precio final dependen del alcance confirmado. No se ofrecen trabajos peligrosos ni de riesgo biológico.",
-      cta: "Solicitar cotización de limpieza",
+      cta: "Solicitar servicio",
     },
     decoration: {
       eyebrow: "Servicios para el hogar",
@@ -121,7 +121,7 @@ export const es = {
       price: "Desde $59 por hora",
       cardPrice: "$59 por hora",
       note: "El precio final se confirma después de una consulta. Este es un servicio de decoración y estilo, no un servicio profesional de diseño interior con licencia.",
-      cta: "Solicitar apoyo de decoración",
+      cta: "Solicitar servicio",
     },
     notary: {
       eyebrow: "Servicios profesionales",
@@ -143,7 +143,7 @@ export const es = {
         "$5 por cada acto notarial presencial; cualquier tarifa de viaje móvil se cotiza y acuerda por adelantado.",
       cardPrice: "$5 por acto",
       note: "No se ofrece notarización remota en línea.",
-      cta: "Solicitar una cita de notaría",
+      cta: "Solicitar servicio",
     },
     interpreting: {
       eyebrow: "Servicios profesionales",
@@ -164,7 +164,7 @@ export const es = {
       price: "El precio se confirma después de revisar la solicitud",
       cardPrice: "Precio personalizado",
       note: "Si la línea está ocupada o no recibe respuesta, envíe un mensaje al (716) 748-9117 o solicite una devolución de llamada urgente.",
-      cta: "Solicitar intérprete",
+      cta: "Solicitar servicio",
     },
   },
   about: {
@@ -199,15 +199,15 @@ export const es = {
       "Jacqueline Valentin, fundadora de JVF Services, con un blazer azul marino junto a una ventana iluminada",
   },
   gallery: {
-    eyebrow: "Galería de proyectos",
-    title: "Trabajo cuidadoso, terminado con atención.",
+    eyebrow: "Portafolio de servicios",
+    title: "El trabajo real merece una presentación honesta.",
     intro:
-      "Una vista más cercana de una sala de sótano terminada que aparece en la galería existente de JVF Services.",
-    firstCaption: "Sala de sótano terminada con almacenamiento integrado",
-    secondCaption: "Área terminada para convivir en el nivel inferior",
+      "Estamos actualizando nuestro portafolio con trabajos actuales de limpieza, decoración, interpretación y notaría.",
+    firstCaption: "Trabajos de limpieza y decoración del hogar",
+    secondCaption: "Apoyo profesional de interpretación y notaría",
   },
   contact: {
-    eyebrow: "Contacto y solicitud de cotización",
+    eyebrow: "Solicitar servicio",
     title: "Encontremos el siguiente paso adecuado.",
     intro:
       "Elija un servicio y comparta algunos detalles prácticos. Su solicitud se revisará personalmente antes de confirmar una cita o un precio.",
@@ -217,6 +217,32 @@ export const es = {
     formTitle: "Solicitar servicio",
     privacyNote:
       "No envíe documentos, números de identificación, expedientes médicos ni detalles legales confidenciales.",
+  },
+  book: {
+    eyebrow: "Consulta telefónica de 15 minutos",
+    title: "Reserve una consulta",
+    intro:
+      "Elija un horario conveniente para una breve conversación telefónica sobre su servicio, el horario y los próximos pasos.",
+    durationLabel: "Duración de la consulta: 15 minutos",
+    minutes: "minutos",
+    consultationTitle: "Una primera conversación clara",
+    consultationBody:
+      "Esta consulta es para conversar sobre su solicitud. No confirma una cita, precio final ni disponibilidad del servicio.",
+    consultationPoints: [
+      "Conversar sobre el servicio y el alcance práctico",
+      "Revisar horario, ubicación y disponibilidad",
+      "Entender el siguiente paso antes de comprometerse",
+    ],
+    calendarLabel: "Google Calendar",
+    calendarTitle: "Elija un horario disponible",
+    calendarBody:
+      "La página segura de Google se abre en el mismo navegador. La cita se agregará al calendario de JVF Services al completar la reserva.",
+    openCalendar: "Abrir calendario de reservas",
+    fallbackLabel: "Configuración en proceso",
+    fallbackTitle: "Programe directamente por ahora",
+    fallbackBody:
+      "Estamos conectando el calendario en línea. Llame o envíe un mensaje y le ayudaremos a elegir una hora.",
+    requestInstead: "Solicitar servicio en su lugar",
   },
   legal: {
     lastUpdated: "Última actualización: 25 de agosto de 2026",
@@ -264,7 +290,7 @@ export const es = {
         {
           title: "Pagos y cancelaciones",
           paragraphs: [
-            "Este sitio no acepta pagos, no crea cuentas de cliente ni completa reservas. El método de pago, las condiciones de cancelación y cualquier tarifa de viaje se confirmarán directamente antes del servicio.",
+            "Este sitio no acepta pagos ni crea cuentas de cliente. Una consulta en el calendario es solo una conversación y no confirma una cita de servicio. El método de pago, las condiciones de cancelación y cualquier tarifa de viaje se confirmarán directamente antes del servicio.",
           ],
         },
         {
@@ -284,21 +310,21 @@ export const es = {
         {
           title: "Información que proporciona el visitante",
           paragraphs: [
-            "El formulario solicita nombre, número de teléfono, correo electrónico, ciudad, código postal, servicio elegido, preferencias de horario y una nota breve no confidencial. Las preguntas específicas pueden tratar sobre un hogar u oficina pequeña, objetivos de decoración, una cita notarial o el formato y duración de una interpretación.",
+            "El formulario bilingüe de Google puede solicitar nombre, número de teléfono, correo electrónico, ciudad, código postal, servicio elegido, preferencias de horario y una nota breve no confidencial. Las preguntas específicas pueden tratar sobre un hogar u oficina pequeña, objetivos de decoración, una cita notarial o el formato y duración de una interpretación.",
             "No envíe documentos, números de identificación, expedientes médicos, datos de cuentas financieras ni información legal confidencial. El sitio conceptual no permite subir archivos.",
           ],
         },
         {
-          title: "Modo de demostración actual",
+          title: "Google Forms y Calendar",
           paragraphs: [
-            "En modo de demostración, el servidor valida la solicitud y devuelve un resultado realista. Solo registra metadatos anónimos: identificador de envío, idioma de la página, servicio elegido y fecha y hora. No registra el nombre, teléfono, correo, ciudad, código postal ni mensaje del visitante.",
-            "El concepto no tiene base de datos de clientes, cuentas, respuesta automática por correo o texto ni entrega de correo de producción. El contenido del formulario no se conserva intencionalmente después de completar la respuesta.",
+            "Cuando se configuran, las solicitudes se envían directamente a Google Forms y las consultas se programan con Google Calendar. Google procesa la información ingresada bajo sus propios términos de privacidad y la configuración de la cuenta.",
+            "JVF Services no mantiene cuentas de cliente en este sitio. Enviar una solicitud o reservar una consulta no confirma disponibilidad, precio final ni una cita de servicio.",
           ],
         },
         {
-          title: "Futuro proveedor de entrega por correo",
+          title: "Alternativas de contacto directo",
           paragraphs: [
-            "Antes del lanzamiento, JVF Services podrá configurar un proveedor de correo para enviar solicitudes validadas al negocio. Este aviso deberá identificar al proveedor, la información enviada, reglas de retención, controles de acceso y un contacto de privacidad activo antes de recopilar datos.",
+            "Puede llamar, enviar un mensaje o escribir por correo en lugar de usar Google Forms o Google Calendar. No envíe documentos de identidad, expedientes médicos, datos financieros ni información legal confidencial por correo o mensaje.",
           ],
         },
         {

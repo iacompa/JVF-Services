@@ -21,6 +21,7 @@ const pageLabels: Record<RouteKey, { en: string; es: string }> = {
   },
   gallery: { en: "Gallery", es: "Galería" },
   about: { en: "About", es: "Nosotros" },
+  book: { en: "Book a Consultation", es: "Reserve una consulta" },
   contact: { en: "Contact & Quote", es: "Contacto y cotización" },
   terms: { en: "Terms and Conditions", es: "Términos y condiciones" },
   privacy: { en: "Privacy", es: "Privacidad" },
@@ -40,6 +41,7 @@ function descriptionFor(locale: Locale, route: RouteKey): string {
     return content.serviceDetails[route].summary;
   if (route === "gallery") return content.gallery.intro;
   if (route === "about") return content.about.intro;
+  if (route === "book") return content.book.intro;
   if (route === "contact") return content.contact.intro;
   return locale === "en"
     ? `${pageLabels[route].en} for the ${businessFacts.publicName} website.`

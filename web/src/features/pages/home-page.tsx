@@ -9,8 +9,8 @@ import type {
 } from "@/lib/google-business-reviews";
 import { localizedHref } from "@/lib/i18n";
 import { CallToAction } from "@/components/ui/call-to-action";
-import { FeaturedServiceCard } from "@/components/ui/featured-service-card";
 import { ReviewsSection } from "@/components/ui/reviews-section";
+import { ServiceOverviewCard } from "@/components/ui/service-overview-card";
 
 const serviceRoutes: Record<
   ServiceKey,
@@ -62,7 +62,7 @@ export function HomePage({
               </Link>
               <Link
                 className="button button-secondary"
-                href={localizedHref("services", locale)}
+                href={localizedHref("book", locale)}
               >
                 {content.home.secondaryCta}
               </Link>
@@ -76,26 +76,6 @@ export function HomePage({
               <a href={businessFacts.phoneHref}>{content.common.call}</a>
             </div>
           </div>
-          <aside
-            className="hero-service-note"
-            aria-label={
-              locale === "en" ? "Service highlights" : "Aspectos destacados"
-            }
-          >
-            <p>
-              {locale === "en"
-                ? "Four ways we can help"
-                : "Cuatro maneras de ayudarle"}
-            </p>
-            <strong>
-              {locale === "en" ? "Home + professional" : "Hogar + profesional"}
-            </strong>
-            <span>
-              {locale === "en"
-                ? "24/7 virtual interpretation"
-                : "Interpretación virtual 24/7"}
-            </span>
-          </aside>
         </div>
       </section>
 
@@ -128,13 +108,10 @@ export function HomePage({
             <h2>{content.home.availabilityTitle}</h2>
             <p>{content.home.availabilityBody}</p>
           </div>
-          <Link
-            href={`${localizedHref("contact", locale)}?service=interpreting`}
-            className="text-action dark-action"
-          >
-            {content.serviceDetails.interpreting.cta}
+          <a href={businessFacts.phoneHref} className="text-action dark-action">
+            {locale === "en" ? "Call Now" : "Llamar ahora"}
             <span aria-hidden="true">→</span>
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -149,17 +126,28 @@ export function HomePage({
             <h2>{content.home.servicesHeading}</h2>
             <p>{content.home.servicesIntro}</p>
           </div>
-          <div className="featured-service-list">
+          <div className="service-overview-grid">
             {services.map(([key, service], index) => (
-              <FeaturedServiceCard
+              <ServiceOverviewCard
                 key={key}
-                locale={locale}
                 serviceKey={key}
                 number={String(index + 1).padStart(2, "0")}
                 service={service}
                 href={localizedHref(serviceRoutes[key], locale)}
+                actionLabel={content.common.learnMore}
               />
             ))}
+          </div>
+          <div className="service-index-action">
+            <Link
+              className="text-action"
+              href={localizedHref("services", locale)}
+            >
+              {locale === "en"
+                ? "View all service details"
+                : "Ver todos los detalles"}
+              <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </section>

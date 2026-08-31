@@ -43,10 +43,10 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           <a href={businessFacts.smsHref}>{content.common.text}</a>
           <a href={businessFacts.emailHref}>{businessFacts.email}</a>
           <address>{businessFacts.mailingAddress.formatted}</address>
-          <Link href={localizedHref("gallery", locale)}>
-            {content.nav.gallery}
-          </Link>
           <Link href={localizedHref("about", locale)}>{content.nav.about}</Link>
+          <Link href={localizedHref("book", locale)}>
+            {locale === "en" ? "Book a Consultation" : "Reservar una consulta"}
+          </Link>
           <Link href={localizedHref("contact", locale)}>
             {content.nav.requestQuote}
           </Link>

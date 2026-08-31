@@ -32,7 +32,7 @@ export function FeaturedServiceCard({
 }) {
   const serviceArtwork = artwork[serviceKey];
   const included = locale === "en" ? "What’s included?" : "¿Qué incluye?";
-  const getStarted = locale === "en" ? "Get started" : "Comenzar";
+  const getStarted = locale === "en" ? "View service" : "Ver servicio";
 
   return (
     <article
