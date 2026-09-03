@@ -2554,6 +2554,9 @@ li {
   max-width: 42rem;
   color: var(--muted-graphite);
 }
+.gallery-google-link {
+  margin-top: 1rem;
+}
 .gallery-holding ul {
   margin: 0;
   padding: 0;

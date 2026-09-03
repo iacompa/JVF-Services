@@ -64,6 +64,12 @@ test("migrated pricing, unchanged contact address, and honest portfolio state ar
       name: "Our service portfolio is being refreshed",
     }),
   ).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: "View photos on Google Maps" }),
+  ).toHaveAttribute(
+    "href",
+    "https://www.google.com/maps/search/?api=1&query=JVF%20Services&query_place_id=ChIJ1XQC2gWKcWIRkcHDuVMpH60",
+  );
   await expect(page.locator("main").getByRole("img")).toHaveCount(0);
 });
 

@@ -14,6 +14,13 @@ export const businessFacts = Object.freeze({
   },
   owner: "Jacqueline Valentin",
   legalEntitySuffix: null,
+  googleProfile: {
+    placeId: "ChIJ1XQC2gWKcWIRkcHDuVMpH60",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=JVF%20Services&query_place_id=ChIJ1XQC2gWKcWIRkcHDuVMpH60",
+    writeReviewUrl:
+      "https://search.google.com/local/writereview?placeid=ChIJ1XQC2gWKcWIRkcHDuVMpH60",
+  },
   reviews: [
     {
       id: "rebecca-hawland-cleaning",

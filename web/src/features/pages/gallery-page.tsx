@@ -1,4 +1,5 @@
 import { getContent } from "@/content/content";
+import { businessFacts } from "@/content/business";
 import type { Locale } from "@/content/types";
 import { localizedHref } from "@/lib/i18n";
 import { CallToAction } from "@/components/ui/call-to-action";
@@ -31,6 +32,16 @@ export function GalleryPage({ locale }: { locale: Locale }) {
                 ? "We removed older images that no longer represented the services JVF Services offers. Current, permission-approved work will be added here as it becomes available."
                 : "Quitamos imágenes anteriores que ya no representaban los servicios de JVF Services. Agregaremos aquí trabajos actuales con la autorización correspondiente."}
             </p>
+            <a
+              className="button button-primary gallery-google-link"
+              href={businessFacts.googleProfile.mapsUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {locale === "en"
+                ? "View photos on Google Maps"
+                : "Ver fotos en Google Maps"}
+            </a>
           </div>
           <ul>
             <li>{content.gallery.firstCaption}</li>
