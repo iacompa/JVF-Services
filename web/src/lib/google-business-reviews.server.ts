@@ -10,6 +10,9 @@ import {
 
 const GOOGLE_REVIEWS_CACHE_SECONDS = 21_600;
 const GOOGLE_REVIEWS_PAGE_SIZE = 50;
+const JVF_GOOGLE_PLACE_ID = "ChIJ1XQC2gWKcWIRkcHDuVMpH60";
+const JVF_GOOGLE_REVIEW_URL = `https://search.google.com/local/writereview?placeid=${JVF_GOOGLE_PLACE_ID}`;
+const JVF_GOOGLE_REVIEWS_URL = `https://www.google.com/maps/search/?api=1&query=JVF%20Services&query_place_id=${JVF_GOOGLE_PLACE_ID}`;
 
 type GoogleBusinessProfileConfig = {
   accountId: string;
@@ -45,8 +48,10 @@ function parsePublicUrl(value: string | undefined) {
 
 export function getGoogleReviewLinks(): GoogleReviewLinks {
   return {
-    writeReviewUrl: parsePublicUrl(process.env.GOOGLE_REVIEW_URL),
-    allReviewsUrl: parsePublicUrl(process.env.GOOGLE_REVIEWS_URL),
+    writeReviewUrl:
+      parsePublicUrl(process.env.GOOGLE_REVIEW_URL) ?? JVF_GOOGLE_REVIEW_URL,
+    allReviewsUrl:
+      parsePublicUrl(process.env.GOOGLE_REVIEWS_URL) ?? JVF_GOOGLE_REVIEWS_URL,
   };
 }
 
