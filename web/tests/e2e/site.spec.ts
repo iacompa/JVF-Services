@@ -211,6 +211,31 @@ test("review actions open the verified JVF Services Google listing", async ({
   );
 });
 
+test("JVF Services brand icons are served for browser tabs and Apple devices", async ({
+  request,
+}) => {
+  const icons = [
+    { path: "/favicon.ico", contentType: "image/x-icon", signature: [0, 0, 1, 0] },
+    { path: "/icon.png", contentType: "image/png", signature: [137, 80, 78, 71] },
+    {
+      path: "/apple-icon.png",
+      contentType: "image/png",
+      signature: [137, 80, 78, 71],
+    },
+  ] as const;
+
+  for (const icon of icons) {
+    const response = await request.get(icon.path);
+    expect(response.status(), icon.path).toBe(200);
+    expect(response.headers()["content-type"], icon.path).toContain(
+      icon.contentType,
+    );
+    const bytes = await response.body();
+    expect([...bytes.subarray(0, 4)], icon.path).toEqual([...icon.signature]);
+    expect(bytes.byteLength, icon.path).toBeGreaterThan(1_000);
+  }
+});
+
 test("mobile navigation works and all required widths avoid horizontal overflow", async ({
   page,
 }) => {
