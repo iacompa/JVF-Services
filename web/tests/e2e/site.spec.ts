@@ -215,12 +215,23 @@ test("JVF Services brand icons are served for browser tabs and Apple devices", a
   request,
 }) => {
   const icons = [
-    { path: "/favicon.ico", contentType: "image/x-icon", signature: [0, 0, 1, 0] },
-    { path: "/icon.png", contentType: "image/png", signature: [137, 80, 78, 71] },
+    {
+      path: "/favicon.ico",
+      contentType: "image/x-icon",
+      signature: [0, 0, 1, 0],
+      pngColorTypeOffset: null,
+    },
+    {
+      path: "/icon.png",
+      contentType: "image/png",
+      signature: [137, 80, 78, 71],
+      pngColorTypeOffset: 25,
+    },
     {
       path: "/apple-icon.png",
       contentType: "image/png",
       signature: [137, 80, 78, 71],
+      pngColorTypeOffset: 25,
     },
   ] as const;
 
@@ -233,6 +244,12 @@ test("JVF Services brand icons are served for browser tabs and Apple devices", a
     const bytes = await response.body();
     expect([...bytes.subarray(0, 4)], icon.path).toEqual([...icon.signature]);
     expect(bytes.byteLength, icon.path).toBeGreaterThan(1_000);
+    if (icon.pngColorTypeOffset !== null) {
+      expect(
+        bytes[icon.pngColorTypeOffset],
+        `${icon.path} must use RGBA pixels so the background remains transparent`,
+      ).toBe(6);
+    }
   }
 });
 
